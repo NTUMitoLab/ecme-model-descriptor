@@ -14,10 +14,10 @@ $$
 | Parameter        | Value   | Unit | Description                         |
 | :--------------- | ------- | ---- | ----------------------------------- |
 | $k_{cat}$        | 0.23523 | Hz   | Catalytic constant                  |
-| $E_T$            | 400     | μM   | Enzyme concentration of CS          |
-| $K_m^{AcCoA}$    | 12.6    | μM   | Michaelis constant for AcCoA        |
-| $K_m^{OAA}$      | 0.64    | μM   | Michaelis constant for OAA          |
-| $\ce{[AcCoA]}$   | 1000    | μM   | Acetyl CoA concentration            |
+| $E_T$            | 0.4     | mM   | Enzyme concentration of CS          |
+| $K_m^{AcCoA}$    | 0.0126  | mM   | Michaelis constant for AcCoA        |
+| $K_m^{OAA}$      | 6.4E-4  | mM   | Michaelis constant for OAA          |
+| $\ce{[AcCoA]}$   | 1       | mM   | Acetyl CoA concentration            |
 | $k_{cat}$ (cell) | 0.15891 | Hz   | Catalytic constant (cellular model) |
 
 ### Aconitase (ACO)
@@ -33,7 +33,7 @@ $$
 | -------------- | -------- | ---- | -------------------------------------- |
 | $k_f$          | 0.11688  | Hz   | Forward rate constant of ACO           |
 | $K_{eq}$       | 2.22     | -    | Equilibrium constant of ACO            |
-| $\Sigma_{CAC}$ | 1300     | μM   | Sum of TCA cycle intermediates         |
+| $\Sigma_{CAC}$ | 1.300    | mM   | Sum of TCA cycle intermediates         |
 | $k_f$ (cell)   | 0.078959 | Hz   | Forward rate constant (cellular model) |
 
 ### Isocitrate dehydrogenase, NADH-producing (IDH3)
@@ -51,16 +51,16 @@ $$
 
 | Parameter        | Value | Unit | Description                       |
 | ---------------- | ----- | ---- | --------------------------------- |
-| $k_{cat}$        | 11.88 | kHz  | Rate constant of IDH3             |
-| $E_T$            | 109   | μM   | Concentration of IDH3             |
-| $K_{H1}$         | 1E-9  | M    | Ionization constant of IDH3       |
-| $K_{H2}$         | 9E-7  | M    | Ionization constant of IDH3       |
-| $K_{NAD}$        | 923   | μM   | Michaelis constant for NAD        |
-| $K_{ISOC}$       | 1520  | μM   | Michaelis constant for isocitrate |
+| $k_{cat}$        | 11880 | Hz   | Rate constant of IDH3             |
+| $E_T$            | 0.109 | mM   | Concentration of IDH3             |
+| $K_{H1}$         | 1E-6  | mM   | Ionization constant of IDH3       |
+| $K_{H2}$         | 9E-4  | mM   | Ionization constant of IDH3       |
+| $K_{NAD}$        | 0.923 | mM   | Michaelis constant for NAD        |
+| $K_{ISOC}$       | 1.520 | mM   | Michaelis constant for isocitrate |
 | $n$              | 2     | -    | Cooperativity for isocitrate      |
-| $K_A$            | 620   | μM   | Activation constant by ADP        |
-| $K_{CA}$         | 0.5   | μM   | Activation constant for calcium   |
-| $K_{NADH}$       | 190   | μM   | Inhibition constant by NADH       |
+| $K_A$            | 0.62  | mM   | Activation constant by ADP        |
+| $K_{CA}$         | 5E-4  | mM   | Activation constant for calcium   |
+| $K_{NADH}$       | 0.19  | mM   | Inhibition constant by NADH       |
 | $k_{cat}$ (cell) | 535   | Hz   | Rate constant (cellular model)    |
 
 ### Alpha-ketoglutarate dehydrogenase (KGDH)
@@ -75,18 +75,18 @@ f_a &= \frac{K_{MG}}{K_{MG} + [Mg^{2+}]_m} \frac{K_{CA}}{K_{CA} + [Ca^{2+}]_m}  
 \end{align}
 $$
 
-| Parameter        | Value | Unit | Description                    |
-| ---------------- | ----- | ---- | ------------------------------ |
-| $k_{cat}$        | 13.2  | Hz   | Rate constant of KGDH          |
-| $E_T$            | 500   | μM   | Concentration of KGDH          |
-| $K_{H1}$         | 4E-8  | M    | Ionization constant of KGDH    |
-| $K_{H2}$         | 7E-8  | M    | Ionization constant of KGDH    |
-| $K_{NAD}$        | 38700 | μM   | Michaelis constant for NAD     |
-| $K_{AKG}$        | 30000 | μM   | Michaelis constant for αKG     |
-| $n$              | 1.2   | -    | Hill coefficient for αKG       |
-| $K_{MG}$         | 30.8  | μM   | Activation constant for Mg     |
-| $K_{CA}$         | 0.15  | μM   | Activation constant for Ca     |
-| $k_{cat}$ (cell) | 17.9  | Hz   | Rate constant (cellular model) |
+| Parameter        | Value  | Unit | Description                    |
+| ---------------- | ------ | ---- | ------------------------------ |
+| $k_{cat}$        | 13.2   | Hz   | Rate constant of KGDH          |
+| $E_T$            | 0.5    | mM   | Concentration of KGDH          |
+| $K_{H1}$         | 4E-5   | mM   | Ionization constant of KGDH    |
+| $K_{H2}$         | 7E-5   | mM   | Ionization constant of KGDH    |
+| $K_{NAD}$        | 38.7   | mM   | Michaelis constant for NAD     |
+| $K_{AKG}$        | 30     | mM   | Michaelis constant for αKG     |
+| $n$              | 1.2    | -    | Hill coefficient for αKG       |
+| $K_{MG}$         | 0.0308 | mM   | Activation constant for Mg     |
+| $K_{CA}$         | 1.5E-4 | mM   | Activation constant for Ca     |
+| $k_{cat}$ (cell) | 17.9   | Hz   | Rate constant (cellular model) |
 
 ### Succinate-CoA ligase (SL)
 
@@ -97,12 +97,12 @@ K_{eq}^{app} &= K_{eq} \frac{P_{SUC}P_{ATP}}{P_{Pi}P_{ADP}}
 \end{align}
 $$
 
-| Parameter    | Value  | Unit    | Description                            |
-| ------------ | ------ | ------- | -------------------------------------- |
-| $k_f$        | 0.028  | μM * Hz | Forward rate constant of SL            |
-| $K_{eq}$     | 3.115  | -       | Equilibrium constant of SL             |
-| [CoA]        | 20     | μM      | Coenzyme A concentration               |
-| $k_f$ (cell) | 0.0284 | μM * Hz | Forward rate constant (cellular model) |
+| Parameter    | Value   | Unit    | Description                            |
+| ------------ | ------- | ------- | -------------------------------------- |
+| $k_f$        | 2.8E-5  | mM * Hz | Forward rate constant of SL            |
+| $K_{eq}$     | 3.115   | -       | Equilibrium constant of SL             |
+| [CoA]        | 0.020   | mM      | Coenzyme A concentration               |
+| $k_f$ (cell) | 2.84E-5 | mM * Hz | Forward rate constant (cellular model) |
 
 ### Succinate dehydrogenase (SDH)
 
@@ -135,15 +135,15 @@ $$
 | Parameter        | Value    | Units | Description                          |
 | ---------------- | -------- | ----- | ------------------------------------ |
 | $k_{cat}$        | 124.2    | Hz    | Rate constant                        |
-| $E_T$            | 154      | μM    |                                      |
-| $K_{H1}$         | 1.131E-8 | M     | Ionization constant                  |
-| $K_{H2}$         | 2.67E-2  | M     | Ionization constant                  |
-| $K_{H3}$         | 6.68E-12 | M     | Ionization constant                  |
-| $K_{H4}$         | 5.62E-9  | M     | Ionization constant                  |
+| $E_T$            | 0.154    | mM    |                                      |
+| $K_{H1}$         | 1.131E-5 | mM    | Ionization constant                  |
+| $K_{H2}$         | 26.7     | mM    | Ionization constant                  |
+| $K_{H3}$         | 6.68E-9  | mM    | Ionization constant                  |
+| $K_{H4}$         | 5.62E-6  | mM    | Ionization constant                  |
 | $k_{offset}$     | 0.0399   |       | Offset of MDH pH activation factor   |
-| $K_{NAD}$        | 224.4    | μM    | Michaelis constant for NAD           |
-| $K_{MAL}$        | 1493     | μM    | Michaelis constant for malate        |
-| $K_{OAA}$        | 31       | μM    | Inhibition constant for oxaloacetate |
+| $K_{NAD}$        | 0.2244   | mM    | Michaelis constant for NAD           |
+| $K_{MAL}$        | 1.493    | mM    | Michaelis constant for malate        |
+| $K_{OAA}$        | 0.031    | mM    | Inhibition constant for oxaloacetate |
 | $k_{cat}$ (cell) | 125.9    | Hz    | Rate constant for cellular model     |
 
 ### Aspartate aminotransferase (AAT)
@@ -157,7 +157,7 @@ $$
 | $k_f$        | 21.4   | Hz    | Forward rate constant                  |
 | $k_{ASP}$    | 0.0015 | Hz    | Rate constant of aspartate consumption |
 | $K_{eq}$     | 6.6    |       | Equilibrium constant                   |
-| [GLU]        | 30000  | μM    | Glutamate concentration                |
+| [GLU]        | 30.000 | mM    | Glutamate concentration                |
 | $k_f$ (cell) | 21.7   | Hz    | Forward rate constant (cellular model) |
 
 

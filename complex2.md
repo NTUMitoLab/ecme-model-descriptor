@@ -12,11 +12,11 @@ J_{c2} &= J_{SDH} \\
 \end{align}
 $$
 
-| Parameter | Value | Units | Desc.                                |
-| --------- | ----- | ----- | ------------------------------------ |
-| $V_{SDH}$ | 4.167 | mMHz  | Maximum rate of SDH                  |
-| $K_i$     | 0.150 | mM    | Inhibition constant for oxaloacetate |
-| $K_m$     | 0.6   | -     | Michaelis constant for CoQ           |
+| Parameter | Value | Units   | Desc.                                |
+| --------- | ----- | ------- | ------------------------------------ |
+| $V_{SDH}$ | 4.167 | mM * Hz | Maximum rate of SDH                  |
+| $K_i$     | 0.150 | mM      | Inhibition constant for oxaloacetate |
+| $K_m$     | 0.6   | -       | Michaelis constant for CoQ           |
 
 
 

@@ -4,13 +4,13 @@ Follows equilibrium random Bi:Bi reaction kinetics
 
 $$
 \begin{align}
-J_{PiC} &= c_{PiC}(V_fAB - V_bPQ) / \Delta  \\
+J_{PiC} &= c_{PiC}(k_f AB - k_b PQ) / \Delta  \\
 A &= \ce{[HPO_4^2-]}_i / K_{pi,i} \\
 P &= \ce{[HPO_4^2-]}_m / K_{pi,m} \\
 Q &= \ce{[OH^-]}_i / K_{OH,i} \\
 B &= \ce{[OH^-]}_m / K_{OH,m} \\
 \Delta &= 1 + A + B + P + Q + AB + PQ \\
-V_b &= \frac{V_fK_{pi,m}K_{OH,i}}{K_{eq}K_{pi,i}K_{OH,m}}
+k_b &= \frac{k_f K_{pi,m} K_{OH,i}}{K_{eq} K_{pi,i} K_{OH,m}}
 \end{align}
 $$
 
@@ -20,7 +20,7 @@ $$
 | $K_{pi,m}$ | 11.06   | mM   | Mitochondrial matrix Pi binding constant  |
 | $K_{OH,i}$ | 4.08E-5 | mM   | Extra-matrix OH- binding constant         |
 | $K_{OH,m}$ | 4.08E-5 | mM   | Mitochondrial matrix OH- binding constant |
-| $V_f$      | 1.5     | Hz   | Forward rate                              |
+| $k_f$      | 1.5     | Hz   | Forward rate                              |
 | $c_{PiC}$  | 4.9     | mM   | PiC activity                              |
 | $K_{eq}$   | 1       | -    | Equilibrium constant of PiC               |
 
@@ -46,17 +46,17 @@ k_4^- &= \frac{k_1^+ k_4^+}{K_{eq} k_1^-}
 \end{align}
 $$
 
-| Parameter   | Value   | Unit | Desc.                           |
-| ----------- | ------- | ---- | ------------------------------- |
-| $c_{NHE}$   | 0.00785 | mM   | NHE concentration               |
-| $K_{Na}$    | 24      | mM   | Na Dissociation constant        |
-| $K_H$       | 158.5   | nM   | H Dissociation constant         |
-| $K_i$       | 3.02    | nM   | Proton binding constant         |
-| $n$         | 3       | -    | Hill coefficient for H+ binding |
-| $k_{1}^{+}$ | 25.2    | Hz   | NHE forward rate constant       |
-| $k_{1}^{-}$ | 42.9    | Hz   | NHE backward rate constant      |
-| $k_{4}^{+}$ | 160     | Hz   | NHE forward rate constant       |
-| $K_{eq}$    | 1       | -    | Equilibrium constant of NHE     |
+| Parameter   | Value    | Unit | Desc.                           |
+| ----------- | -------- | ---- | ------------------------------- |
+| $c_{NHE}$   | 0.00785  | mM   | NHE concentration               |
+| $K_{Na}$    | 24       | mM   | Na Dissociation constant        |
+| $K_H$       | 158.5E-6 | mM   | H Dissociation constant         |
+| $K_i$       | 3.02E-6  | mM   | Proton binding constant         |
+| $n$         | 3        | -    | Hill coefficient for H+ binding |
+| $k_{1}^{+}$ | 25.2     | Hz   | NHE forward rate constant       |
+| $k_{1}^{-}$ | 42.9     | Hz   | NHE backward rate constant      |
+| $k_{4}^{+}$ | 160      | Hz   | NHE forward rate constant       |
+| $K_{eq}$    | 1        | -    | Equilibrium constant of NHE     |
 
 ## Adenine Nucleotide translocator (ANT) [^Wei2011]
 
@@ -67,16 +67,16 @@ A &= \ce{[ATP^4-]}_m  \\
 B &= \ce{[ADP^3-]}_i  \\
 P &= \ce{[ATP^4-]}_i  \\
 Q &= \ce{[ADP^3-]}_m  \\
-\delta &= \text{exp}(-F\Delta\Psi_m / V_T)
+\delta &= \text{exp}(-\Delta\Psi_m / V_T)
 \end{align}
 $$
 
 
 
-| Parameter | Value | Unit     | Desc.            |
-| --------- | ----- | -------- | ---------------- |
-| $V_{max}$ | 3.15  | mM * kHz | Maximal rate     |
-| $h$       | 0.5   | -        | Fraction of dpsi |
+| Parameter | Value | Unit    | Desc.            |
+| --------- | ----- | ------- | ---------------- |
+| $V_{max}$ | 3150  | mM * Hz | Maximal rate     |
+| $h$       | 0.5   | -       | Fraction of dpsi |
 
 ## Mitochondrial calcium uniporter (MCU)[^Wei2011]
 
@@ -89,14 +89,14 @@ A &= \ce{[Ca^2+]}_i / K_{act}    \\
 \end{align}
 $$
 
-| Parameter      | Value | Unit  | Desc.                              |
-| -------------- | ----- | ----- | ---------------------------------- |
-| $V_{max}$      | 4.46  | mM*Hz | Maximal rate                       |
-| $\Delta\Psi_0$ | 91    | mV    | Offset potential                   |
-| $K_{act}$      | 0.38  | μM    | Activation constant for calcium    |
-| $K_{trans}$    | 19    | μM    | Dissociation constant for calcium  |
-| n              | -2.8  | -     | Activation cooperativity           |
-| L              | 110   | -     | Keq for conformational transitions |
+| Parameter      | Value  | Unit    | Desc.                              |
+| -------------- | ------ | ------- | ---------------------------------- |
+| $V_{max}$      | 4.46   | mM * Hz | Maximal rate                       |
+| $\Delta\Psi_0$ | 91     | mV      | Offset potential                   |
+| $K_{act}$      | 3.8E-4 | mM      | Activation constant for calcium    |
+| $K_{trans}$    | 0.019  | mM      | Dissociation constant for calcium  |
+| n              | -2.8   | -       | Activation cooperativity           |
+| L              | 110    | -       | Keq for conformational transitions |
 
 ## Mitochondrial sodium-calcium exchanger (NCLX)[^Wei2011]
 
@@ -108,23 +108,22 @@ B &= \ce{[Ca^2+]}_m / K_{Ca}  \\
 \end{align}
 $$
 
-| Parameter | Value | Unit  | Desc. |
-| --------- | ----- | ----- | ----- |
-| $V_{max}$ | 0.183 | mM*Hz |       |
-| b         | 0.5   | -     |       |
-| $K_{Na}$  | 9.4   | mM    |       |
-| $K_{Ca}$  | 0.375 | μM    |       |
-| $n$       | 3     |       |       |
+| Parameter | Value   | Unit    | Desc.                             |
+| --------- | ------- | ------- | --------------------------------- |
+| $V_{max}$ | 0.183   | mM * Hz | Maximal rate                      |
+| b         | 0.5     | -       | Ffraction of $\Delta\Psi_m$       |
+| $K_{Na}$  | 9.4     | mM      | Dissociation constant for sodium  |
+| $K_{Ca}$  | 3.75E-4 | mM      | Dissociation constant for calcium |
+| $n$       | 3       |         |                                   |
 
-## Mitochondrial proton leak
-
+Mitochondrial proton leak
 $$
 J_{hleak} = g_H\Delta\Psi_m
 $$
 
-| Parameter | Value | Unit    | Desc.                                   |
-| --------- | ----- | ------- | --------------------------------------- |
-| $g_{H}$   | 2     | mM*Hz/V | Ionic conductance of the inner membrane |
+| Parameter | Value | Unit         | Desc.                                   |
+| --------- | ----- | ------------ | --------------------------------------- |
+| $g_{H}$   | 2     | mM / (V * s) | Ionic conductance of the inner membrane |
 
 
 
@@ -135,8 +134,8 @@ $J_{Hn}$: Proton flux due to enzyme stoichiometry
 $J_{HL}$: Proton flux due to ligand binding / unbinding
 $$
 \begin{aligned}
-J_H &= -J_{He} - J_{HSDH} + J_{hu} + J_{NHE} + J_{PiC} + J_{Hleak}   \\
-J_{Hn} &= -(J_{IDH} + J_{KGDH} + J_{MDH} - J_{F1Fo})   \\
+J_H &= -J_{h, Res}+ J_{hu} + J_{NHE} + J_{PiC} + J_{Hleak}   \\
+J_{Hn} &= -(J_{IDH3} + J_{KGDH} + J_{MDH} - J_{F1Fo})   \\
 J_{HL} &= \frac{[H^+]_m}{K_{a, ATP}P_{ATP}}\frac{d[ATP]_m}{dt} + \frac{[H^+]_m}{K_{a, ADP}P_{ADP}}\frac{d[ADP]_m}{dt} + \frac{[H^+]_m}{K_{a, Pi}P_{Pi}}\frac{d[Pi]_m}{dt} + \frac{[H^+]_m}{K_{a, SUC}P_{SUC}}\frac{d[SUC]_m}{dt}   \\
 \frac{d[H^+]_m}{dt} &= δ_H(J_H - J_{Hn} - J_{HL})   \\
 \end{aligned}

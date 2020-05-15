@@ -21,7 +21,7 @@ a_{47} &= C1_{inhib}  \cdot K_{47} \sqrt{[Q_n][H^+]_m} \\
 a_{74} &= k_{74} \\
 a_{57} &=  C1_{inhib}  \cdot K_{57} \sqrt{[QH_2]} \\
 a_{75} &= k_{75} \\
-k_{42}^\prime &= k_{42} (1 + k_{RC}[DOX])  \\
+k_{42}^\prime &= k_{42} \\
 a_{42} &= k_{42}^\prime [O_2] \\
 K_{eq}^{ROS} &= \text{exp}((E_{FMN} - E_{sox}) / V_T) \\
 a_{24} &= a_{42} K_{eq}^{ROS} [O_2^{ \cdot  -}]_m  \\
@@ -176,7 +176,7 @@ $$
 
 | Parameter      | Value     | Units       | Desc.                                        |
 | -------------- | --------- | ----------- | -------------------------------------------- |
-| $\rho_{C1}$    | 8849      | μ           | Concentration of complex I<br />(Adjustable) |
+| $\rho_{C1}$    | 8.849     | mM          | Concentration of complex I<br />(Adjustable) |
 | $\Delta\Psi_B$ | 50        | mV          | Phase boundary potential                     |
 | $k_{12}$       | 6.3396E11 | Hz/mM^2     |                                              |
 | $k_{21}$       | 5         | Hz          |                                              |
@@ -193,7 +193,7 @@ $$
 | $k_{75}$       | 24615     | Hz          |                                              |
 | $k_{57}$       | 1166.7    | Hz/mM^{1/2} |                                              |
 | $k_{42}$       | 6.0318    | Hz/mM       |                                              |
-| $E_{FMN}$      | -0.375    | V           | Midpoint potential of flavin mononucleotide  |
-| $E_{sox}$      | -0.15     | V           | Midpoint potential of superoxide             |
+| $E_{FMN}$      | -375      | mV          | Midpoint potential of flavin mononucleotide  |
+| $E_{sox}$      | -150      | mV          | Midpoint potential of superoxide             |
 
 [^Gauthier2013A]: Gauthier LD, Greenstein JL, O’Rourke B, Winslow RL. An Integrated Mitochondrial ROS Production and Scavenging Model: Implications for Heart Failure. Biophysical Journal. 2013;105(12):2832-2842. doi:10.1016/j.bpj.2013.11.007. [PMC3882515](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3882515)
