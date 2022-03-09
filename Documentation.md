@@ -16,149 +16,36 @@
 
 The model is constructed by integrating two computational models: van Beek 2007 creatine kinase model[^van Beek 2007] and Gauthier 2013 cardiac bioenergetic model[^Gauthier2013A]. The model parameters were directly taken from these two model unless stated otherwise. The metabolite steady state levels in the control group were matched to the original model as a model validation.
 
-
-
-## Ordinary Differential Equations[^van Beek 2007]
+## Ordinary Differential Equations[^vanBeek2007]
 
 
 $$
 \begin{aligned}
-\frac{d\left[ Ca^{2+}\right]_{mito}}{dt} =\delta _{Ca}( V_{uni} -V_{NaCa})
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[ADP]_{mito}}{dt} =V_{ANT} -V_{ATPase} -V_{SL}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d\Delta \Psi _{m}}{dt} =\frac{V_{He} +V_{He(SDH)} -V_{Hu} -V_{ANT} -V_{Hleak} -V_{NaCa} -V_{uni} -V_{IMAC}}{C_{mito}}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[NADH]_{mito}}{dt} =V_{O_{2}} +V_{IDH} +V_{KGDH} +V_{MDH} -V_{THD}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d\left[ H^{+}\right]_{mito}}{dt} =\delta _{M}( -V_{He} -V_{He(SDH)} +V_{Hu} +V_{NaH} +V_{PiC} +V_{Hleck})
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[Pi]_{mito}}{dt} =-V_{ATPase} +V_{PiC} -V_{SL}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[ISOC]}{dt} =V_{ACO} -V_{IDH} -V_{IDH_{-} NADP}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[\alpha KG]}{dt} =V_{IDH} +V_{IDH_{-} NADP} -V_{KGDH} +V_{ATT}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[SCoA]}{dt} =V_{KGDH} -V_{SL}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[Suc]}{dt} =V_{SL} -V_{O_{2} SDH}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[FUM]}{dt} =V_{o_{2} SHH} -V_{FH}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[MAL]}{dt} =V_{FH} -V_{MDH}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[OAA]}{dt} =V_{MDH} -V_{CS} -V_{AAT}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[NADPH]_{m}}{dt} =V_{IDH_{-} NADP} +V_{THD} -V_{GRm} -V_{TxRm}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d\left[ O_{2}^{\bullet -}\right]_{mito}}{dt} =\operatorname{shunt}( V_{O_{2}} +V_{O_{2} SDH}) -V_{MnSOD} -V^{Tr}_{ROS}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d\left[ O_{2}^{\bullet -}\right]_{cyto}}{dt} =\frac{v_{m}}{v_{i}} V^{Tr}_{ROS} -V_{CuZnSOD}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[ H_{2} O_{2}]_{mito}}{dt} =V_{MnSOD} -V_{difH_{2} O_{2}} -V_{GPXm} -V_{TxPXm}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\frac{d[ H_{2} O_{2}]_{cyto}}{dt} =V_{CuZnSOD} +\frac{v_{m}}{v_{i}} V_{difH_{2} O_{2}} -V_{GPXi} -V_{TxPXi} -V_{CAT}
-\end{aligned}
-$$
-
-$$
-\frac{d[GSH]_{mito}}{dt} =V_{GRm} -V_{GPXm} -V_{GRXm} +V_{GST} -V_{PSSGm}
-$$
-
-$$
-\frac{d[GSH]_{cyto}}{dt} =V_{GRi} -V_{GPXi} -V_{GRXi} +\frac{v_{m}}{v_{i}} V_{GST} -V_{PSSGi}
-$$
-
-$$
-\frac{d[GSSG]_{mito}}{dt} =0.5( V_{GPXm} -V_{GRm}) +V_{GRXm}
-$$
-
-$$
-\frac{d[ Trx( SH)_{2}] }{dt}\ =\ V_{TrxR} \ -\ V_{TxPx}   \\ 
-$$
-
-$$
-\frac{d[ Prx( SH)_{2}] }{dt}\ =\ V_{TxPx} \ -\ V_{Prx} \\
-$$
-
-$$
-\frac{d[PSSG]_{mito}}{dt} =V_{PSSGm} -V_{GRXm}
-$$
-
-$$
-\frac{d[PSSG]_{cyto}}{dt} =V_{PSSGi} -V_{GRXi}
-$$
-
-$$
-\begin{aligned}
+\frac{d\left[ Ca^{2+}\right]_{mito}}{dt} &=\delta _{Ca}( V_{uni} -V_{NaCa}) \\
+\frac{d[ADP]_{mito}}{dt} &=V_{ANT} -V_{ATPase} -V_{SL} \\
+\frac{d\Delta \Psi _{m}}{dt} &=\frac{V_{He} +V_{He(SDH)} -V_{Hu} -V_{ANT} -V_{Hleak} -V_{NaCa} -V_{uni} -V_{IMAC}}{C_{mito}} \\
+\frac{d[NADH]_{mito}}{dt} &= V_{O_{2}} +V_{IDH} +V_{KGDH} +V_{MDH} -V_{THD} \\
+\frac{d\left[ H^{+}\right]_{mito}}{dt} &= \delta _{M}( -V_{He} -V_{He(SDH)} +V_{Hu} +V_{NaH} +V_{PiC} +V_{Hleck}) \\
+\frac{d[Pi]_{mito}}{dt} &= -V_{ATPase} +V_{PiC} -V_{SL} \\
+\frac{d[ISOC]}{dt} &= V_{ACO} -V_{IDH} -V_{IDH_{-} NADP} \\
+\frac{d[\alpha KG]}{dt} &= V_{IDH} +V_{IDH_{-} NADP} -V_{KGDH} +V_{ATT} \\
+\frac{d[SCoA]}{dt} &= V_{KGDH} -V_{SL} \\
+\frac{d[Suc]}{dt} &= V_{SL} -V_{O_{2} SDH} \\
+\frac{d[FUM]}{dt} &= V_{o_{2} SHH} -V_{FH} \\
+\frac{d[MAL]}{dt} &= V_{FH} -V_{MDH} \\
+\frac{d[OAA]}{dt} &= V_{MDH} -V_{CS} -V_{AAT} \\
+\frac{d[NADPH]_{m}}{dt} &= V_{IDH_{-} NADP} +V_{THD} -V_{GRm} -V_{TxRm} \\
+\frac{d\left[ O_{2}^{\bullet -}\right]_{mito}}{dt} &=\operatorname{shunt}( V_{O_{2}} +V_{O_{2} SDH}) -V_{MnSOD} -V^{Tr}_{ROS} \\
+\frac{d\left[ O_{2}^{\bullet -}\right]_{cyto}}{dt} & =\frac{v_{m}}{v_{i}} V^{Tr}_{ROS} -V_{CuZnSOD} \\
+\frac{d[ H_{2} O_{2}]_{mito}}{dt} &= V_{MnSOD} -V_{difH_{2} O_{2}} -V_{GPXm} -V_{TxPXm} \\
+\frac{d[ H_{2} O_{2}]_{cyto}}{dt} &= V_{CuZnSOD} +\frac{v_{m}}{v_{i}} V_{difH_{2} O_{2}} -V_{GPXi} -V_{TxPXi} -V_{CAT} \\
+\frac{d[GSH]_{mito}}{dt} &= V_{GRm} -V_{GPXm} -V_{GRXm} +V_{GST} -V_{PSSGm} \\
+\frac{d[GSH]_{cyto}}{dt} &= V_{GRi} -V_{GPXi} -V_{GRXi} +\frac{v_{m}}{v_{i}} V_{GST} -V_{PSSGi} \\
+\frac{d[GSSG]_{mito}}{dt} &= 0.5( V_{GPXm} -V_{GRm}) +V_{GRXm} \\
+\frac{d[ Trx( SH)_{2}] }{dt}\ &=\ V_{TrxR} \ -\ V_{TxPx}   \\ 
+\frac{d[ Prx( SH)_{2}] }{dt}\ &=\ V_{TxPx} \ -\ V_{Prx} \\
+\frac{d[PSSG]_{mito}}{dt} &= V_{PSSGm} -V_{GRXm} \\
+\frac{d[PSSG]_{cyto}}{dt} &= V_{PSSGi} -V_{GRXi} \\
 \frac{d[Q]_n}{dt} &= v_5 - v_{7,ox}- v_{7,rd} - v_1  \\
 \frac{d[Q^{ \cdot -}]_n}{dt} &= v_{7,ox} + v_{7,rd} - v_{8,ox}- v_{8,rd}  \\
 \frac{d[QH_2]_n}{dt} &= v_{8,ox} + v_{8,rd} + v_1 - v_2   \\
@@ -168,70 +55,26 @@ $$
 \frac{d[b1]}{dt} &= v_{7,ox} + v_{8,ox} - v_{4,ox}    \\
 \frac{d[b2]}{dt} &= v_{4,ox} + v_{7,rd} - v_{8,rd} - v_6   \\
 \frac{d[b3]}{dt} &= v_6 - v_{4,rd} + v_{7,ox} - v_{8,ox}    \\
-
 \frac{d[FeS]_{ox}}{dt} &= v_9 - v_3      \\
 \frac{d[cytc1]_{ox}}{dt} &= v_{33} - v_9   \\
-\frac{d[cytc]_{ox}}{dt} &= V_e - v_{33}   \\\end{aligned}
+\frac{d[cytc]_{ox}}{dt} &= V_e - v_{33}   \\
+\frac{d[ADP]_{ims}}{dt} &= (-J_{syn} -J_{CK,Mi} -j_{diff,ATP} )/V_{ims} \\
+\frac{d[ATP]_{ims}}{dt} &= (J_{syn} -J_{CK,Mi} -j_{diff,ATP} )/V_{ims} \\
+\frac{d[Cr]_{ims}}{dt}  &= (-J_{CK,Mi} -j_{diff,Cr} )/V_{ims} \\
+\frac{d[PCr]_{ims}}{dt} &= (J_{CK,Mi} -j_{diff,PCr} )/V_{ims} \\
+\frac{d[PCr]_{cyt}}{dt} &= (J_{CK,MM} +J_{diff,PCr} )/V_{cyt} \\
+\frac{d[ADP]_{cyt}}{dt} &= (J_{hyd} +J_{CK,MM} +J_{diff,ADP} )/V_{cyt}    \\
+\frac{d[ATP]_{cyt}}{dt} &= (-J_{hyd} -J_{CK,MM} +J_{diff,ATP} )/V_{cyt}   \\
+\frac{d[Cr]_{cyt}}{dt} &= (-J_{CK,MM} +J_{diff,Cr} )/V_{cyt} \\
+\frac{d[Pi]_{ims}}{dt} &= (-J_{syn} -j_{diff,Pi} )/V_{ims} \\
+\frac{d[Pi]_{cyt}}{dt} &= (J_{hyd} +J_{diff,Pi} )/V_{cyt} \\
+\frac{d[ATP]_{mito}}{dt} &= -V_{ANT}+V_{ATPase} +V_{SL}
+\end{aligned}
 $$
-
-$$
-\frac{d[ADP]_{ims}}{dt}=(-J_{syn} -J_{CK,Mi} -j_{diff,ATP} )/V_{ims}
-$$
-
-$$
-\frac{d[ATP]_{ims}}{dt} =(J_{syn} -J_{CK,Mi} -j_{diff,ATP} )/V_{ims}
-$$
-
-$$
-\frac{d[Cr]_{ims}}{dt}=(-J_{CK,Mi} -j_{diff,Cr} )/V_{ims}
-        \\
-$$
-
-$$
-\frac{d[PCr]_{ims}}{dt}=(J_{CK,Mi} -j_{diff,PCr} )/V_{ims}
-$$
-
-$$
-\frac{d[PCr]_{cyt}}{dt}
-=(J_{CK,MM} +J_{diff,PCr} )/V_{cyt}
-$$
-
-$$
-\frac{d[ADP]_{cyt}}{dt}
-=(J_{hyd} +J_{CK,MM} +J_{diff,ADP} )/V_{cyt}    \\
-$$
-
-$$
-\frac{d[ATP]_{cyt}}{dt}
-=(-J_{hyd} -J_{CK,MM} +J_{diff,ATP} )/V_{cyt}    \\
-$$
-
-$$
-\frac{d[Cr]_{cyt}}{dt}
-=(-J_{CK,MM} +J_{diff,Cr} )/V_{cyt} \\
-$$
-
-$$
-\frac{d[Pi]_{ims}}{dt}=(-J_{syn} -j_{diff,Pi} )/V_{ims}
-$$
-
-$$
-\frac{d[Pi]_{cyt}}{dt}=(J_{hyd} +J_{diff,Pi} )/V_{cyt}
-$$
-
-$$
-\frac{d[ATP]_{mito}}{dt} =-V_{ANT}+V_{ATPase} +V_{SL}
-$$
-
-
-
-
-
-
 
 ## Simulation protocol 
 
-#### The ATP hydrolysis pulse[^van Beek2007]
+### The ATP hydrolysis pulse[^vanBeek2007]
 
 $$
 \begin{aligned}
@@ -249,9 +92,7 @@ $H_{ATP,max}=0.003mM/sec$
 
 $t_{cycle} =120ms$
 
-
-
-#### Cytosolic calcium pulse
+### Cytosolic calcium pulse
 
 $$
 \begin{aligned}
@@ -261,37 +102,22 @@ Ca_{i}=Ca_{i,Amp}- (Ca_{i,Amp}-Ca_{i,rest})(t/t_{cycle}-t_{Ca,peak})/(t_{cycle}-
 \end{aligned}
 $$
 
-
-
 Cytosolic calcium is set around 1E-4 to 3E-4mM, and the heart rate is set at 120ms/beat ($t_{cycle}=120ms$).
 
 $t_{Ca,peak}=0.3t_{cycle}$
-
-
 
 ## Creatine kinase system[^van Beek 2007]
 
 $$
 \begin{aligned}
-V_{CK} =C_{CK}*(V_{f}\frac{ATP\cdotp Cr}{K_{ia} K_{B}} -V_{b}\frac{ADP\cdotp PCr}{K_{ic} K_{d}} )/DEN_{CK}  \\
-
-DEN_{CK} =1+\frac{Cr}{K_{ib}} +\frac{PCr}{K_{id}} +ATP(\frac{1}{K_{ia}} +\frac{Cr}{K_{ia} K_{b}} )+ADP(\frac{1}{K_{ic}} +\frac{PCr}{K_{id} K_{c}} +\frac{Cr}{K_{ic} K_{Ib}} )\\
-
-J_{syn} =V_{ATPase}   \\
-
-
-
-J_{diff,ATP} =R_{ATP}( \frac{ATP_{ims}}{V_{ims}}\ -ATP{cyt})\\
-
-J_{diff,ADP} =R_{ADP}( ADP_{ims} -ADP)\\
-
-J_{diff,PCr} =R_{PCr}( PCr_{ims} -PCr) \\
-
-J_{diff,Cr} =R_{Cr}( Cr_{ims} -Cr)  \\
-
-J_{diff,Pi} =R_{Pi}( Pi_{ims} -Pi)  \\
-
-
+V_{CK} &=C_{CK}*(V_{f}\frac{ATP\cdotp Cr}{K_{ia} K_{B}} -V_{b}\frac{ADP\cdotp PCr}{K_{ic} K_{d}} )/DEN_{CK}  \\
+DEN_{CK} &=1+\frac{Cr}{K_{ib}} +\frac{PCr}{K_{id}} +ATP(\frac{1}{K_{ia}} +\frac{Cr}{K_{ia} K_{b}} )+ADP(\frac{1}{K_{ic}} +\frac{PCr}{K_{id} K_{c}} +\frac{Cr}{K_{ic} K_{Ib}} )\\
+J_{syn} &=V_{ATPase}   \\
+J_{diff,ATP} &=R_{ATP}( \frac{ATP_{ims}}{V_{ims}}\ -ATP{cyt})\\
+J_{diff,ADP} &=R_{ADP}( ADP_{ims} -ADP)\\
+J_{diff,PCr} &=R_{PCr}( PCr_{ims} -PCr) \\
+J_{diff,Cr} &=R_{Cr}( Cr_{ims} -Cr)  \\
+J_{diff,Pi} &=R_{Pi}( Pi_{ims} -Pi)  \\
 \end{aligned}
 $$
 
@@ -300,11 +126,8 @@ $$
 $$
 \begin{aligned}
 
-
 J_{hyd} =H_{ATP(max)} \  6t/t_{cycle} \ \ \ \ \ for\ \ \ \ \ 0< t< 1/6 t_{cycle} \\
-
 J_{hyd} =H_{ATP(max)} \  [1-6(t/t_{cycle} -1/6)]\ \ \ \ \ for\ \ \ \ \ 1/6\ t_{cycle} < t< 1/3 t_{cycle} \\
-
 J_{hyd} =0\ \ \ \ \ for\ \ \ \ \ 1/3 t_{cycle} < t< t_{cycle} \\
 \end{aligned}
 $$
@@ -347,8 +170,7 @@ $$
 | $V_{cyto}$     | 3                                    |       | Fractional volume of cytosol. Total volume 1 corresponds to $V_{mito}$=0.153mL/gww.            |
 | $V_{ims}$      | 1/4                                  |       | Fractional volume of intermembrane space.                                                      |
 
-[^van Beek 2007]: Kongas O, van Beek JHGM Creatine kinase in energy metabolic signaling in muscle Nature Precedings (2007)DOI: https://doi.org/10.1038/npre.2007.1317.1
-
+[^vanBeek2007]: Kongas O, van Beek JHGM Creatine kinase in energy metabolic signaling in muscle Nature Precedings (2007)DOI: https://doi.org/10.1038/npre.2007.1317.1
 
 
 ## Common parameters
@@ -373,11 +195,9 @@ $$
 | $\Sigma{[NADP]_m}$ | 0.1     | mM      | Sum of mitochondrial NADPH plus NADP (VNADPHm) |
 
 
-
 ## TCA cycle rates[^Wei2011]
 
 ### Citrate synthase (CS)
-
 
 $$
 \begin{aligned}
@@ -701,8 +521,6 @@ $$
 | --------- | ----- | ------- | --------------------------------------- |
 | $g_{H}$   | 2     | mM*Hz/V | Ionic conductance of the inner membrane |
 
-
-
 ## Mitochondrial hydrogen flux balance[^Wei2011]
 
 $J_H$: Proton influx to mitochondrial matrix by pumps / transporters
@@ -715,13 +533,7 @@ J_{Hn} &= -(J_{IDH} + J_{KGDH} + J_{MDH} - J_{F1Fo})   \\
 J_{HL} &= \frac{[H^+]_m}{K_{a, ATP}P_{ATP}}\frac{d[ATP]_m}{dt} + \frac{[H^+]_m}{K_{a, ADP}P_{ADP}}\frac{d[ADP]_m}{dt} + \frac{[H^+]_m}{K_{a, Pi}P_{Pi}}\frac{d[Pi]_m}{dt} + \frac{[H^+]_m}{K_{a, SUC}P_{SUC}}\frac{d[SUC]_m}{dt}   \\
 \frac{d[H^+]_m}{dt} &= δ_H(J_H - J_{Hn} - J_{HL})   \\
 \end{aligned}
-
-
-
 $$
-
-
-
 
 
 ## Complex I model[^Gauthier2013A]
@@ -1286,7 +1098,6 @@ $$
 | $[GSH]_m$ |       | mM   | Mitochondrial GSH pool |
 
 
-
 ## Thioredoxin system[^Kembro2013]
 
 ### Peroxiredoxin (TPX)
@@ -1342,7 +1153,6 @@ $$
 | $[TrxSS]_m$ | 50    | μM   | Sum of mitochondrial thioreoxin |
 
 
-
 ## Inner mitochondrial anion channel[^Cortassa2004]
 
 $$
@@ -1365,7 +1175,6 @@ $$
 | j                | 0.1    | -            | Fraction of IMAC conductance       |
 
 
-
 ## Hydrogen peroxide transfer[^Kembro2013]
 
 Simple diffusion.
@@ -1383,7 +1192,6 @@ $$
 $$
 \Sigma{[NADP]_m} = [NADP^+]_m + [NADPH]_m
 $$
-
 
 
 ## NADPH-producing isocitrate dehydrogenase (IDH2)[^Kembro2013]
@@ -1409,7 +1217,6 @@ $$
 | $K_{m,\alpha KG}$ | 510   | μM    | Michaelis constant for αKG        |
 | $V_f$             | 87    | μM*Hz | Maximal forward rate of IDH2      |
 | $V_b$             | 5.45  | μM*Hz | Maximal backward rate of IDH2     |
-
 
 
 ## Transhydrogenase (THD)[^Kembro2013]
@@ -1440,22 +1247,13 @@ $$
 | $K_{eq}^{App}$ | 1       | -    | Apparent equilibrium constant |
 
 
-
-
-
 [^Cortassa2004]: Cortassa S, Aon MA, Winslow RL, O'Rourke B. A mitochondrial oscillator dependent on reactive oxygen species. Biophys J. 2004;87(3):2060-73. [PMC1304608](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1304608/)
 
 [^Kembro2013]: Kembro JM, Aon MA, Winslow RL, O'Rourke B, Cortassa S. Integrating mitochondrial energetics, redox and ROS metabolic networks: a two-compartment model. Biophys J. 2013;104(2):332-43. [PMC3552263](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3552263/)
 
-
-
 [^Wei2011]: Wei AC, Aon MA, O'Rourke B, Winslow RL, Cortassa S. Mitochondrial energetics, pH regulation, and ion dynamics: a computational-experimental approach. Biophys J. 2011;100(12):2894-903. [PMC3123977](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3123977/)
-
-
 
 [^Gauthier2013A]: Gauthier LD, Greenstein JL, O’Rourke B, Winslow RL. An Integrated Mitochondrial ROS Production and Scavenging Model: Implications for Heart Failure. Biophysical Journal. 2013;105(12):2832-2842. doi:10.1016/j.bpj.2013.11.007. [PMC3882515]
 
-
-
-[^van Beek 2007]: Kongas O, van Beek JHGM Creatine kinase in energy metabolic signaling in muscle Nature Precedings (2007)DOI: https://doi.org/10.1038/npre.2007.1317.1
+[^vanBeek2007]: Kongas O, van Beek JHGM Creatine kinase in energy metabolic signaling in muscle Nature Precedings (2007)DOI: https://doi.org/10.1038/npre.2007.1317.1
 
