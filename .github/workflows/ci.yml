@@ -7,7 +7,7 @@ env:
 
 jobs:
   build:
-    runs-on: [self-hosted, ubuntu]
+    runs-on: ubuntu-latest
     steps:
       # - uses: actions/checkout@v3
       # - name: Setup pandoc
@@ -16,7 +16,7 @@ jobs:
       #     wget -qO- https://github.com/jgm/pandoc/releases/download/${PDC_VER}/pandoc-${PDC_VER}-linux-amd64.tar.gz | sudo tar xvzf - --strip-components 1 -C /usr/local/
       - name: Build docx files
         run: |
-          find docs -type f -name "*.md" -print0 | parallel -0 -j4 pandoc -s {} -o {}.docx
+          find docs -type f -name "*.md" -print0 | parallel -0 -j2 pandoc -s {} -o {}.docx
       - name: Deploy to GitHub pages
         uses: peaceiris/actions-gh-pages@v3.8.0
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
