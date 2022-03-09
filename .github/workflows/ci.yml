@@ -14,29 +14,9 @@ jobs:
         run: |
           echo "Installing pandoc version ${PDC_VER}"
           wget -qO- https://github.com/jgm/pandoc/releases/download/${PDC_VER}/pandoc-${PDC_VER}-linux-amd64.tar.gz | sudo tar xvzf - --strip-components 1 -C /usr/local/
-      - name: Copy files
-        run: |
-          mkdir -p docs
-          cp -r reference/ ./docs/
-          cp -r george/ ./docs/
       - name: Build docx files
         run: |
-          pandoc -s acid-base.md -o ./docs/acid-base.docx
-          pandoc -s cac-wei.md -o ./docs/cac-wei.docx
-          pandoc -s ck-van-beek.md -o ./docs/ck-van-beek.docx
-          pandoc -s common.md -o ./docs/common.docx
-          pandoc -s complex1.md -o ./docs/complex1.docx
-          pandoc -s complex2.md -o ./docs/complex2.docx
-          pandoc -s complex3.md -o ./docs/complex3.docx
-          pandoc -s complex4.md -o ./docs/complex4.docx
-          pandoc -s complex5.md -o ./docs/complex5.docx
-          pandoc -s Concentrations051220.md -o ./docs/Concentrations051220.docx
-          pandoc -s Documentation.md -o ./docs/Documentation.docx
-          pandoc -s ics.md -o ./docs/ics.docx
-          pandoc -s mitotransport.md -o ./docs/mitotransport.docx
-          pandoc -s issues.md -o ./docs/issues.docx
-          pandoc -s odes.md -o ./docs/odes.docx
-          pandoc -s ros.md -o ./docs/ros.docx
+          find docs -type f -name "*.md" -print0 | parallel -0 -j2 pandoc -s {} -o {}.docx
       - name: Deploy to GitHub pages
         uses: peaceiris/actions-gh-pages@v3.8.0
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
