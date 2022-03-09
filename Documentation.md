@@ -22,111 +22,111 @@ The model is constructed by integrating two computational models: van Beek 2007 
 
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d\left[ Ca^{2+}\right]_{mito}}{dt} =\delta _{Ca}( V_{uni} -V_{NaCa})
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[ADP]_{mito}}{dt} =V_{ANT} -V_{ATPase} -V_{SL}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d\Delta \Psi _{m}}{dt} =\frac{V_{He} +V_{He(SDH)} -V_{Hu} -V_{ANT} -V_{Hleak} -V_{NaCa} -V_{uni} -V_{IMAC}}{C_{mito}}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[NADH]_{mito}}{dt} =V_{O_{2}} +V_{IDH} +V_{KGDH} +V_{MDH} -V_{THD}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d\left[ H^{+}\right]_{mito}}{dt} =\delta _{M}( -V_{He} -V_{He(SDH)} +V_{Hu} +V_{NaH} +V_{PiC} +V_{Hleck})
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[Pi]_{mito}}{dt} =-V_{ATPase} +V_{PiC} -V_{SL}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[ISOC]}{dt} =V_{ACO} -V_{IDH} -V_{IDH_{-} NADP}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[\alpha KG]}{dt} =V_{IDH} +V_{IDH_{-} NADP} -V_{KGDH} +V_{ATT}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[SCoA]}{dt} =V_{KGDH} -V_{SL}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[Suc]}{dt} =V_{SL} -V_{O_{2} SDH}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[FUM]}{dt} =V_{o_{2} SHH} -V_{FH}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[MAL]}{dt} =V_{FH} -V_{MDH}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[OAA]}{dt} =V_{MDH} -V_{CS} -V_{AAT}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[NADPH]_{m}}{dt} =V_{IDH_{-} NADP} +V_{THD} -V_{GRm} -V_{TxRm}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d\left[ O_{2}^{\bullet -}\right]_{mito}}{dt} =\operatorname{shunt}( V_{O_{2}} +V_{O_{2} SDH}) -V_{MnSOD} -V^{Tr}_{ROS}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d\left[ O_{2}^{\bullet -}\right]_{cyto}}{dt} =\frac{v_{m}}{v_{i}} V^{Tr}_{ROS} -V_{CuZnSOD}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[ H_{2} O_{2}]_{mito}}{dt} =V_{MnSOD} -V_{difH_{2} O_{2}} -V_{GPXm} -V_{TxPXm}
-\end{equation}
+\end{aligned}
 $$
 
 $$
-\begin{equation}
+\begin{aligned}
 \frac{d[ H_{2} O_{2}]_{cyto}}{dt} =V_{CuZnSOD} +\frac{v_{m}}{v_{i}} V_{difH_{2} O_{2}} -V_{GPXi} -V_{TxPXi} -V_{CAT}
-\end{equation}
+\end{aligned}
 $$
 
 $$
@@ -158,7 +158,7 @@ $$
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 \frac{d[Q]_n}{dt} &= v_5 - v_{7,ox}- v_{7,rd} - v_1  \\
 \frac{d[Q^{ \cdot -}]_n}{dt} &= v_{7,ox} + v_{7,rd} - v_{8,ox}- v_{8,rd}  \\
 \frac{d[QH_2]_n}{dt} &= v_{8,ox} + v_{8,rd} + v_1 - v_2   \\
@@ -171,7 +171,7 @@ $$
 
 \frac{d[FeS]_{ox}}{dt} &= v_9 - v_3      \\
 \frac{d[cytc1]_{ox}}{dt} &= v_{33} - v_9   \\
-\frac{d[cytc]_{ox}}{dt} &= V_e - v_{33}   \\\end{align}
+\frac{d[cytc]_{ox}}{dt} &= V_e - v_{33}   \\\end{aligned}
 $$
 
 $$
@@ -234,7 +234,7 @@ $$
 #### The ATP hydrolysis pulse[^van Beek2007]
 
 $$
-\begin{align}
+\begin{aligned}
 
 
 J_{hyd} =H_{ATP,max} \  6t/t_{cycle} \ \ \ \ \ for\ \ \ \ \ 0< t< \frac {t_{cycle}}{6} \\
@@ -242,7 +242,7 @@ J_{hyd} =H_{ATP,max} \  6t/t_{cycle} \ \ \ \ \ for\ \ \ \ \ 0< t< \frac {t_{cycl
 J_{hyd} =H_{ATP,max} \  [1-6(t/t_{cycle} -1/6)]\ \ \ \ \ for\ \ \ \ \ \frac {t_{cycle}}{6}< t< \frac {t_{cycle}}{3}  \\
 
 J_{hyd} =0\ \ \ \ \ for\ \ \ \ \ \frac {t_{cycle}}{3}  < t< t_{cycle} \\
-\end{align}
+\end{aligned}
 $$
 
 $H_{ATP,max}=0.003mM/sec$ 
@@ -254,11 +254,11 @@ $t_{cycle} =120ms$
 #### Cytosolic calcium pulse
 
 $$
-\begin{align}
+\begin{aligned}
 Ca_{i}=t/t_{cycle}(Ca_{i,Amp}-Ca_{i,rest})/t_{Ca,peak}+Ca_{i,rest} \ \ \ for\ \ \ 0< t<t_{Ca,peak} \\
 Ca_{i}=Ca_{i,Amp}- (Ca_{i,Amp}-Ca_{i,rest})(t/t_{cycle}-t_{Ca,peak})/(t_{cycle}-t_{Ca,peak})
 \ \ \ \ for \ \  t>t_{Ca,peak} \\
-\end{align}
+\end{aligned}
 $$
 
 
@@ -272,7 +272,7 @@ $t_{Ca,peak}=0.3t_{cycle}$
 ## Creatine kinase system[^van Beek 2007]
 
 $$
-\begin{align}
+\begin{aligned}
 V_{CK} =C_{CK}*(V_{f}\frac{ATP\cdotp Cr}{K_{ia} K_{B}} -V_{b}\frac{ADP\cdotp PCr}{K_{ic} K_{d}} )/DEN_{CK}  \\
 
 DEN_{CK} =1+\frac{Cr}{K_{ib}} +\frac{PCr}{K_{id}} +ATP(\frac{1}{K_{ia}} +\frac{Cr}{K_{ia} K_{b}} )+ADP(\frac{1}{K_{ic}} +\frac{PCr}{K_{id} K_{c}} +\frac{Cr}{K_{ic} K_{Ib}} )\\
@@ -292,13 +292,13 @@ J_{diff,Cr} =R_{Cr}( Cr_{ims} -Cr)  \\
 J_{diff,Pi} =R_{Pi}( Pi_{ims} -Pi)  \\
 
 
-\end{align}
+\end{aligned}
 $$
 
 
 
 $$
-\begin{align}
+\begin{aligned}
 
 
 J_{hyd} =H_{ATP(max)} \  6t/t_{cycle} \ \ \ \ \ for\ \ \ \ \ 0< t< 1/6 t_{cycle} \\
@@ -306,46 +306,46 @@ J_{hyd} =H_{ATP(max)} \  6t/t_{cycle} \ \ \ \ \ for\ \ \ \ \ 0< t< 1/6 t_{cycle}
 J_{hyd} =H_{ATP(max)} \  [1-6(t/t_{cycle} -1/6)]\ \ \ \ \ for\ \ \ \ \ 1/6\ t_{cycle} < t< 1/3 t_{cycle} \\
 
 J_{hyd} =0\ \ \ \ \ for\ \ \ \ \ 1/3 t_{cycle} < t< t_{cycle} \\
-\end{align}
+\end{aligned}
 $$
 
 
-| Parameter      | Value                                | Units | Desc.                                                        |
-| -------------- | ------------------------------------ | ----- | ------------------------------------------------------------ |
-| MiCK           |                                      |       | mitochondrial creatine kinase enzyme                         |
-| $V_{max,Mi,f}$ | 2.658E-3                             | mM/ms | maximum velocity in the forward direction (PCr production)   |
-| $V_{max,Mi,b}$ | calculated                           | mM/ms | maximum velocity in the backward direction (ATP production); Vb/Vf = 4.199 |
-| $K_{ia, Mi}$   | 7.1532E-1                            | mM    | binary dissociation constant ATP                             |
-| $K_{ib, Mi}$   | 2.8733E1                             | mM    | binary dissociation constant Cr                              |
-| $K_{ic, Mi}$   | 2.017E-1                             | mM    | binary dissociation constant ADP                             |
-| $K_{id, Mi}$   | 1.5977                               | mM    | binary dissociation constant PCr                             |
-| $K_{b, Mi}$    | 5.209                                | mM    | ternary dissociation constant Cr                             |
-| $K_{d, Mi}$    | 4.99E-1                              | mM    | ternary dissociation constant PCr                            |
-| $K_{c, Mi}$    | $K_{ic, Mi}$$K_{d, Mi}$/$K_{id, Mi}$ | mM    | ternary dissociation constant ADP                            |
-| $K_{Ib, Mi}$   | $K_{ib, Mi}$                         | mM    | ternary dissociation constant Cr from dead end complex       |
-| $C_{CK, Mi}$   | 1                                    |       | mitochondrial creatine kinase activity                       |
-|                |                                      |       |                                                              |
+| Parameter      | Value                                | Units | Desc.                                                                                          |
+| -------------- | ------------------------------------ | ----- | ---------------------------------------------------------------------------------------------- |
+| MiCK           |                                      |       | mitochondrial creatine kinase enzyme                                                           |
+| $V_{max,Mi,f}$ | 2.658E-3                             | mM/ms | maximum velocity in the forward direction (PCr production)                                     |
+| $V_{max,Mi,b}$ | calculated                           | mM/ms | maximum velocity in the backward direction (ATP production); Vb/Vf = 4.199                     |
+| $K_{ia, Mi}$   | 7.1532E-1                            | mM    | binary dissociation constant ATP                                                               |
+| $K_{ib, Mi}$   | 2.8733E1                             | mM    | binary dissociation constant Cr                                                                |
+| $K_{ic, Mi}$   | 2.017E-1                             | mM    | binary dissociation constant ADP                                                               |
+| $K_{id, Mi}$   | 1.5977                               | mM    | binary dissociation constant PCr                                                               |
+| $K_{b, Mi}$    | 5.209                                | mM    | ternary dissociation constant Cr                                                               |
+| $K_{d, Mi}$    | 4.99E-1                              | mM    | ternary dissociation constant PCr                                                              |
+| $K_{c, Mi}$    | $K_{ic, Mi}$$K_{d, Mi}$/$K_{id, Mi}$ | mM    | ternary dissociation constant ADP                                                              |
+| $K_{Ib, Mi}$   | $K_{ib, Mi}$                         | mM    | ternary dissociation constant Cr from dead end complex                                         |
+| $C_{CK, Mi}$   | 1                                    |       | mitochondrial creatine kinase activity                                                         |
+|                |                                      |       |                                                                                                |
 | MMCK           |                                      |       | cytosol creatine kinase enzyme  (MiCK activity is about 15% of the total CK activity in heart) |
-| $V_{max,MM,f}$ | 6.996E-3                             | mM/ms | maximum velocity in the forward direction (PCr production)   |
-| $V_{max,MM,b}$ | calculated                           | mM/ms | maximum velocity in the backward direction (ATP production)  |
-| $K_{ia, MM}$   | 9E-1                                 | mM    | binary dissociation constant ATP                             |
-| $K_{ib, MM}$   | 1.55E1                               | mM    | binary dissociation constant Cr                              |
-| $K_{ic, MM}$   | 2.224E-1                             | mM    | binary dissociation constant ADP                             |
-| $K_{id, MM}$   | 1.670                                | mM    | binary dissociation constant PCr                             |
-| $K_{b, MM}$    | 3.49E1                               | mM    | ternary dissociation constant Cr                             |
-| $K_{d, MM}$    | 4.73                                 | mM    | ternary dissociation constant PCr                            |
-| $K_{c, MM}$    | $K_{ic, Mi}$$K_{d, Mi}$/$K_{id, Mi}$ | mM    | ternary dissociation constant ADP                            |
-| $K_{Ib, MM}$   | $K_{ib, Mi}$                         | mM    | ternary dissociation constant Cr from dead end complex       |
-| $C_{CK, MM}$   | 1                                    |       | cytosol creatine kinase activity                             |
-|                |                                      |       |                                                              |
-| Permeability   |                                      |       |                                                              |
-| $R_{ATP}$      | 8.16                                 | Hz    | diffusional conductance ATP                                  |
-| $R_{ADP}$      | 65.2227                              | Hz    | diffusional conductance ADP                                  |
-| $R_{PCr}$      | 24615                                | Hz    | diffusional conductance PCr                                  |
-| $R_{Cr}$       | 1166.7                               | Hz    | diffusional conductance Cr                                   |
-| $R_{Pi}$       | 6.0318                               | Hz    | diffusional conductance Pi                                   |
-| $V_{cyto}$     | 3                                    |       | Fractional volume of cytosol. Total volume 1 corresponds to $V_{mito}$=0.153mL/gww. |
-| $V_{ims}$      | 1/4                                  |       | Fractional volume of intermembrane space.                    |
+| $V_{max,MM,f}$ | 6.996E-3                             | mM/ms | maximum velocity in the forward direction (PCr production)                                     |
+| $V_{max,MM,b}$ | calculated                           | mM/ms | maximum velocity in the backward direction (ATP production)                                    |
+| $K_{ia, MM}$   | 9E-1                                 | mM    | binary dissociation constant ATP                                                               |
+| $K_{ib, MM}$   | 1.55E1                               | mM    | binary dissociation constant Cr                                                                |
+| $K_{ic, MM}$   | 2.224E-1                             | mM    | binary dissociation constant ADP                                                               |
+| $K_{id, MM}$   | 1.670                                | mM    | binary dissociation constant PCr                                                               |
+| $K_{b, MM}$    | 3.49E1                               | mM    | ternary dissociation constant Cr                                                               |
+| $K_{d, MM}$    | 4.73                                 | mM    | ternary dissociation constant PCr                                                              |
+| $K_{c, MM}$    | $K_{ic, Mi}$$K_{d, Mi}$/$K_{id, Mi}$ | mM    | ternary dissociation constant ADP                                                              |
+| $K_{Ib, MM}$   | $K_{ib, Mi}$                         | mM    | ternary dissociation constant Cr from dead end complex                                         |
+| $C_{CK, MM}$   | 1                                    |       | cytosol creatine kinase activity                                                               |
+|                |                                      |       |                                                                                                |
+| Permeability   |                                      |       |                                                                                                |
+| $R_{ATP}$      | 8.16                                 | Hz    | diffusional conductance ATP                                                                    |
+| $R_{ADP}$      | 65.2227                              | Hz    | diffusional conductance ADP                                                                    |
+| $R_{PCr}$      | 24615                                | Hz    | diffusional conductance PCr                                                                    |
+| $R_{Cr}$       | 1166.7                               | Hz    | diffusional conductance Cr                                                                     |
+| $R_{Pi}$       | 6.0318                               | Hz    | diffusional conductance Pi                                                                     |
+| $V_{cyto}$     | 3                                    |       | Fractional volume of cytosol. Total volume 1 corresponds to $V_{mito}$=0.153mL/gww.            |
+| $V_{ims}$      | 1/4                                  |       | Fractional volume of intermembrane space.                                                      |
 
 [^van Beek 2007]: Kongas O, van Beek JHGM Creatine kinase in energy metabolic signaling in muscle Nature Precedings (2007)DOI: https://doi.org/10.1038/npre.2007.1317.1
 
@@ -353,24 +353,24 @@ $$
 
 ## Common parameters
 
-| Parameter               | Value   | Unit    | Desc.                                          |
-| ----------------------- | ------- | ------- | ---------------------------------------------- |
-| F                       | 96485   | C/mol   | Faraday constant                               |
-| T                       | 310     | K       | Absolute temperature                           |
-| R                       | 8.314   | J/molK  | Universal gas constant                         |
-| $V_T$                   | 26.71   | mV      | Thermal voltage (=${RT}/{F}$)                  |
-| $C_m$                   | 1.0     | μF/cm^2 | Plasma membrane capacitance                    |
-| $C_{mito}$              | 1.812   | mM/V    | Mitochondrial inner membrane capacitance       |
-| $pH_i$                  | 7       |         | Cytosolic pH                                   |
-| $pH_m$                  | 7.3-7.8 |         | Mitochondrial pH                               |
-| $\ce{[O2]}$             | 6       | μM      | Tissue oxygen concentration                    |
-| $\ce{[Mg^2+]}_i$        | 1.0     | mM      | Cytosolic magnesium concentration              |
-| $\ce{[Mg^2+]}_m$        | 0.4     | mM      | Mitochondrial magnesium concentration          |
-| $$\Sigma\ce{[Pi]}_m$$   |         | mM      | Sum of mitochondrial inorganic phosphate       |
-| $\Sigma{\ce{[N]}}$      | 1       | mM      | Sum of mitochondrial NAD and NADH              |
-| $\Sigma\ce{[A]}_m$      |         | mM      | Sum of mitochondrial ATP and ADP  (Cm)         |
-| $\Sigma\ce{[A]}_i$      |         | mM      | Sum of cytosolic ATP and ADP  (Catp)           |
-| $\Sigma{\ce{[NADP]_m}}$ | 0.1     | mM      | Sum of mitochondrial NADPH plus NADP (VNADPHm) |
+| Parameter          | Value   | Unit    | Desc.                                          |
+| ------------------ | ------- | ------- | ---------------------------------------------- |
+| F                  | 96485   | C/mol   | Faraday constant                               |
+| T                  | 310     | K       | Absolute temperature                           |
+| R                  | 8.314   | J/molK  | Universal gas constant                         |
+| $V_T$              | 26.71   | mV      | Thermal voltage (=${RT}/{F}$)                  |
+| $C_m$              | 1.0     | μF/cm^2 | Plasma membrane capacitance                    |
+| $C_{mito}$         | 1.812   | mM/V    | Mitochondrial inner membrane capacitance       |
+| $pH_i$             | 7       |         | Cytosolic pH                                   |
+| $pH_m$             | 7.3-7.8 |         | Mitochondrial pH                               |
+| $[O_2]$            | 6       | μM      | Tissue oxygen concentration                    |
+| $[Mg^{2+}]_i$      | 1.0     | mM      | Cytosolic magnesium concentration              |
+| $[Mg^{2+}]_m$      | 0.4     | mM      | Mitochondrial magnesium concentration          |
+| $$\Sigma[Pi]_m$$   |         | mM      | Sum of mitochondrial inorganic phosphate       |
+| $\Sigma{[N]}$      | 1       | mM      | Sum of mitochondrial NAD and NADH              |
+| $\Sigma[A]_m$      |         | mM      | Sum of mitochondrial ATP and ADP  (Cm)         |
+| $\Sigma[A]_i$      |         | mM      | Sum of cytosolic ATP and ADP  (Catp)           |
+| $\Sigma{[NADP]_m}$ | 0.1     | mM      | Sum of mitochondrial NADPH plus NADP (VNADPHm) |
 
 
 
@@ -380,11 +380,11 @@ $$
 
 
 $$
-\begin{align}
+\begin{aligned}
 J_{CS} &= \frac{k_{cat} E_T AB}{(1+A)(1+B)}  \\
-A &= \ce{[AcCoA]} / K_m^{AcCoA} \\
-B &= \ce{[OAA]} / K_m^{OAA}
-\end{align}
+A &= [AcCoA] / K_m^{AcCoA} \\
+B &= [OAA] / K_m^{OAA}
+\end{aligned}
 $$
 
 | Parameter        | Value   | Unit | Description                         |
@@ -393,16 +393,16 @@ $$
 | $E_T$            | 400     | μM   | Enzyme concentration of CS          |
 | $K_m^{AcCoA}$    | 12.6    | μM   | Michaelis constant for AcCoA        |
 | $K_m^{OAA}$      | 0.64    | μM   | Michaelis constant for OAA          |
-| $\ce{[AcCoA]}$   | 1000    | μM   | Acetyl CoA concentration            |
+| $[AcCoA]$        | 1000    | μM   | Acetyl CoA concentration            |
 | $k_{cat}$ (cell) | 0.15891 | Hz   | Catalytic constant (cellular model) |
 
 ### Aconitase (ACO)
 
 $$
-\begin{align}
+\begin{aligned}
 J_{ACO} &= k_f ([CIT] - [ISOC] / K_{eq})  \\
 \ [CIT] &= \Sigma_{CAC} - [ISOC] - [\alpha KG]-[SCoA] - [SUC] - [FUM] - [MAL] - [OAA]
-\end{align}
+\end{aligned}
 $$
 
 | Parameter      | Value    | Unit | Description                            |
@@ -415,14 +415,14 @@ $$
 ### Isocitrate dehydrogenase, NADH-producing (IDH3)
 
 $$
-\begin{align}
+\begin{aligned}
 J_{IDH3} &= \frac{k_{cat} E_T AB}{f_H AB + f_i B + f_a A + f_a f_i} \\
 f_H & = 1 + \frac{[H^+]_m}{K_{H1}} + \frac{K_{H2}}{[H^+]_m}  \\
 A &= [NAD] / K_{NAD} \\
 B &= ([ISOC] / K_{ISOC})^n  \\
 f_a &= \frac{K_A}{K_A + [ADP]_m} \frac{K_{CA}}{K_{CA} + [Ca^{2+}]_m}  \\
 f_i &= 1 + \frac{[NADH]}{K_{NADH}}  \\
-\end{align}
+\end{aligned}
 $$
 
 | Parameter        | Value | Unit | Description                       |
@@ -442,13 +442,13 @@ $$
 ### Alpha-ketoglutarate dehydrogenase (KGDH)
 
 $$
-\begin{align}
+\begin{aligned}
 J_{KGDH} &= \frac{k_{cat} E_T AB}{f_H AB + f_a (A + B)} \\
 f_H & = 1 + \frac{[H^+]_m}{K_{H1}} + \frac{K_{H2}}{[H^+]_m}  \\
 A &= [NAD] / K_{NAD} \\
 B &= ([\alpha KG] / K_{AKG})^n  \\
 f_a &= \frac{K_{MG}}{K_{MG} + [Mg^{2+}]_m} \frac{K_{CA}}{K_{CA} + [Ca^{2+}]_m}  \\
-\end{align}
+\end{aligned}
 $$
 
 | Parameter        | Value | Unit | Description                    |
@@ -467,10 +467,10 @@ $$
 ### Succinate-CoA ligase (SL)
 
 $$
-\begin{align}
+\begin{aligned}
 J_{SL} &= k_f ([SCoA][ADP]_m[Pi]_m - [SUC][ATP]_m[CoA]/K_{eq}^{app}) \\
 K_{eq}^{app} &= K_{eq} \frac{P_{SUC}P_{ATP}}{P_{Pi}P_{ADP}}
-\end{align}
+\end{aligned}
 $$
 
 | Parameter    | Value  | Unit    | Description                            |
@@ -499,13 +499,13 @@ $$
 ### Malate dehydrogenase (MDH)
 
 $$
-\begin{align}
+\begin{aligned}
 J_{MDH} &= \frac{k_{cat} E_T AB f_a f_i}{(1+A)(1+B)}  \\
 A &= \frac{[MAL]}{K_{MAL}}\frac{K_{OAA}}{K_{OAA} + [OAA]}  \\
 B &= [NAD] / K_{NAD}  \\
 f_a &= k_{offset} + \left( 1 + \frac{[H^+]_m}{K_{H1}} (1 + \frac{[H^+]_m}{K_{H2}})    \right)^{-1}  \\
 f_i &= \left( 1 + \frac{K_{H3}}{[H^+]_m} (1 + \frac{K_{H4}}{[H^+]_m})    \right)^{2}  \\
-\end{align}
+\end{aligned}
 $$
 
 | Parameter        | Value    | Units | Description                          |
@@ -542,19 +542,34 @@ $$
 
 For both cytoplasmic and mitochondrial compartments.
 $$
-\begin{align}P_{ATP} &= 1 + \frac{\ce{[H^+]}}{K_{a}^{ATP}} + \frac{\ce{[Mg^2+]}}{K_{Mg}^{ATP}}  \\P_{ADP} &= 1 + \frac{\ce{[H^+]}}{K_{a}^{ADP}} + \frac{\ce{[Mg^2+]}}{K_{Mg}^{ADP}}  \\P_{Pi} &= 1 + \frac{\ce{[H^+]}}{K_{a}^{Pi}}      \\P_{SUC} &= 1 + \frac{\ce{[H^+]}}{K_{a}^{SUC}}    \\P_{H_2O} &= 1 + \frac{\ce{[H^+]}}{K_w}     \\\ce{[OH^-]} &= K_{A}^{H_2O} / \ce{[H^+]}     \\\ce{[ATP^4-]} &= \Sigma ATP / P_{ATP}   \\\ce{[ADP^3-]} &= \Sigma ADP / P_{ADP}   \\\ce{[HPO4^2-]} &= \Sigma Pi / P_{Pi}   \\\ce{[HATP^3-]} &= \ce{[ATP^4-]} \frac{\ce{[H^+]}}{K_{a}^{ATP}}  \\\ce{[HADP^2-]} &= \ce{[ADP^3-]} \frac{\ce{[H^+]}}{K_{a}^{ADP}}  \\\ce{[H2PO4-]} &= \ce{[HPO4^2-]} \frac{\ce{[H^+]}}{K_{a}^{Pi}} \\\ce{[MgATP^2-]} &= \ce{[ATP^4-]} \frac{\ce{[Mg^2+]}}{K_{Mg}^{ATP}}  \\\ce{[MgADP^-]} &= \ce{[ADP^3-]} \frac{\ce{[Mg^2+]}}{K_{Mg}^{ADP}}  \\\end{align}
+\begin{aligned}
+P_{ATP} &= 1 + \frac{[H^+]}{K_{a}^{ATP}} + \frac{[Mg^{2+}]}{K_{Mg}^{ATP}}  \\
+P_{ADP} &= 1 + \frac{[H^+]}{K_{a}^{ADP}} + \frac{[Mg^{2+}]}{K_{Mg}^{ADP}}  \\
+P_{Pi} &= 1 + \frac{[H^+]}{K_{a}^{Pi}}      \\
+P_{SUC} &= 1 + \frac{[H^+]}{K_{a}^{SUC}}    \\
+P_{H_2O} &= 1 + \frac{[H^+]}{K_w}     \\
+{[OH^-]} &= K_{A}^{H_2O} / [H^+]     \\
+{[ATP^{4-}]} &= \Sigma ATP / P_{ATP}  \\
+{[ADP^{3-}]} &= \Sigma ADP / P_{ADP}   \\
+{[HPO_4^{2-}]} &= \Sigma Pi / P_{Pi}   \\
+{[HATP^{3-}]} &= [ATP^{4-}] \frac{[H^+]}{K_{a}^{ATP}}  \\
+{[HADP^{2-}]} &= [ADP^{3-}] \frac{[H^+]}{K_{a}^{ADP}}  \\
+{[H2PO_4^-]} &= [HPO_4^{2-}] \frac{[H^+]}{K_{a}^{Pi}} \\
+{[MgATP^{2-}]} &= [ATP^{4-}] \frac{[Mg^{2+}]}{K_{Mg}^{ATP}}  \\
+{[MgADP^-]} &= [ADP^{3-}] \frac{[Mg^{2+}]}{K_{Mg}^{ADP}}  \\
+\end{aligned}
 $$
 
-| Parameter       | Value | Unit | Description                                  |
-| --------------- | ----- | ---- | -------------------------------------------- |
-| $\delta_H$      | 1E-5  | -    | mitochondria $\ce{[H^+]}$ buffering capacity |
-| $pK_{a}^{ATP}$  | 6.48  | -    | pK of ATP acid dissociation constant         |
-| $pK_{a}^{ADP}$  | 6.38  | -    | pK of ADP acid dissociation constant         |
-| $pK_{a}^{Pi}$   | 6.75  | -    | pKa of phosphate acid dissociation constant  |
-| $pK_{Mg}^{ATP}$ | 4.19  | -    | pK of ATP magnesium dissociation constant    |
-| $pK_{Mg}^{ADP}$ | 3.25  | -    | pK of ADP magnesium dissociation constant    |
-| $pK_{a}^{SUC}$  | 5.2   | -    | pK of succinic acid dissociation constant    |
-| $pKw$           | 14    |      | pK of water acid dissociation constant       |
+| Parameter       | Value | Unit | Description                                 |
+| --------------- | ----- | ---- | ------------------------------------------- |
+| $\delta_H$      | 1E-5  | -    | mitochondria [H^+] buffering capacity       |
+| $pK_{a}^{ATP}$  | 6.48  | -    | pK of ATP acid dissociation constant        |
+| $pK_{a}^{ADP}$  | 6.38  | -    | pK of ADP acid dissociation constant        |
+| $pK_{a}^{Pi}$   | 6.75  | -    | pKa of phosphate acid dissociation constant |
+| $pK_{Mg}^{ATP}$ | 4.19  | -    | pK of ATP magnesium dissociation constant   |
+| $pK_{Mg}^{ADP}$ | 3.25  | -    | pK of ADP magnesium dissociation constant   |
+| $pK_{a}^{SUC}$  | 5.2   | -    | pK of succinic acid dissociation constant   |
+| $pKw$           | 14    |      | pK of water acid dissociation constant      |
 
 
 
@@ -563,15 +578,15 @@ $$
 Follows equilibrium random Bi:Bi reaction kinetics 
 
 $$
-\begin{align}
+\begin{aligned}
 J_{PiC} &= c_{PiC}(V_fAB - V_bPQ) / \Delta  \\
-A &= \ce{[HPO_4^2-]}_i / K_{pi,i} \\
-P &= \ce{[HPO_4^2-]}_m / K_{pi,m} \\
-Q &= \ce{[OH^-]}_i / K_{OH,i} \\
-B &= \ce{[OH^-]}_m / K_{OH,m} \\
+A &= [HPO_4^{2-}]_i / K_{pi,i} \\
+P &= [HPO_4^{2-}]_m / K_{pi,m} \\
+Q &= [OH^-]_i / K_{OH,i} \\
+B &= [OH^-]_m / K_{OH,m} \\
 \Delta &= 1 + A + B + P + Q + AB + PQ \\
 V_b &= \frac{V_fK_{pi,m}K_{OH,i}}{K_{eq}K_{pi,i}K_{OH,m}}
-\end{align}
+\end{aligned}
 $$
 
 | Parameter  | Value   | Unit | Desc.                                     |
@@ -591,19 +606,19 @@ $$
 Following Smith and Crampin's model of counterpart on the plasma membrane
 
 $$
-\begin{align}
+\begin{aligned}
 J_{NHE} &= c_{NHE} f_h \frac{β^+_1β^+_2-β^-_1β^-_2}{β^+_1 + β^+_2 + β^-_1 + β^-_2}\\
-f_h &= \frac{(\ce{[H^+]}_i)^n}{(\ce{[H^+]}_i)^n + K_i^n} \\
-A &= \ce{[Na^+]}_m / K_{Na}  \\
-B &= \ce{[H^+]}_i / K_{H}  \\
-P &= \ce{[Na^+]}_i / K_{Na}  \\
-Q &= \ce{[H^+]}_m / K_{H}  \\
+f_h &= \frac{([H^+]_i)^n}{([H^+]_i)^n + K_i^n} \\
+A &= [Na^+]_m / K_{Na}  \\
+B &= [H^+]_i / K_{H}  \\
+P &= [Na^+]_i / K_{Na}  \\
+Q &= [H^+]_m / K_{H}  \\
 β^+_1 &= \frac{k_1^+ A}{1 + A + Q}  \\
 β^-_1 &= \frac{k^-_1 P}{1 + P + B}   \\
 β^+_2 &= \frac{k_4^+ B}{1 + P + B}  \\
 β^-_2 &= \frac{k^-_4 Q}{1 + A + Q}   \\
 k_4^- &= \frac{k_1^+ k_4^+}{K_{eq} k_1^-}
-\end{align}
+\end{aligned}
 $$
 
 | Parameter   | Value   | Unit | Desc.                           |
@@ -621,14 +636,14 @@ $$
 ## Adenine Nucleotide translocator (ANT) [^Wei2011]
 
 $$
-\begin{align}
+\begin{aligned}
 J_{ANT} &= V_{max}\frac{AB - \delta PQ}{(B + \delta^h P)(A + Q)}  \\
-A &= \ce{[ATP^4-]}_m  \\
-B &= \ce{[ADP^3-]}_i  \\
-P &= \ce{[ATP^4-]}_i  \\
-Q &= \ce{[ADP^3-]}_m  \\
+A &= [ATP^{4-}]_m  \\
+B &= [ADP^{3-}]_i  \\
+P &= [ATP^{4-}]_i  \\
+Q &= [ADP^{3-}]_m  \\
 \delta &= \text{exp}(-F\Delta\Psi_m / V_T)
-\end{align}
+\end{aligned}
 $$
 
 
@@ -641,12 +656,12 @@ $$
 ## Mitochondrial calcium uniporter (MCU)[^Wei2011]
 
 $$
-\begin{align}
+\begin{aligned}
 J_{uni} &= V_{max} \frac{S (1+S)^3}{(1+S)^4 + L(1 + A)^n} \frac{\delta}{e^\delta-1}  \\
-S &= \ce{[Ca^2+]}_i / K_{trans}  \\
-A &= \ce{[Ca^2+]}_i / K_{act}    \\
+S &= [Ca^{2+}]_i / K_{trans}  \\
+A &= [Ca^{2+}]_i / K_{act}    \\
 \delta &= -Z_{Ca} (\Delta\Psi_m - \Delta\Psi_0) / V_T
-\end{align}
+\end{aligned}
 $$
 
 | Parameter      | Value | Unit  | Desc.                              |
@@ -661,11 +676,11 @@ $$
 ## Mitochondrial sodium-calcium exchanger (NCLX)[^Wei2011]
 
 $$
-\begin{align}
+\begin{aligned}
 J_{NCLX} &= V_{max}\text{exp}(b\Delta\Psi_m/V_T)\frac{[Ca^{2+}]_m}{[Ca^{2+}]_i} (\frac{A}{1+A})^n \frac{B}{1+B}  \\
-A &= \ce{[Na^+]}_i / K_{Na}  \\
-B &= \ce{[Ca^2+]}_m / K_{Ca}  \\
-\end{align}
+A &= [Na^+]_i / K_{Na}  \\
+B &= [Ca^{2+}]_m / K_{Ca}  \\
+\end{aligned}
 $$
 
 | Parameter | Value | Unit  | Desc. |
@@ -701,7 +716,8 @@ J_{HL} &= \frac{[H^+]_m}{K_{a, ATP}P_{ATP}}\frac{d[ATP]_m}{dt} + \frac{[H^+]_m}{
 \frac{d[H^+]_m}{dt} &= δ_H(J_H - J_{Hn} - J_{HL})   \\
 \end{aligned}
 
-
+
+
 $$
 
 
@@ -713,7 +729,7 @@ $$
 Assuming single electron transfer for each cycle.
 
 $$
-\begin{align}
+\begin{aligned}
 \nu &= \text{exp}((\Delta\Psi_m - \Delta\Psi_B) / V_T) \\
 a_{12} &= k_{12} ([H^+]_m)^2 \\
 a_{21} &= k_{21} \\
@@ -734,11 +750,11 @@ a_{42} &= k_{42}^\prime [O_2] \\
 K_{eq}^{ROS} &= \text{exp}((E_{FMN} - E_{sox}) / V_T) \\
 a_{24} &= a_{42} K_{eq}^{ROS} [O_2^{ \cdot  -}]_m  \\
 a_{25} &= a_{52} = 0  \\
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 e_{1} &=
 a_{21} \cdot a_{32} \cdot a_{42} \cdot a_{56} \cdot a_{61} \cdot a_{74} +
 a_{21} \cdot a_{32} \cdot a_{42} \cdot a_{56} \cdot a_{61} \cdot a_{75} +
@@ -865,18 +881,18 @@ a_{16} \cdot a_{21} \cdot a_{34} \cdot a_{47} \cdot a_{57} \cdot a_{65}   +
 a_{16} \cdot a_{23} \cdot a_{34} \cdot a_{47} \cdot a_{57} \cdot a_{65}   \\ &+
 a_{16} \cdot a_{24} \cdot a_{32} \cdot a_{47} \cdot a_{57} \cdot a_{65}   +
 a_{16} \cdot a_{24} \cdot a_{34} \cdot a_{47} \cdot a_{57} \cdot a_{65}   \\
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 Δ &= e_{1} + e_{2} + e_{3} + e_{4} + e_{5} + e_{6} + e_{7}  \\
 \rho_{C1}^\prime &= \rho_{C1}  \cdot mt_{prot} / \Delta  \\
 J_{Hres}^{C1} &= 2\rho_{C1}^\prime (e_{6}a_{61} - e_{1}a_{16}) \\
 J_{Q}^{C1} &= 0.5\rho_{C1}^\prime (e_{4}a_{47} - e_{7}a_{74}) \\
 J_{NADH}^{C1} &= 0.5\rho_{C1}^\prime (e_{3}a_{34} - e_{4}a_{43}) \\
 J_{ROS}^{C1} &= \rho_{C1}^\prime (e_{4}a_{42} - e_{2}a_{24})  \\
-\end{align}
+\end{aligned}
 $$
 
 
@@ -911,13 +927,13 @@ $$
 
 
 $$
-\begin{align}
+\begin{aligned}
 f_Q &= \frac{[Q]_n}{[Q]_n + [QH_2]_n}  \\
 f_{OAA} &= \frac{K_i}{[OAA] + K_i} \\
 f_{SUC} &= 0.085 \sqrt{[SUC] / [FUM]} \\
 J_{SDH} &= V_{SDH} C2_{inhib} f_{SUC} f_{OAA} \frac{f_Q}{f_Q + K_m}  \\
 J_{c2} &= J_{SDH} \\
-\end{align}
+\end{aligned}
 $$
 
 | Parameter | Value | Units | Desc.                                |
@@ -931,7 +947,7 @@ $$
 ## Complex III[^Gauthier2013A]
 
 $$
-\begin{align}
+\begin{aligned}
 f_{hi} & = [H^+]_{i}  / 10^{-7}M   \\
 v_{1} &= v_{Q}^{C1} + v_{Q}^{C2}   \\
 v_2 &= k_d([QH_2]_{n} - [QH_2]_{p})  \\
@@ -979,13 +995,13 @@ cytc_{rd} &= \rho_{C4}^\prime - cytc_{ox}  \\
 J_{hRes}^{C3} &= 2v_{3}     \\
 J_{ROS, m}^{C3} &= v_{10}   \\
 J_{ROS, i}^{C3} &= v_{10b}  \\
-\end{align}
+\end{aligned}
 $$
 
 ODE System in the Q cycle:
 
 $$
-\begin{align}
+\begin{aligned}
 \frac{d[Q]_n}{dt} &= v_5 - v_{7,ox}- v_{7,rd} - v_1  \\
 \frac{d[Q^{ \cdot -}]_n}{dt} &= v_{7,ox} + v_{7,rd} - v_{8,ox}- v_{8,rd}  \\
 \frac{d[QH_2]_n}{dt} &= v_{8,ox} + v_{8,rd} + v_1 - v_2   \\
@@ -999,7 +1015,7 @@ $$
 \frac{d[FeS]_{ox}}{dt} &= v_9 - v_3      \\
 \frac{d[cytc1]_{ox}}{dt} &= v_{33} - v_9   \\
 \frac{d[cytc]_{ox}}{dt} &= V_e - v_{33}   \\
-\end{align}
+\end{aligned}
 $$
 
 #### Parameters
@@ -1041,7 +1057,7 @@ $$
 ## Complex IV[^Gauthier2013A]
 
 $$
-\begin{align}
+\begin{aligned}
 f_{H_{m}} &= \text{exp}(-\delta_5\Delta\Psi_m / V_T) ([H^+]_m /10^{-7}M) \\
 f_{H_{i}} &= \text{exp}((1-\delta_5)\Delta\Psi_m / V_T) ([H^+]_i /10^{-7}M)  \\
 f_{C_{rd}} &= [cytc]_{rd} \\
@@ -1071,7 +1087,7 @@ J_{hRes}^{C4}  &= v_{34} + 2v_{36} + v_{37}  \\
 J_{O_2} &= v_{35}  \\
 J_{hRes} &= J_{hRes}^{C1} + J_{hRes}^{C3} + J_{hRes}^{C4} \\
 \rho_{C4}^\prime &= \rho_{C4} \cdot mt_{prot}
-\end{align}
+\end{aligned}
 $$
 
 | Parameter     | Value     | Unit    | Desc.                    |
@@ -1093,7 +1109,13 @@ $$
 ## Complex V (ATP synthase) rates[^Wei2011]
 
 $$
-\begin{align}J_{F1Fo} &= -\rho^{F1} ((100 p_a + p_{c1} v_B) v_a - (p_a + p_{c2} v_a) v_h)  / \Delta \\J_H^{F1Fo} &= -3\rho^{F1} (100p_a(1 + v_a) - (p_a + p_b)v_h) / \Delta \\\Delta &= (1 + p_1 v_a)v_B + (p_2 + p_3 v_a)v_h \\v_B &= \text{exp}(3\Delta\Psi_B / V_T)   \\v_h &= \text{exp}(3\Delta p / V_T)  \\v_a &= {K_{eq}^{'} \ce{[ATP^4-]}_m \over \Sigma \ce{[Pi]}_m(\ce{[ADP^3-]}_m + \ce{[HADP^2-]}_m)} \\\end{align}
+\begin{aligned}
+J_{F1Fo} &= -\rho^{F1} ((100 p_a + p_{c1} v_B) v_a - (p_a + p_{c2} v_a) v_h)  / \Delta \\
+J_H^{F1Fo} &= -3\rho^{F1} (100p_a(1 + v_a) - (p_a + p_b)v_h) / \Delta \\
+\Delta &= (1 + p_1 v_a)v_B + (p_2 + p_3 v_a)v_h \\
+v_B &= \text{exp}(3\Delta\Psi_B / V_T)   \\ 
+v_h &= \text{exp}(3\Delta p / V_T)  \\
+v_a &= {K_{eq}^{'} [ATP^{4-}]_m \over \Sigma [Pi]_m([ADP^{3-}]_m + [HADP^{2-}]_m)} \\\end{aligned}
 $$
 
 | Parameter      | Value     | Unit | Desc.                                            |
@@ -1120,9 +1142,9 @@ $$
 Includes inhibition by high levels of hydrogen peroxide
 
 $$
-\begin{align}
-V_{CAT} &= 2k_1E_T\ce{[H2O2]}_i \cdot e^{-fr\ce{[H2O2]}_i} \\
-\end{align}
+\begin{aligned}
+V_{CAT} &= 2k_1E_T[H_2O_2]_i \cdot e^{-fr[H_2O_2]_i} \\
+\end{aligned}
 $$
 
 | Parameter | Value | Unit  | Desc.                                  |
@@ -1136,11 +1158,11 @@ $$
 Based on McADAM, 1976 model, for both cytosolic and mitochondrial compartments.
 
 $$
-\begin{align}
+\begin{aligned}
 J_{SOD} &= {2k_5E_Tf_{sox}(k_1 + k_3^\prime) \over k_5(2 k_1 + k_3^\prime) + k_3^\prime f_{sox}}   \\
-k_3^\prime &= k_3 (1 + \frac{\ce{[H2O2]}}{K_{H_2O_2}})  \\
-f_{sox} &= k_1^{SOD} \ce{[O2^-]} \\
-\end{align}
+k_3^\prime &= k_3 (1 + \frac{[H_2O_2]}{K_{H_2O_2}})  \\
+f_{sox} &= k_1^{SOD} [O_2^-] \\
+\end{aligned}
 $$
 
 | Parameter | Value   | Unit  | Desc.                                  |
@@ -1158,11 +1180,11 @@ $$
 
 Dalziel type Ping-pong mechanism, for both cytosolic and mitochondrial compartments.
 $$
-\begin{align}
+\begin{aligned}
 J_{GPX} &= \frac{E_T}{A + B}      \\
-A &= \frac{\Phi_1}{\ce{[H2O2]} }  \\
-B & = \frac{\Phi_2}{\ce{[GSH]} }  \\
-\end{align}
+A &= \frac{\Phi_1}{[H_2O_2] }  \\
+B & = \frac{\Phi_2}{[GSH] }  \\
+\end{aligned}
 $$
 
 | Parameter | Value  | Unit | Desc.                       |
@@ -1180,11 +1202,11 @@ Michaelis-Menten kinetics, for both cytosolic and mitochondrial compartments.
 
 
 $$
-\begin{align}
+\begin{aligned}
 J_{GR} &= k_1E_T\frac{A}{1+A}\frac{B}{1 + B} \\
-A &= \frac{\ce{[GSSG]}}{K_{GSSG}}  \\
-B &= \frac{\ce{[NADPH]}}{K_{NADPH}}  \\
-\end{align}
+A &= \frac{[GSSG]}{K_{GSSG}}  \\
+B &= \frac{[NADPH]}{K_{NADPH}}  \\
+\end{aligned}
 $$
 
 | Parameter   | Value | Unit | Desc.                        |
@@ -1199,50 +1221,50 @@ $$
 
 Disabled in the cellular model.
 $$
-\begin{align}
+\begin{aligned}
 J_{GRX} &= V_{max}BC  \\
-B &= \frac{\ce{[PSSG]}}{\ce{[PSSG]} + K_{PSSG}}  \\
-C &= \frac{A \ce{\Sigma[Grx]}}{A \ce{\Sigma[Grx]} + K_m}   \\
-A &= \frac{K_{eq}\ce{[GSH]}^2}{K_{eq}\ce{[GSH]}^2 + \ce{[GSSG]}}
-\end{align}
+B &= \frac{[PSSG]}{[PSSG] + K_{PSSG}}  \\
+C &= \frac{A \Sigma[Grx]}{A \Sigma[Grx] + K_m}   \\
+A &= \frac{K_{eq}[GSH]^2}{K_{eq}[GSH]^2 + [GSSG]}
+\end{aligned}
 $$
 
-| Parameter          | Value   | Unit  | Desc.                                                        |
-| ------------------ | ------- | ----- | ------------------------------------------------------------ |
-| $V_{max, i}$       | 3.6E-4  | mM*Hz | Extra-matrix glutaredoxin reaction rate                      |
-| $V_{max, m}$       | 3.6E-4  | mM*Hz | Mitochondrial glutaredoxin reaction rate                     |
-| $K_{eq}$           | 1.37E-3 | 1/mM  | Equilibrium constant of glutaredoxin                         |
-| $K_m$              | 0.01    | mM    | Michaelis constant for GSH of GRX                            |
-| $K_{PSSG}$         | 0.0005  | mM    | Michaelis constant for glutathionylated <br />protein of glutaredoxin |
-| $\ce{\Sigma[Grx]}$ | 0.002   | mM    | Glutaredoxin concentration                                   |
-| $V_{max, i}$       | 0       |       | Cellular model                                               |
-| $V_{max, i}$       | 0       |       | Cellular model                                               |
+| Parameter     | Value   | Unit  | Desc.                                                                 |
+| ------------- | ------- | ----- | --------------------------------------------------------------------- |
+| $V_{max, i}$  | 3.6E-4  | mM*Hz | Extra-matrix glutaredoxin reaction rate                               |
+| $V_{max, m}$  | 3.6E-4  | mM*Hz | Mitochondrial glutaredoxin reaction rate                              |
+| $K_{eq}$      | 1.37E-3 | 1/mM  | Equilibrium constant of glutaredoxin                                  |
+| $K_m$         | 0.01    | mM    | Michaelis constant for GSH of GRX                                     |
+| $K_{PSSG}$    | 0.0005  | mM    | Michaelis constant for glutathionylated <br />protein of glutaredoxin |
+| $\Sigma[Grx]$ | 0.002   | mM    | Glutaredoxin concentration                                            |
+| $V_{max, i}$  | 0       |       | Cellular model                                                        |
+| $V_{max, i}$  | 0       |       | Cellular model                                                        |
 
 ### Glutathionylated protein[^Kembro2013]
 
 Disabled in the cellular model.
 $$
-\begin{align}
-J_{PSSG} &= k_1 E_T (\Sigma\ce{[PSSG]} - \ce{[PSSG]})AB  \\
-A &= \frac{\ce{[GSH]}}{\ce{[GSH]} + K_m}  \\
-B &= \frac{K_{act}}{\ce{[H2O2]} + K_{act}}
-\end{align}
+\begin{aligned}
+J_{PSSG} &= k_1 E_T (\Sigma[PSSG] - [PSSG])AB  \\
+A &= \frac{[GSH]}{[GSH] + K_m}  \\
+B &= \frac{K_{act}}{[H_2O_2] + K_{act}}
+\end{aligned}
 $$
 
-| Parameter           | Value | Unit | Desc.                                                        |
-| ------------------- | ----- | ---- | ------------------------------------------------------------ |
-| $k_1$               | 640   | Hz   | Rate constant of protein glutathionylation                   |
-| $E_T$               | 8E-4  |      | Concentration of proteins that <br />can become glutathionylated |
-| $\Sigma\ce{[PSSG]}$ | 1E-3  | mM   | Total PSSG                                                   |
-| $K_m$               | 0.75  | mM   | Michaelis constant of GSH                                    |
-| $K_{act}$           | 1E-3  | mM   | Activation constant of H2O2                                  |
-| $k_{1}$             | 0     |      | Cellular model                                               |
+| Parameter      | Value | Unit | Desc.                                                            |
+| -------------- | ----- | ---- | ---------------------------------------------------------------- |
+| $k_1$          | 640   | Hz   | Rate constant of protein glutathionylation                       |
+| $E_T$          | 8E-4  |      | Concentration of proteins that <br />can become glutathionylated |
+| $\Sigma[PSSG]$ | 1E-3  | mM   | Total PSSG                                                       |
+| $K_m$          | 0.75  | mM   | Michaelis constant of GSH                                        |
+| $K_{act}$      | 1E-3  | mM   | Activation constant of H2O2                                      |
+| $k_{1}$        | 0     |      | Cellular model                                                   |
 
 ### Glutathione transport[^Kembro2013]
 
 Disabled in the cellular model.
 $$
-J_{GST} = c_{GST}\frac{\ce{[GSH]}_i-\ce{[GSH]}_m}{\ce{[GSH]}_i + k_{0.5}}
+J_{GST} = c_{GST}\frac{[GSH]_i-[GSH]_m}{[GSH]_i + k_{0.5}}
 $$
 
 | Parameter | Value  | Unit    | Desc.                                    |
@@ -1255,13 +1277,13 @@ $$
 
 for both cytosolic and mitochondrial compartments.
 $$
-\Sigma \ce{[GSH]} = \ce{[GSH]} + 2 \ce{[GSSG]}
+\Sigma [GSH] = [GSH] + 2 [GSSG]
 $$
 
-| Parameter      | Value | Unit | Desc.                  |
-| -------------- | ----- | ---- | ---------------------- |
-| $\ce{[GSH]}_i$ |       | mM   | Cytosolic GSH pool     |
-| $\ce{[GSH]}_m$ |       | mM   | Mitochondrial GSH pool |
+| Parameter | Value | Unit | Desc.                  |
+| --------- | ----- | ---- | ---------------------- |
+| $[GSH]_i$ |       | mM   | Cytosolic GSH pool     |
+| $[GSH]_m$ |       | mM   | Mitochondrial GSH pool |
 
 
 
@@ -1271,11 +1293,11 @@ $$
 
 Dalziel type Ping-pong mechanism, for both cytosolic and mitochondrial compartments.
 $$
-\begin{align}
+\begin{aligned}
 J_{GPX} &= \frac{E_T}{A + B}      \\
-A &= \frac{\Phi_1}{\ce{[H2O2]} }  \\
-B & = \frac{\Phi_2}{\ce{[TrxSH2]} }  \\
-\end{align}
+A &= \frac{\Phi_1}{[H_2O_2] }  \\
+B & = \frac{\Phi_2}{[TrxSH_2] }  \\
+\end{aligned}
 $$
 
 | Parameter | Value | Unit   | Desc.                       |
@@ -1292,11 +1314,11 @@ Michaelis-Menten kinetics, for both cytosolic and mitochondrial compartments.
 
 
 $$
-\begin{align}
+\begin{aligned}
 J_{TR} &= k_1E_T\frac{A}{1+A}\frac{B}{1 + B} \\
-A &= \frac{\ce{[TrxSS]}}{K_{TrxSS}}  \\
-B &= \frac{\ce{[NADPH]}}{K_{NADPH}}  \\
-\end{align}
+A &= \frac{[TrxSS]}{K_{TrxSS}}  \\
+B &= \frac{[NADPH]}{K_{NADPH}}  \\
+\end{aligned}
 $$
 
 | Parameter   | Value | Unit | Desc.                        |
@@ -1311,36 +1333,36 @@ $$
 
 For both cytosolic and mitochondrial compartments.
 $$
-\ce{[TrxSS]} = \Sigma\ce{[Trx]} - \ce{[TrxSH2]}
+[TrxSS] = \Sigma[Trx] - [TrxSH_2]
 $$
 
-| Parameter        | Value | Unit | Desc.                           |
-| ---------------- | ----- | ---- | ------------------------------- |
-| $\ce{[TrxSS]}_i$ | 25    | μM   | Sum of cytosolic thioreoxin     |
-| $\ce{[TrxSS]}_m$ | 50    | μM   | Sum of mitochondrial thioreoxin |
+| Parameter   | Value | Unit | Desc.                           |
+| ----------- | ----- | ---- | ------------------------------- |
+| $[TrxSS]_i$ | 25    | μM   | Sum of cytosolic thioreoxin     |
+| $[TrxSS]_m$ | 50    | μM   | Sum of mitochondrial thioreoxin |
 
 
 
 ## Inner mitochondrial anion channel[^Cortassa2004]
 
 $$
-\begin{align}
-g_{IMAC} &= \left( a + b \frac{\ce{[O2-]_i}}{\ce{[O2-]_i} + K_{CC}} \right) \left( G_L + \frac{G_{max}}{1 + e^{κ(\Delta\Psi_m^b + \Delta\Psi_m)}} \right) \\
+\begin{aligned}
+g_{IMAC} &= \left( a + b \frac{[O_2^-]_i}{[O_2^-]_i + K_{CC}} \right) \left( G_L + \frac{G_{max}}{1 + e^{κ(\Delta\Psi_m^b + \Delta\Psi_m)}} \right) \\
 V_{IMAC} &= g_{IMAC}\Delta\Psi_m \\
-V_{tr}^{ROS} &= j \cdot g_{IMAC} \left( \Delta\Psi_m + V_T ln \left( \frac{\ce{[O2-]_m}}{\ce{[O2-]_i}} \right) \right) \\
-\end{align}
+V_{tr}^{ROS} &= j \cdot g_{IMAC} \left( \Delta\Psi_m + V_T ln \left( \frac{[O_2^-]_m}{[O_2^-]_i} \right) \right) \\
+\end{aligned}
 $$
 
-| Parameter        | Value  | Unit         | Desc.                                 |
-| ---------------- | ------ | ------------ | ------------------------------------- |
-| a                | 0.001  | -            | Basal IMAC conductance                |
-| b                | 10000  | -            | Activation factor by $\ce{[O2-]_i}$   |
-| $K_{CC}$         | 10     | μM           | Activation constant by $\ce{[O2-]_i}$ |
-| $G_L$            | 0.035  | μM * Hz / mV | Integral conductance for IMAC         |
-| $G_{max}$        | 3.9085 | μM * Hz / mV | Leak conductance of IMAC              |
-| $\kappa$         | 0.07   | 1/mV         | Steepness factor                      |
-| $\Delta\Psi_m^b$ | 4      | mV           | Potential at half saturation          |
-| j                | 0.1    | -            | Fraction of IMAC conductance          |
+| Parameter        | Value  | Unit         | Desc.                              |
+| ---------------- | ------ | ------------ | ---------------------------------- |
+| a                | 0.001  | -            | Basal IMAC conductance             |
+| b                | 10000  | -            | Activation factor by $[O_2^-]_i$   |
+| $K_{CC}$         | 10     | μM           | Activation constant by $[O_2^-]_i$ |
+| $G_L$            | 0.035  | μM * Hz / mV | Integral conductance for IMAC      |
+| $G_{max}$        | 3.9085 | μM * Hz / mV | Leak conductance of IMAC           |
+| $\kappa$         | 0.07   | 1/mV         | Steepness factor                   |
+| $\Delta\Psi_m^b$ | 4      | mV           | Potential at half saturation       |
+| j                | 0.1    | -            | Fraction of IMAC conductance       |
 
 
 
@@ -1349,7 +1371,7 @@ $$
 Simple diffusion.
 
 $$
-J_{diff}^{H_2O_2} = c_{diff}([\ce{H2O2}]_m - [\ce{H2O2}]_i)
+J_{diff}^{H_2O_2} = c_{diff}([[H_2O_2]]_m - [[H_2O_2]]_i)
 $$
 
 | Parameter  | Value | Unit | Desc.                     |
@@ -1359,7 +1381,7 @@ $$
 ## Conservation of NADPH
 
 $$
-\Sigma{\ce{[NADP]_m}} = \ce{[NADP+]_m} + \ce{[NADPH]_m}
+\Sigma{[NADP]_m} = [NADP^+]_m + [NADPH]_m
 $$
 
 
@@ -1367,14 +1389,14 @@ $$
 ## NADPH-producing isocitrate dehydrogenase (IDH2)[^Kembro2013]
 
 $$
-\begin{align}
+\begin{aligned}
 J_{IDH2} &= f_H \frac{V_f AB - V_b PQ}{(1 + A + P)(1 + B + Q)} \\
-A &= \ce{[ISOC]} / K_{m, ISOC}  \\
-B &= (\ce{[NADP]}_m + K_{i,NADP}) / K_{m, NADP}  \\
-P &= \ce{[\alpha KG]}/ K_{m,\alpha KG}  \\
-Q &= \ce{[NADPH]}_m / K_{m, NADPH}      \\
-f_H &= \frac{K_H}{K_H + \ce{[H^+]}_m}   \\
-\end{align}
+A &= [ISOC] / K_{m, ISOC}  \\
+B &= ([NADP]_m + K_{i,NADP}) / K_{m, NADP}  \\
+P &= [\alpha KG]/ K_{m,\alpha KG}  \\
+Q &= [NADPH]_m / K_{m, NADPH}      \\
+f_H &= \frac{K_H}{K_H + [H^+]_m}   \\
+\end{aligned}
 $$
 
 | Parameter         | Value | Unit  | Desc.                             |
@@ -1393,18 +1415,18 @@ $$
 ## Transhydrogenase (THD)[^Kembro2013]
 
 $$
-\begin{align}
+\begin{aligned}
 J_{THD} &= (V_fAB^{'} - V_bP^{'}Q) / \Delta  \\
 \Delta &= 1 + A + B + P + Q + AQ + B^{'}P^{'} + AB^{'} + P^{'}Q \\
-A &= \ce{[NADH]} / K_{m,NADH}   \\
-B &= \ce{[NADP]}_m / K_{m,NADP}   \\
+A &= [NADH] / K_{m,NADH}   \\
+B &= [NADP]_m / K_{m,NADP}   \\
 B^{'} &= B \cdot \text{exp}(x(d-1) \Delta p / V_T) \\
-P &= \ce{[NAD]} / K_{m,NAD}  \\
+P &= [NAD] / K_{m,NAD}  \\
 P^{'} &= P  \cdot \text{exp}(xd \Delta p / V_T)  \\
-Q &= \ce{[NADPH]_m} / K_{m,NADPH} \\
+Q &= [NADPH]_m / K_{m,NADPH} \\
 V_f &= E_T k_a  \\
 V_b &= V_f \frac{K_{m,NADP} K_{m,NADH}}{K_{m,NAD} K_{m,NADPH}^{THD} K_{eq}^{App}}  \\
-\end{align}
+\end{aligned}
 $$
 
 | Parameter      | Value   | Unit | Desc.                         |

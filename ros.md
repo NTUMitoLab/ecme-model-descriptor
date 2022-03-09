@@ -7,9 +7,9 @@
 Includes inhibition by high levels of hydrogen peroxide
 
 $$
-\begin{align}
-V_{CAT} &= 2k_1E_T\ce{[H2O2]}_i \cdot e^{-fr\ce{[H2O2]}_i} \\
-\end{align}
+\begin{aligned}
+V_{CAT} &= 2k_1E_T[H_2O_2]_i \cdot e^{-fr[H_2O_2]_i} \\
+\end{aligned}
 $$
 
 | Parameter | Value | Unit  | Desc.                                  |
@@ -23,11 +23,11 @@ $$
 Based on McADAM, 1976 model, for both cytosolic and mitochondrial compartments.
 
 $$
-\begin{align}
+\begin{aligned}
 J_{SOD} &= {2k_5E_Tf_{sox}(k_1 + k_3^\prime) \over k_5(2 k_1 + k_3^\prime) + k_3^\prime f_{sox}}   \\
-k_3^\prime &= k_3 (1 + \frac{\ce{[H2O2]}}{K_{H_2O_2}})  \\
-f_{sox} &= k_1^{SOD} \ce{[O2^-]} \\
-\end{align}
+k_3^\prime &= k_3 (1 + \frac{[H_2O_2]}{K_{H_2O_2}})  \\
+f_{sox} &= k_1^{SOD} [O_2^-] \\
+\end{aligned}
 $$
 
 | Parameter | Value   | Unit  | Desc.                                  |
@@ -45,11 +45,11 @@ $$
 
 Dalziel type Ping-pong mechanism, for both cytosolic and mitochondrial compartments.
 $$
-\begin{align}
+\begin{aligned}
 J_{GPX} &= \frac{E_T}{A + B}      \\
-A &= \frac{\Phi_1}{\ce{[H2O2]} }  \\
-B & = \frac{\Phi_2}{\ce{[GSH]} }  \\
-\end{align}
+A &= \frac{\Phi_1}{[H_2O_2] }  \\
+B & = \frac{\Phi_2}{[GSH] }  \\
+\end{aligned}
 $$
 
 | Parameter | Value  | Unit | Desc.                       |
@@ -67,11 +67,11 @@ Michaelis-Menten kinetics, for both cytosolic and mitochondrial compartments.
 
 
 $$
-\begin{align}
+\begin{aligned}
 J_{GR} &= k_1E_T\frac{A}{1+A}\frac{B}{1 + B} \\
-A &= \frac{\ce{[GSSG]}}{K_{GSSG}}  \\
-B &= \frac{\ce{[NADPH]}}{K_{NADPH}}  \\
-\end{align}
+A &= \frac{[GSSG]}{K_{GSSG}}  \\
+B &= \frac{[NADPH]}{K_{NADPH}}  \\
+\end{aligned}
 $$
 
 | Parameter   | Value | Unit | Desc.                        |
@@ -86,50 +86,50 @@ $$
 
 Disabled in the cellular model.
 $$
-\begin{align}
+\begin{aligned}
 J_{GRX} &= V_{max}BC  \\
-B &= \frac{\ce{[PSSG]}}{\ce{[PSSG]} + K_{PSSG}}  \\
-C &= \frac{A \ce{\Sigma[Grx]}}{A \ce{\Sigma[Grx]} + K_m}   \\
-A &= \frac{K_{eq}\ce{[GSH]}^2}{K_{eq}\ce{[GSH]}^2 + \ce{[GSSG]}}
-\end{align}
+B &= \frac{[PSSG]}{[PSSG] + K_{PSSG}}  \\
+C &= \frac{A \Sigma[Grx]}{A \Sigma[Grx] + K_m}   \\
+A &= \frac{K_{eq}[GSH]^2}{K_{eq}[GSH]^2 + [GSSG]}
+\end{aligned}
 $$
 
-| Parameter          | Value   | Unit  | Desc.                                                        |
-| ------------------ | ------- | ----- | ------------------------------------------------------------ |
-| $V_{max, i}$       | 3.6E-4  | mM*Hz | Extra-matrix glutaredoxin reaction rate                      |
-| $V_{max, m}$       | 3.6E-4  | mM*Hz | Mitochondrial glutaredoxin reaction rate                     |
-| $K_{eq}$           | 1.37E-3 | 1/mM  | Equilibrium constant of glutaredoxin                         |
-| $K_m$              | 0.01    | mM    | Michaelis constant for GSH of GRX                            |
-| $K_{PSSG}$         | 0.0005  | mM    | Michaelis constant for glutathionylated <br />protein of glutaredoxin |
-| $\ce{\Sigma[Grx]}$ | 0.002   | mM    | Glutaredoxin concentration                                   |
-| $V_{max, i}$       | 0       |       | Cellular model                                               |
-| $V_{max, i}$       | 0       |       | Cellular model                                               |
+| Parameter     | Value   | Unit  | Desc.                                                                 |
+| ------------- | ------- | ----- | --------------------------------------------------------------------- |
+| $V_{max, i}$  | 3.6E-4  | mM*Hz | Extra-matrix glutaredoxin reaction rate                               |
+| $V_{max, m}$  | 3.6E-4  | mM*Hz | Mitochondrial glutaredoxin reaction rate                              |
+| $K_{eq}$      | 1.37E-3 | 1/mM  | Equilibrium constant of glutaredoxin                                  |
+| $K_m$         | 0.01    | mM    | Michaelis constant for GSH of GRX                                     |
+| $K_{PSSG}$    | 0.0005  | mM    | Michaelis constant for glutathionylated <br />protein of glutaredoxin |
+| $\Sigma[Grx]$ | 0.002   | mM    | Glutaredoxin concentration                                            |
+| $V_{max, i}$  | 0       |       | Cellular model                                                        |
+| $V_{max, i}$  | 0       |       | Cellular model                                                        |
 
 ### Glutathionylated protein[^Kembro2013]
 
 Disabled in the cellular model.
 $$
-\begin{align}
-J_{PSSG} &= k_1 E_T (\Sigma\ce{[PSSG]} - \ce{[PSSG]})AB  \\
-A &= \frac{\ce{[GSH]}}{\ce{[GSH]} + K_m}  \\
-B &= \frac{K_{act}}{\ce{[H2O2]} + K_{act}}
-\end{align}
+\begin{aligned}
+J_{PSSG} &= k_1 E_T (\Sigma[PSSG] - [PSSG])AB  \\
+A &= \frac{[GSH]}{[GSH] + K_m}  \\
+B &= \frac{K_{act}}{[H_2O_2] + K_{act}}
+\end{aligned}
 $$
 
-| Parameter           | Value | Unit | Desc.                                                        |
-| ------------------- | ----- | ---- | ------------------------------------------------------------ |
-| $k_1$               | 640   | Hz   | Rate constant of protein glutathionylation                   |
-| $E_T$               | 8E-4  |      | Concentration of proteins that <br />can become glutathionylated |
-| $\Sigma\ce{[PSSG]}$ | 1E-3  | mM   | Total PSSG                                                   |
-| $K_m$               | 0.75  | mM   | Michaelis constant of GSH                                    |
-| $K_{act}$           | 1E-3  | mM   | Activation constant of H2O2                                  |
-| $k_{1}$             | 0     |      | Cellular model                                               |
+| Parameter      | Value | Unit | Desc.                                                            |
+| -------------- | ----- | ---- | ---------------------------------------------------------------- |
+| $k_1$          | 640   | Hz   | Rate constant of protein glutathionylation                       |
+| $E_T$          | 8E-4  |      | Concentration of proteins that <br />can become glutathionylated |
+| $\Sigma[PSSG]$ | 1E-3  | mM   | Total PSSG                                                       |
+| $K_m$          | 0.75  | mM   | Michaelis constant of GSH                                        |
+| $K_{act}$      | 1E-3  | mM   | Activation constant of H2O2                                      |
+| $k_{1}$        | 0     |      | Cellular model                                                   |
 
 ### Glutathione transport[^Kembro2013]
 
 Disabled in the cellular model.
 $$
-J_{GST} = c_{GST}\frac{\ce{[GSH]}_i-\ce{[GSH]}_m}{\ce{[GSH]}_i + k_{0.5}}
+J_{GST} = c_{GST}\frac{[GSH]_i-[GSH]_m}{[GSH]_i + k_{0.5}}
 $$
 
 | Parameter | Value  | Unit    | Desc.                                    |
@@ -142,13 +142,13 @@ $$
 
 for both cytosolic and mitochondrial compartments.
 $$
-\Sigma \ce{[GSH]} = \ce{[GSH]} + 2 \ce{[GSSG]}
+\Sigma [GSH] = [GSH] + 2 [GSSG]
 $$
 
-| Parameter      | Value | Unit | Desc.                  |
-| -------------- | ----- | ---- | ---------------------- |
-| $\ce{[GSH]}_i$ |       | mM   | Cytosolic GSH pool     |
-| $\ce{[GSH]}_m$ |       | mM   | Mitochondrial GSH pool |
+| Parameter | Value | Unit | Desc.                  |
+| --------- | ----- | ---- | ---------------------- |
+| $[GSH]_i$ |       | mM   | Cytosolic GSH pool     |
+| $[GSH]_m$ |       | mM   | Mitochondrial GSH pool |
 
 
 
@@ -158,11 +158,11 @@ $$
 
 Dalziel type Ping-pong mechanism, for both cytosolic and mitochondrial compartments.
 $$
-\begin{align}
+\begin{aligned}
 J_{GPX} &= \frac{E_T}{A + B}      \\
-A &= \frac{\Phi_1}{\ce{[H2O2]} }  \\
-B & = \frac{\Phi_2}{\ce{[TrxSH2]} }  \\
-\end{align}
+A &= \frac{\Phi_1}{[H_2O_2] }  \\
+B & = \frac{\Phi_2}{[TrxSH_2] }  \\
+\end{aligned}
 $$
 
 | Parameter | Value | Unit   | Desc.                       |
@@ -179,11 +179,11 @@ Michaelis-Menten kinetics, for both cytosolic and mitochondrial compartments.
 
 
 $$
-\begin{align}
+\begin{aligned}
 J_{TR} &= k_1E_T\frac{A}{1+A}\frac{B}{1 + B} \\
-A &= \frac{\ce{[TrxSS]}}{K_{TrxSS}}  \\
-B &= \frac{\ce{[NADPH]}}{K_{NADPH}}  \\
-\end{align}
+A &= \frac{[TrxSS]}{K_{TrxSS}}  \\
+B &= \frac{[NADPH]}{K_{NADPH}}  \\
+\end{aligned}
 $$
 
 | Parameter   | Value | Unit | Desc.                        |
@@ -198,35 +198,35 @@ $$
 
 For both cytosolic and mitochondrial compartments.
 $$
-\ce{[TrxSS]} = \Sigma\ce{[Trx]} - \ce{[TrxSH2]}
+[TrxSS] = \Sigma[Trx] - [TrxSH_2]
 $$
 
-| Parameter        | Value | Unit | Desc.                           |
-| ---------------- | ----- | ---- | ------------------------------- |
-| $\ce{[TrxSS]}_i$ | 25    | μM   | Sum of cytosolic thioreoxin     |
-| $\ce{[TrxSS]}_m$ | 50    | μM   | Sum of mitochondrial thioreoxin |
+| Parameter   | Value | Unit | Desc.                           |
+| ----------- | ----- | ---- | ------------------------------- |
+| $[TrxSS]_i$ | 25    | μM   | Sum of cytosolic thioreoxin     |
+| $[TrxSS]_m$ | 50    | μM   | Sum of mitochondrial thioreoxin |
 
 
 
 ## Inner mitochondrial anion channel[^Cortassa2004]
 
 $$
-\begin{align}
-g_{IMAC} &= \left( a + b \frac{\ce{[O2-]_i}}{\ce{[O2-]_i} + K_{CC}} \right) \left( G_L + \frac{G_{max}}{1 + e^{κ(\Delta\Psi_m^b + \Delta\Psi_m)}} \right) \\
+\begin{aligned}
+g_{IMAC} &= \left( a + b \frac{[O_2^-]_i}{[O_2^-]_i + K_{CC}} \right) \left( G_L + \frac{G_{max}}{1 + e^{κ(\Delta\Psi_m^b + \Delta\Psi_m)}} \right) \\
 V_{IMAC} &= g_{IMAC}\Delta\Psi_m \\
-V_{tr}^{ROS} &= j \cdot g_{IMAC} \left( \Delta\Psi_m + V_T ln \left( \frac{\ce{[O2-]_m}}{\ce{[O2-]_i}} \right) \right) \\
-\end{align}
+V_{tr}^{ROS} &= j \cdot g_{IMAC} \left( \Delta\Psi_m + V_T ln \left( \frac{[O_2^-]_m}{[O_2^-]_i} \right) \right) \\
+\end{aligned}
 $$
-| Parameter        | Value  | Unit         | Desc.                                 |
-| ---------------- | ------ | ------------ | ------------------------------------- |
-| a                | 0.001  | -            | Basal IMAC conductance                |
-| b                | 10000  | -            | Activation factor by $\ce{[O2-]_i}$   |
-| $K_{CC}$         | 10     | μM           | Activation constant by $\ce{[O2-]_i}$ |
-| $G_L$            | 0.035  | μM * Hz / mV | Integral conductance for IMAC         |
-| $G_{max}$        | 3.9085 | μM * Hz / mV | Leak conductance of IMAC              |
-| $\kappa$         | 0.07   | 1/mV         | Steepness factor                      |
-| $\Delta\Psi_m^b$ | 4      | mV           | Potential at half saturation          |
-| j                | 0.1    | -            | Fraction of IMAC conductance          |
+| Parameter        | Value  | Unit         | Desc.                              |
+| ---------------- | ------ | ------------ | ---------------------------------- |
+| a                | 0.001  | -            | Basal IMAC conductance             |
+| b                | 10000  | -            | Activation factor by $[O_2^-]_i$   |
+| $K_{CC}$         | 10     | μM           | Activation constant by $[O_2^-]_i$ |
+| $G_L$            | 0.035  | μM * Hz / mV | Integral conductance for IMAC      |
+| $G_{max}$        | 3.9085 | μM * Hz / mV | Leak conductance of IMAC           |
+| $\kappa$         | 0.07   | 1/mV         | Steepness factor                   |
+| $\Delta\Psi_m^b$ | 4      | mV           | Potential at half saturation       |
+| j                | 0.1    | -            | Fraction of IMAC conductance       |
 
 
 
@@ -235,7 +235,7 @@ $$
 Simple diffusion.
 
 $$
-J_{diff}^{H_2O_2} = c_{diff}([\ce{H2O2}]_m - [\ce{H2O2}]_i)
+J_{diff}^{H_2O_2} = c_{diff}([[H_2O_2]]_m - [[H_2O_2]]_i)
 $$
 
 | Parameter  | Value | Unit | Desc.                     |
@@ -245,7 +245,7 @@ $$
 ## Conservation of NADPH
 
 $$
-\Sigma{\ce{[NADP]_m}} = \ce{[NADP+]_m} + \ce{[NADPH]_m}
+\Sigma{[NADP]_m} = [NADP^+]_m + [NADPH]_m
 $$
 
 
@@ -253,14 +253,14 @@ $$
 ## NADPH-producing isocitrate dehydrogenase (IDH2)[^Kembro2013]
 
 $$
-\begin{align}
+\begin{aligned}
 J_{IDH2} &= f_H \frac{V_f AB - V_b PQ}{(1 + A + P)(1 + B + Q)} \\
-A &= \ce{[ISOC]} / K_{m, ISOC}  \\
-B &= (\ce{[NADP]}_m + K_{i,NADP}) / K_{m, NADP}  \\
-P &= \ce{[\alpha KG]}/ K_{m,\alpha KG}  \\
-Q &= \ce{[NADPH]}_m / K_{m, NADPH}      \\
-f_H &= \frac{K_H}{K_H + \ce{[H^+]}_m}   \\
-\end{align}
+A &= [ISOC] / K_{m, ISOC}  \\
+B &= ([NADP]_m + K_{i,NADP}) / K_{m, NADP}  \\
+P &= [\alpha KG]/ K_{m,\alpha KG}  \\
+Q &= [NADPH]_m / K_{m, NADPH}      \\
+f_H &= \frac{K_H}{K_H + [H^+]_m}   \\
+\end{aligned}
 $$
 
 | Parameter         | Value | Unit  | Desc.                             |
@@ -279,18 +279,18 @@ $$
 ## Transhydrogenase (THD)[^Kembro2013]
 
 $$
-\begin{align}
+\begin{aligned}
 J_{THD} &= (V_fAB^{'} - V_bP^{'}Q) / \Delta  \\
 \Delta &= 1 + A + B + P + Q + AQ + B^{'}P^{'} + AB^{'} + P^{'}Q \\
-A &= \ce{[NADH]} / K_{m,NADH}   \\
-B &= \ce{[NADP]}_m / K_{m,NADP}   \\
+A &= [NADH] / K_{m,NADH}   \\
+B &= [NADP]_m / K_{m,NADP}   \\
 B^{'} &= B \cdot \text{exp}(x(d-1) \Delta p / V_T) \\
-P &= \ce{[NAD]} / K_{m,NAD}  \\
+P &= [NAD] / K_{m,NAD}  \\
 P^{'} &= P  \cdot \text{exp}(xd \Delta p / V_T)  \\
-Q &= \ce{[NADPH]_m} / K_{m,NADPH} \\
+Q &= [NADPH]_m / K_{m,NADPH} \\
 V_f &= E_T k_a  \\
 V_b &= V_f \frac{K_{m,NADP} K_{m,NADH}}{K_{m,NAD} K_{m,NADPH}^{THD} K_{eq}^{App}}  \\
-\end{align}
+\end{aligned}
 $$
 
 | Parameter      | Value   | Unit | Desc.                         |

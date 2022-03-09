@@ -5,7 +5,7 @@
 Assuming single electron transfer for each cycle.
 
 $$
-\begin{align}
+\begin{aligned}
 \nu &= \text{exp}((\Delta\Psi_m - \Delta\Psi_B) / V_T) \\
 a_{12} &= k_{12} ([H^+]_m)^2 \\
 a_{21} &= k_{21} \\
@@ -26,11 +26,11 @@ a_{42} &= k_{42}^\prime [O_2] \\
 K_{eq}^{ROS} &= \text{exp}((E_{FMN} - E_{sox}) / V_T) \\
 a_{24} &= a_{42} K_{eq}^{ROS} [O_2^{ \cdot  -}]_m  \\
 a_{25} &= a_{52} = 0  \\
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 e_{1} &=
 a_{21} \cdot a_{32} \cdot a_{42} \cdot a_{56} \cdot a_{61} \cdot a_{74} +
 a_{21} \cdot a_{32} \cdot a_{42} \cdot a_{56} \cdot a_{61} \cdot a_{75} +
@@ -157,18 +157,18 @@ a_{16} \cdot a_{21} \cdot a_{34} \cdot a_{47} \cdot a_{57} \cdot a_{65}   +
 a_{16} \cdot a_{23} \cdot a_{34} \cdot a_{47} \cdot a_{57} \cdot a_{65}   \\ &+
 a_{16} \cdot a_{24} \cdot a_{32} \cdot a_{47} \cdot a_{57} \cdot a_{65}   +
 a_{16} \cdot a_{24} \cdot a_{34} \cdot a_{47} \cdot a_{57} \cdot a_{65}   \\
-\end{align}
+\end{aligned}
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 Δ &= e_{1} + e_{2} + e_{3} + e_{4} + e_{5} + e_{6} + e_{7}  \\
 \rho_{C1}^\prime &= \rho_{C1}  \cdot mt_{prot} / \Delta  \\
 J_{Hres}^{C1} &= 2\rho_{C1}^\prime (e_{6}a_{61} - e_{1}a_{16}) \\
 J_{Q}^{C1} &= 0.5\rho_{C1}^\prime (e_{4}a_{47} - e_{7}a_{74}) \\
 J_{NADH}^{C1} &= 0.5\rho_{C1}^\prime (e_{3}a_{34} - e_{4}a_{43}) \\
 J_{ROS}^{C1} &= \rho_{C1}^\prime (e_{4}a_{42} - e_{2}a_{24})  \\
-\end{align}
+\end{aligned}
 $$
 
 

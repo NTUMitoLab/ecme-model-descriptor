@@ -1,7 +1,7 @@
 ## Complex III[^Gauthier2013A]
 
 $$
-\begin{align}
+\begin{aligned}
 f_{hi} & = [H^+]_{i}  / 10^{-7}M   \\
 v_{1} &= v_{Q}^{C1} + v_{Q}^{C2}   \\
 v_2 &= k_d([QH_2]_{n} - [QH_2]_{p})  \\
@@ -49,13 +49,13 @@ cytc_{rd} &= \rho_{C4}^\prime - cytc_{ox}  \\
 J_{hRes}^{C3} &= 2v_{3}     \\
 J_{ROS, m}^{C3} &= v_{10}   \\
 J_{ROS, i}^{C3} &= v_{10b}  \\
-\end{align}
+\end{aligned}
 $$
 
 ODE System in the Q cycle:
 
 $$
-\begin{align}
+\begin{aligned}
 \frac{d[Q]_n}{dt} &= v_5 - v_{7,ox}- v_{7,rd} - v_1  \\
 \frac{d[Q^{ \cdot -}]_n}{dt} &= v_{7,ox} + v_{7,rd} - v_{8,ox}- v_{8,rd}  \\
 \frac{d[QH_2]_n}{dt} &= v_{8,ox} + v_{8,rd} + v_1 - v_2   \\
@@ -69,7 +69,7 @@ $$
 \frac{d[FeS]_{ox}}{dt} &= v_9 - v_3      \\
 \frac{d[cytc1]_{ox}}{dt} &= v_{33} - v_9   \\
 \frac{d[cytc]_{ox}}{dt} &= V_e - v_{33}   \\
-\end{align}
+\end{aligned}
 $$
 
 #### Parameters
@@ -105,8 +105,6 @@ $$
 | $k_{33}$     | 2469.13  | Hz/mM | Reverse rate constant for reaction 33                     |
 | $K_{eq33}$   | 2.1145   | -     | Equilibrium constant for reaction 33                      |
 | $\rho_{C3}$  | 0.325    | mM    | Total complex III protein                                 |
-
-
 
 
 [^Gauthier2013A]: Gauthier LD, Greenstein JL, O’Rourke B, Winslow RL. An Integrated Mitochondrial ROS Production and Scavenging Model: Implications for Heart Failure. Biophysical Journal. 2013;105(12):2832-2842. doi:10.1016/j.bpj.2013.11.007. [PMC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3882515)

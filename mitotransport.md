@@ -3,15 +3,15 @@
 Follows equilibrium random Bi:Bi reaction kinetics 
 
 $$
-\begin{align}
+\begin{aligned}
 J_{PiC} &= c_{PiC}(k_f AB - k_b PQ) / \Delta  \\
-A &= \ce{[HPO_4^2-]}_i / K_{pi,i} \\
-P &= \ce{[HPO_4^2-]}_m / K_{pi,m} \\
-Q &= \ce{[OH^-]}_i / K_{OH,i} \\
-B &= \ce{[OH^-]}_m / K_{OH,m} \\
+A &= [HPO_4^{2-}]_i / K_{pi,i} \\
+P &= [HPO_4^{2-}]_m / K_{pi,m} \\
+Q &= [OH^-]_i / K_{OH,i} \\
+B &= [OH^-]_m / K_{OH,m} \\
 \Delta &= 1 + A + B + P + Q + AB + PQ \\
 k_b &= \frac{k_f K_{pi,m} K_{OH,i}}{K_{eq} K_{pi,i} K_{OH,m}}
-\end{align}
+\end{aligned}
 $$
 
 | Parameter  | Value   | Unit | Desc.                                     |
@@ -31,19 +31,19 @@ $$
 Following Smith and Crampin's model of counterpart on the plasma membrane
 
 $$
-\begin{align}
+\begin{aligned}
 J_{NHE} &= c_{NHE} f_h \frac{β^+_1β^+_2-β^-_1β^-_2}{β^+_1 + β^+_2 + β^-_1 + β^-_2}\\
-f_h &= \frac{(\ce{[H^+]}_i)^n}{(\ce{[H^+]}_i)^n + K_i^n} \\
-A &= \ce{[Na^+]}_m / K_{Na}  \\
-B &= \ce{[H^+]}_i / K_{H}  \\
-P &= \ce{[Na^+]}_i / K_{Na}  \\
-Q &= \ce{[H^+]}_m / K_{H}  \\
+f_h &= \frac{([H^+]_i)^n}{([H^+]_i)^n + K_i^n} \\
+A &= [Na^+]_m / K_{Na}  \\
+B &= [H^+]_i / K_{H}  \\
+P &= [Na^+]_i / K_{Na}  \\
+Q &= [H^+]_m / K_{H}  \\
 β^+_1 &= \frac{k_1^+ A}{1 + A + Q}  \\
 β^-_1 &= \frac{k^-_1 P}{1 + P + B}   \\
 β^+_2 &= \frac{k_4^+ B}{1 + P + B}  \\
 β^-_2 &= \frac{k^-_4 Q}{1 + A + Q}   \\
 k_4^- &= \frac{k_1^+ k_4^+}{K_{eq} k_1^-}
-\end{align}
+\end{aligned}
 $$
 
 | Parameter   | Value    | Unit | Desc.                           |
@@ -61,14 +61,14 @@ $$
 ## Adenine Nucleotide translocator (ANT) [^Wei2011]
 
 $$
-\begin{align}
+\begin{aligned}
 J_{ANT} &= V_{max}\frac{AB - \delta PQ}{(B + \delta^h P)(A + Q)}  \\
-A &= \ce{[ATP^4-]}_m  \\
-B &= \ce{[ADP^3-]}_i  \\
-P &= \ce{[ATP^4-]}_i  \\
-Q &= \ce{[ADP^3-]}_m  \\
+A &= [ATP^{4-}]_m  \\
+B &= [ADP^{3-}]_i  \\
+P &= [ATP^{4-}]_i  \\
+Q &= [ADP^{3-}]_m  \\
 \delta &= \text{exp}(-\Delta\Psi_m / V_T)
-\end{align}
+\end{aligned}
 $$
 
 
@@ -81,12 +81,12 @@ $$
 ## Mitochondrial calcium uniporter (MCU)[^Wei2011]
 
 $$
-\begin{align}
+\begin{aligned}
 J_{uni} &= V_{max} \frac{S (1+S)^3}{(1+S)^4 + L(1 + A)^n} \frac{\delta}{e^\delta-1}  \\
-S &= \ce{[Ca^2+]}_i / K_{trans}  \\
-A &= \ce{[Ca^2+]}_i / K_{act}    \\
+S &= [Ca^{2+}]_i / K_{trans}  \\
+A &= [Ca^{2+}]_i / K_{act}    \\
 \delta &= -Z_{Ca} (\Delta\Psi_m - \Delta\Psi_0) / V_T
-\end{align}
+\end{aligned}
 $$
 
 | Parameter      | Value  | Unit    | Desc.                              |
@@ -101,11 +101,11 @@ $$
 ## Mitochondrial sodium-calcium exchanger (NCLX)[^Wei2011]
 
 $$
-\begin{align}
+\begin{aligned}
 J_{NCLX} &= V_{max}\text{exp}(b\Delta\Psi_m/V_T)\frac{[Ca^{2+}]_m}{[Ca^{2+}]_i} (\frac{A}{1+A})^n \frac{B}{1+B}  \\
-A &= \ce{[Na^+]}_i / K_{Na}  \\
-B &= \ce{[Ca^2+]}_m / K_{Ca}  \\
-\end{align}
+A &= [Na^+]_i / K_{Na}  \\
+B &= [Ca^{2+}]_m / K_{Ca}  \\
+\end{aligned}
 $$
 
 | Parameter | Value   | Unit    | Desc.                             |

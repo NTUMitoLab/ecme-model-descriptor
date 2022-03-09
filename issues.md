@@ -4,14 +4,14 @@
 
 The Nernst notation[^Cortassa2004] for ROS efflux may fall out of the linear range of IMAC when there is a huge difference of the concentrations of ROS between the matrix  and extra-matrix compartments. This may cause  numerical stability issues.
 $$
-\begin{align}
-V_{tr}^{ROS} &= j \cdot g_{IMAC} \left( \Delta\Psi_m + V_T ln \left( \frac{\ce{[O2-]_m}}{\ce{[O2-]_i}} \right) \right) \\
-\end{align}
+\begin{aligned}
+V_{tr}^{ROS} &= j \cdot g_{IMAC} \left( \Delta\Psi_m + V_T ln \left( \frac{[O_2^-]_m}{[O_2^-]_i} \right) \right) \\
+\end{aligned}
 $$
 
 An alternative is to adopt Nivalas’ IMAC model[^Nivala2011] with GHK flux equation, which is singularity-free and more general.
 $$
-J_{IMAC} = g_{IMAC}\frac{\delta}{e^\delta -1} (e^\delta \ce{[O2-]}_m - \ce{[O2-]}_i) \\
+J_{IMAC} = g_{IMAC}\frac{\delta}{e^\delta -1} (e^\delta [O_2^-]_m - [O_2^-]_i) \\
 \delta = \Delta\Psi_m / V_T
 $$
 
@@ -29,9 +29,10 @@ The unit of redox potentials of FMN and superoxide is V instead of mV. The fix w
 
 ### Equilibrium constant
 
+ATP + H2O <=> ADP + Pi + H+
+
 $$
-\ce{ATP + H2O <=> ADP + Pi + H+} \\
-K_{eq} = \frac{\ce{[Pi]}\ce{[ADP]}}{\ce{[ATP]}}
+K_{eq} = \frac{[Pi][ADP]}{[ATP]}
 $$
 
 
@@ -39,11 +40,11 @@ $$
 The equilibrium constant for ATP hydrolysis  ($1.71 \times 10^6$ mM)  was originated from Magnus and Keiser model[^Magnus1997], which was from the Pietrobon and Caplan 6-state proton pump model[^Pietrobon1985], but it was 1000 times off ($1.71 \times 10^6$ M = $1.71 \times 10^9$ mM, @ pH = 7.4).
 
 The reference free energy change for ATP hydrolysis with magnesium is around -29.1kJ/mol @ pH=7, T = 310K.[^Guynn1973][^Heiske2017] It corresponds to an equilibrium constant of 80074 M
-$$
-\ce{MgATP^2- + H2O <=> MgADP- + HPO4^2- + H+}
-$$
 
-In physiological conditions, the free energy change for the apparent equilibrium constant is -36.03kJ/mol @  pH=0, T = 310K[^Beard2005], -31.80kJ/mol @ pH=7, Mg = 1mM, T = 310K[^Guynn1973]
+
+MgATP + H2O <=> MgADP + HPO4 + H+
+
+In physiological conditions, the free energy change for the apparent equilibrium constant is -36.03kJ/mol @  pH=0, T = 310K [^Beard2005], -31.80kJ/mol @ pH=7, Mg = 1mM, T = 310K [^Guynn1973]
 
 A table with apparent Keq's with various pH and pMg could be found in Golding's work.[^Golding1995]
 

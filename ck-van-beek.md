@@ -1,24 +1,23 @@
 ## Creatine kinase
 
-Van Beek's model[^van Beek 2007] for both mitochondrial IMS and cytosolic compartments. 
+Van Beek's model[^vanBeek2007] for both mitochondrial IMS and cytosolic compartments. 
 
 Parameters were optimized by Hettling's work.[^Hettling2011]
-$$
-\ce{ATP + Cr <=>[CK] ADP + PCr}
-$$
+
+`ATP + Cr = ADP + PCr`
 
 $$
-\begin{align}
+\begin{aligned}
 J_{CK} &= (V_f AB^{'} - V_b PQ) / \Delta  \\
 \Delta &= 1 + A + B + P + Q + AB^{'} + P^{'}Q + PB^{''} \\
-A &= \ce{[ATP]} / K_{ia}   \\
-B &= \ce{[Cr]} / K_{ib}    \\
-B^{'} &= \ce{[Cr]} / K_{b} \\
-B^{''} &= \ce{[Cr]} / K_{Ib} \\
-P &= \ce{[ADP]} / K_{ic}   \\
-P^{'} &= \ce{[ADP]} / K_{c}\\
-Q &= \ce{[PCr]} / K_{id}
-\end{align}
+A &= [ATP] / K_{ia}   \\
+B &= [Cr] / K_{ib}    \\
+B^{'} &= [Cr] / K_{b} \\
+B^{''} &= [Cr] / K_{Ib} \\
+P &= [ADP] / K_{ic}   \\
+P^{'} &= [ADP] / K_{c}\\
+Q &= [PCr] / K_{id}
+\end{aligned}
 $$
 
 ### Mitochondrial CK (miCK)
@@ -55,39 +54,38 @@ $$
 
 Positive direction is from IMS to cytosol.
 $$
-\begin{align}
+\begin{aligned}
 J_{diff}^{X} &= R_{X}([X]_{ims} - [X]_{cyt})  \\
 \text{For X} &\in \{ ATP,\ ADP, \ Cr, \ PCr \} 
-\end{align}
+\end{aligned}
 $$
 Since the diffusion rate is the same for ATP/ADP pair, and Cr/PCr pair, respectively. We can deduce more conservation relationships.
 $$
-\begin{align}
-\Sigma \ce{[A]_{ims}} &= \ce{[ATP]_{ims}} + \ce{[ADP]_{ims}}  \\
-\Sigma \ce{[A]_{cyt}} &= \ce{[ATP]_{cyt}} + \ce{[ADP]_{cyt}}  \\
-\Sigma \ce{[Cr]_{ims}} &= \ce{[Cr]_{ims}} + \ce{[CrP]_{ims}}  \\
-\Sigma \ce{[Cr]_{cyt}} &= \ce{[Cr]_{cyt}} + \ce{[CrP]_{cyt}}  \\
-\end{align}
+\begin{aligned}
+\Sigma [A]_{ims} &= [ATP]_{ims} + [ADP]_{ims}  \\
+\Sigma [A]_{cyt} &= [ATP]_{cyt} + [ADP]_{cyt}  \\
+\Sigma [Cr]_{ims} &= [Cr]_{ims} + [CrP]_{ims}  \\
+\Sigma [Cr]_{cyt} &= [Cr]_{cyt} + [CrP]_{cyt}  \\
+\end{aligned}
 $$
 
 
-| Parameter                | Value     | Unit | Desc.                                                        |
-| ------------------------ | --------- | ---- | ------------------------------------------------------------ |
-| $R_{ATP}$                | 23.64     | Hz   | conductance of ATP                                           |
-| $R_{ADP}$                | $R_{ATP}$ | Hz   | conductance of ADP                                           |
-| $R_{PCr}$                | 155       | Hz   | conductance of PCr                                           |
-| $R_{Cr}$                 | $R_{PCr}$ | Hz   | conductance of Cr                                            |
-| $R_{Pi}$                 | 195.63    | Hz   | conductance Pi                                               |
-| $V_{cyto}$               | 3         | -    | Relative volume of cytosol. <br />Volume of 1 corresponds to $V_{mito}$=0.153mL/gww. |
-| $V_{mito}$               | 1         | -    | Relative volume of mitochondrial matrix.                     |
-| $V_{ims}$                | 0.25      | -    | Relative volume of intermembrane space.                      |
-| $\Sigma\ce{[A]_{cyt}}$   | 5.665     | mM   | Sum of cytosolic adenylate                                   |
-| $\Sigma\ce{[A]_{ims}}$   | 5.665     | mM   | Sum of intermembrane space adenylate                         |
-| $\Sigma \ce{[Cr]_{cyt}}$ | 15.5      | mM   | Pool of cytosolic creatine                                   |
-| $\Sigma \ce{[Cr]_{ims}}$ | 15.5      | mM   | Pool of intermembrane space creatine                         |
+| Parameter           | Value     | Unit | Desc.                                                                                |
+| ------------------- | --------- | ---- | ------------------------------------------------------------------------------------ |
+| $R_{ATP}$           | 23.64     | Hz   | conductance of ATP                                                                   |
+| $R_{ADP}$           | $R_{ATP}$ | Hz   | conductance of ADP                                                                   |
+| $R_{PCr}$           | 155       | Hz   | conductance of PCr                                                                   |
+| $R_{Cr}$            | $R_{PCr}$ | Hz   | conductance of Cr                                                                    |
+| $R_{Pi}$            | 195.63    | Hz   | conductance Pi                                                                       |
+| $V_{cyto}$          | 3         | -    | Relative volume of cytosol. <br />Volume of 1 corresponds to $V_{mito}$=0.153mL/gww. |
+| $V_{mito}$          | 1         | -    | Relative volume of mitochondrial matrix.                                             |
+| $V_{ims}$           | 0.25      | -    | Relative volume of intermembrane space.                                              |
+| $\Sigma[A]_{cyt}$   | 5.665     | mM   | Sum of cytosolic adenylate                                                           |
+| $\Sigma[A]_{ims}$   | 5.665     | mM   | Sum of intermembrane space adenylate                                                 |
+| $\Sigma [Cr]_{cyt}$ | 15.5      | mM   | Pool of cytosolic creatine                                                           |
+| $\Sigma [Cr]_{ims}$ | 15.5      | mM   | Pool of intermembrane space creatine                                                 |
 
 
-
-[^van Beek 2007]: Kongas O, van Beek JHGM Creatine kinase in energy metabolic signaling in muscle Nature Precedings (2007)DOI: https://doi.org/10.1038/npre.2007.1317.1
+[^vanBeek2007]: Kongas O, van Beek JHGM Creatine kinase in energy metabolic signaling in muscle Nature Precedings (2007)DOI: https://doi.org/10.1038/npre.2007.1317.1
 
 [^Hettling2011]: Hettling, H., & van Beek, J. H. G. M. (2011). Analyzing the functional properties of the creatine kinase system with multiscale “sloppy” modeling. PLoS Computational Biology, 7(8), e1002130.

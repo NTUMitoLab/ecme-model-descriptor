@@ -15,12 +15,12 @@
 #### Conservations
 
 $$
-\begin{equation}
+\begin{aligned}
 (C_{APT,cyt} +C_{ADP,cyt} )V_{cyt} +(C_{APT,ims} +C_{ADP,ims} ) V_{ims}+(C_{APT,mito} +C_{ADP,mito} ) V_{mito} =C_{AdN,tot} (V_{cyt} +V_{ims} ) \\
 (C_{PCr,cyt} +C_{Cr,cyt} ) V_{cyt} +(C_{PCr,ims} +C_{Cr,ims} ) V_{ims} =C_{Cr,tot} (V_{cyt} +V_{ims} ) \\
 
 (C_{APT,cyt} +C_{PCr,cyt} +C_{Pi,cyt} ) V_{cyt} +(C_{APT,ims} +C_{PCr,ims} +C_{Pi,ims} ) V_{ims} =C_{Pi,tot}  (V_{cyt} +V_{ims} ) \\
-\end{equation}
+\end{aligned}
 $$
 
 The total adenosine concentration and the total creatine might be different in different mice strains: WT, mtCK,  mtCaMKII etc.

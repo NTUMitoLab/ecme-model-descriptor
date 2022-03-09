@@ -1,6 +1,7 @@
 ## Complex IV[^Gauthier2013A]
+
 $$
-\begin{align}
+\begin{aligned}
 f_{H_{m}} &= \text{exp}(-\delta_5\Delta\Psi_m / V_T) ([H^+]_m /10^{-7}M) \\
 f_{H_{i}} &= \text{exp}((1-\delta_5)\Delta\Psi_m / V_T) ([H^+]_i /10^{-7}M)  \\
 f_{C_{rd}} &= [cytc]_{rd} \\
@@ -30,7 +31,7 @@ J_{hRes}^{C4}  &= v_{34} + 2v_{36} + v_{37}  \\
 J_{O_2} &= v_{35}  \\
 J_{hRes} &= J_{hRes}^{C1} + J_{hRes}^{C3} + J_{hRes}^{C4} \\
 \rho_{C4}^\prime &= \rho_{C4} \cdot mt_{prot}
-\end{align}
+\end{aligned}
 $$
 
 | Parameter     | Value     | Unit    | Desc.                    |
@@ -44,7 +45,6 @@ $$
 | $k_{-36}$     | 4.826     | Hz/mM   | @ pH = 7                 |
 | $k_{37}$      | 1.7245E8  | Hz      | @ pH = 7                 |
 | $k_{-37}$     | 17.542    | Hz      | @ pH = 7                 |
-
 
 
 [^Gauthier2013A]: Gauthier LD, Greenstein JL, O’Rourke B, Winslow RL. An Integrated Mitochondrial ROS Production and Scavenging Model: Implications for Heart Failure. Biophysical Journal. 2013;105(12):2832-2842. doi:10.1016/j.bpj.2013.11.007. [PMC3882515](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3882515)

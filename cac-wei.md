@@ -4,11 +4,11 @@
 
 
 $$
-\begin{align}
+\begin{aligned}
 J_{CS} &= \frac{k_{cat} E_T AB}{(1+A)(1+B)}  \\
-A &= \ce{[AcCoA]} / K_m^{AcCoA} \\
-B &= \ce{[OAA]} / K_m^{OAA}
-\end{align}
+A &= [AcCoA] / K_m^{AcCoA} \\
+B &= [OAA] / K_m^{OAA}
+\end{aligned}
 $$
 
 | Parameter        | Value   | Unit | Description                         |
@@ -17,16 +17,16 @@ $$
 | $E_T$            | 0.4     | mM   | Enzyme concentration of CS          |
 | $K_m^{AcCoA}$    | 0.0126  | mM   | Michaelis constant for AcCoA        |
 | $K_m^{OAA}$      | 6.4E-4  | mM   | Michaelis constant for OAA          |
-| $\ce{[AcCoA]}$   | 1       | mM   | Acetyl CoA concentration            |
+| $[AcCoA]$        | 1       | mM   | Acetyl CoA concentration            |
 | $k_{cat}$ (cell) | 0.15891 | Hz   | Catalytic constant (cellular model) |
 
 ### Aconitase (ACO)
 
 $$
-\begin{align}
+\begin{aligned}
 J_{ACO} &= k_f ([CIT] - [ISOC] / K_{eq})  \\
 \ [CIT] &= \Sigma_{CAC} - [ISOC] - [\alpha KG]-[SCoA] - [SUC] - [FUM] - [MAL] - [OAA]
-\end{align}
+\end{aligned}
 $$
 
 | Parameter      | Value    | Unit | Description                            |
@@ -39,14 +39,14 @@ $$
 ### Isocitrate dehydrogenase, NADH-producing (IDH3)
 
 $$
-\begin{align}
+\begin{aligned}
 J_{IDH3} &= \frac{k_{cat} E_T AB}{f_H AB + f_i B + f_a A + f_a f_i} \\
 f_H & = 1 + \frac{[H^+]_m}{K_{H1}} + \frac{K_{H2}}{[H^+]_m}  \\
 A &= [NAD] / K_{NAD} \\
 B &= ([ISOC] / K_{ISOC})^n  \\
 f_a &= \frac{K_A}{K_A + [ADP]_m} \frac{K_{CA}}{K_{CA} + [Ca^{2+}]_m}  \\
 f_i &= 1 + \frac{[NADH]}{K_{NADH}}  \\
-\end{align}
+\end{aligned}
 $$
 
 | Parameter        | Value | Unit | Description                       |
@@ -66,13 +66,13 @@ $$
 ### Alpha-ketoglutarate dehydrogenase (KGDH)
 
 $$
-\begin{align}
+\begin{aligned}
 J_{KGDH} &= \frac{k_{cat} E_T AB}{f_H AB + f_a (A + B)} \\
 f_H & = 1 + \frac{[H^+]_m}{K_{H1}} + \frac{K_{H2}}{[H^+]_m}  \\
 A &= [NAD] / K_{NAD} \\
 B &= ([\alpha KG] / K_{AKG})^n  \\
 f_a &= \frac{K_{MG}}{K_{MG} + [Mg^{2+}]_m} \frac{K_{CA}}{K_{CA} + [Ca^{2+}]_m}  \\
-\end{align}
+\end{aligned}
 $$
 
 | Parameter        | Value  | Unit | Description                    |
@@ -91,10 +91,10 @@ $$
 ### Succinate-CoA ligase (SL)
 
 $$
-\begin{align}
+\begin{aligned}
 J_{SL} &= k_f ([SCoA][ADP]_m[Pi]_m - [SUC][ATP]_m[CoA]/K_{eq}^{app}) \\
 K_{eq}^{app} &= K_{eq} \frac{P_{SUC}P_{ATP}}{P_{Pi}P_{ADP}}
-\end{align}
+\end{aligned}
 $$
 
 | Parameter    | Value   | Unit    | Description                            |
@@ -123,13 +123,13 @@ $$
 ### Malate dehydrogenase (MDH)
 
 $$
-\begin{align}
+\begin{aligned}
 J_{MDH} &= \frac{k_{cat} E_T AB f_a f_i}{(1+A)(1+B)}  \\
 A &= \frac{[MAL]}{K_{MAL}}\frac{K_{OAA}}{K_{OAA} + [OAA]}  \\
 B &= [NAD] / K_{NAD}  \\
 f_a &= k_{offset} + \left( 1 + \frac{[H^+]_m}{K_{H1}} (1 + \frac{[H^+]_m}{K_{H2}})    \right)^{-1}  \\
 f_i &= \left( 1 + \frac{K_{H3}}{[H^+]_m} (1 + \frac{K_{H4}}{[H^+]_m})    \right)^{2}  \\
-\end{align}
+\end{aligned}
 $$
 
 | Parameter        | Value    | Units | Description                          |
@@ -159,11 +159,5 @@ $$
 | $K_{eq}$     | 6.6    |       | Equilibrium constant                   |
 | [GLU]        | 30.000 | mM    | Glutamate concentration                |
 | $k_f$ (cell) | 21.7   | Hz    | Forward rate constant (cellular model) |
-
-
-
-
-
-
 
 [^Wei2011]: Wei AC, Aon MA, O'Rourke B, Winslow RL, Cortassa S. Mitochondrial energetics, pH regulation, and ion dynamics: a computational-experimental approach. Biophys J. 2011;100(12):2894-903. [PMC3123977](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3123977/)
