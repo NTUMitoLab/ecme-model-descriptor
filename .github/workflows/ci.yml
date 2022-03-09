@@ -7,13 +7,13 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, ubuntu]
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup pandoc
-        run: |
-          echo "Installing pandoc version ${PDC_VER}"
-          wget -qO- https://github.com/jgm/pandoc/releases/download/${PDC_VER}/pandoc-${PDC_VER}-linux-amd64.tar.gz | sudo tar xvzf - --strip-components 1 -C /usr/local/
+      # - uses: actions/checkout@v3
+      # - name: Setup pandoc
+      #   run: |
+      #     echo "Installing pandoc version ${PDC_VER}"
+      #     wget -qO- https://github.com/jgm/pandoc/releases/download/${PDC_VER}/pandoc-${PDC_VER}-linux-amd64.tar.gz | sudo tar xvzf - --strip-components 1 -C /usr/local/
       - name: Build docx files
         run: |
           find docs -type f -name "*.md" -print0 | parallel -0 -j2 pandoc -s {} -o {}.docx
