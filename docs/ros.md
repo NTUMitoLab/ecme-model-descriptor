@@ -289,6 +289,25 @@ $$
 | $k_{a}$        | 1174.74 | Hz   | Forward catalytic constant    |
 | $K_{eq}^{App}$ | 1       | -    | Apparent equilibrium constant |
 
+## ODE system for ROS 
+
+$$
+\begin{aligned}
+\frac{d[ [NADPH]_m}{dt} & = J_{IDH2} + J_{THD} - 0.5J_{GR,m} - J_{TxR, m}  \\
+\frac{d [ O_{2}^{ \bullet -}]_{m}}{dt} &= J_{ROS,m} - J_{SOD,m} - J^{Tr}_{ROS}  \\
+\frac{d [ O_{2}^{ \bullet -}]_{i}}{dt} &= \frac{V_{mito}}{V_{cyto}} J^{Tr}_{ROS} -J_{SOD,i}  \\
+\frac{d [H_2O_2]_m}{dt} &= 0.5J_{SOD,m} - J_{dif,[H_2O_2]} - J_{GPX,m} -J_{TxPX,m}  \\
+\frac{d[H_2O_2]_i}{dt} &= 0.5J_{SOD,i} + \frac{V_{mito}}{V_{cyto}}  J_{dif,[H_2O_2]} -J_{GPX,i} -J_{TxPX,i} - J_{CAT}  \\
+\frac{d [GSH]_m}{dt} &= J_{GR,m} - J_{GPX,m} - J_{GRX,m} + J_{GST} -J_{PSSG,m}  \\
+\frac{d[GSH]_i}{dt} &= J_{GR,i} - J_{GPX,i} - J_{GRX,i} + \frac{V_{mito}}{V_{cyto}} J_{GST} - J_{PSSG,i}  \\
+\frac{d [GSSG]_m}{dt} &= 0.5( J_{GPX,m} -J_{GR,m}) + J_{GRX,m}  \\
+\frac{d [TrxSH_2]_m}{dt} &= J_{TR,m} - J_{TPX,m}   \\ 
+\frac{d [TrxSH_2]_i}{dt} &= J_{TR,i} - J_{TPX,i}   \\ 
+\frac{d [PSSG]_m}{dt} &= J_{PSSG,m} - J_{GRX,m}    \\
+\frac{d [PSSG]_i}{dt} &= J_{PSSG,i} - J_{GRX,i}    \\
+\end{aligned}
+$$
+
 
 
 [^Cortassa2004]:Cortassa S, Aon MA, Winslow RL, O'Rourke B. A mitochondrial oscillator dependent on reactive oxygen species. Biophys J. 2004;87(3):2060-73. [PMC1304608](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1304608/)

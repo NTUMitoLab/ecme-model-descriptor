@@ -373,6 +373,29 @@ $$
 | $p_{2}$        | 7.739E-7  | -    | Sum of products of rate constants                                                       |
 | $p_{3}$        | 6.65E-15  | -    | Sum of products of rate constants                                                       |
 
+## ODE system
+
+Q cycle
+
+$$
+\begin{aligned}
+\frac{d[Q]_n}{dt} &= v_5 - v_{7,ox}- v_{7,rd} - v_1  \\
+\frac{d[Q^{ \cdot -}]_n}{dt} &= v_{7,ox} + v_{7,rd} - v_{8,ox}- v_{8,rd}  \\
+\frac{d[QH_2]_n}{dt} &= v_{8,ox} + v_{8,rd} + v_1 - v_2   \\
+\frac{d[QH_2]_p}{dt} &= v_2 -v_3 \\
+\frac{d[Q^{ \cdot -}]_p}{dt} &= v_3 - v_{10} - v_{10b} - v_{4,ox} - v_{4,rd}   \\
+\frac{d[Q]_p}{dt} &= v_{10} + v_{10b} + v_{4,ox} + v_{4,rd} - v_5   \\
+\frac{d[b1]}{dt} &= v_{7,ox} + v_{8,ox} - v_{4,ox}    \\
+\frac{d[b2]}{dt} &= v_{4,ox} + v_{7,rd} - v_{8,rd} - v_6   \\
+\frac{d[b3]}{dt} &= v_6 - v_{4,rd} + v_{7,ox} - v_{8,ox}    \\
+\frac{d[b4]}{dt} &= v_{4,rd} - v_{7,rd} - v_{8,rd}   \\
+\frac{d[FeS]_{ox}}{dt} &= v_9 - v_3      \\
+\frac{d[cytc1]_{ox}}{dt} &= v_{33} - v_9   \\
+\frac{d[cytc]_{ox}}{dt} &= V_e - v_{33}   \\
+\end{aligned}
+$$
+
+
 
 [^Wei2011]: Wei AC, Aon MA, O'Rourke B, Winslow RL, Cortassa S. Mitochondrial energetics, pH regulation, and ion dynamics: a computational-experimental approach. Biophys J. 2011;100(12):2894-903. [PMC3123977](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3123977/)
 

@@ -82,7 +82,7 @@ $$
 
 J_{hyd} =H_{ATP,max} \  6t/t_{cycle} \ \ \ \ \ for\ \ \ \ \ 0< t< \frac {t_{cycle}}{6} \\
 
-J_{hyd} =H_{ATP,max} \  [1-6(t/t_{cycle} -1/6)]\ \ \ \ \ for\ \ \ \ \ \frac {t_{cycle}}{6}< t< \frac {t_{cycle}}{3}  \\
+J_{hyd} =H_{ATP,max} \  [1-6(t/t_{cycle} -1/6)]\ \ \ \ \ for\  \\
 
 J_{hyd} =0\ \ \ \ \ for\ \ \ \ \ \frac {t_{cycle}}{3}  < t< t_{cycle} \\
 \end{aligned}
