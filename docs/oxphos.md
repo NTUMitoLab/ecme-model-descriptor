@@ -171,9 +171,6 @@ J_{ROS}^{C1} &= \rho_{C1}^\prime (e_{4}a_{42} - e_{2}a_{24})  \\
 \end{aligned}
 $$
 
-
-#### Parameters
-
 | Parameter      | Value     | Units       | Desc.                                        |
 | -------------- | --------- | ----------- | -------------------------------------------- |
 | $\rho_{C1}$    | 8.849     | mM          | Concentration of complex I<br />(Adjustable) |
@@ -195,7 +192,6 @@ $$
 | $k_{42}$       | 6.0318    | Hz/mM       |                                              |
 | $E_{FMN}$      | -375      | mV          | Midpoint potential of flavin mononucleotide  |
 | $E_{sox}$      | -150      | mV          | Midpoint potential of superoxide             |
-
 
 ## Complex II (Succinate dehydrogenase)[^Gauthier2013A]
 
@@ -268,28 +264,6 @@ J_{ROS, m}^{C3} &= v_{10}   \\
 J_{ROS, i}^{C3} &= v_{10b}  \\
 \end{aligned}
 $$
-
-ODE System in the Q cycle:
-
-$$
-\begin{aligned}
-\frac{d[Q]_n}{dt} &= v_5 - v_{7,ox}- v_{7,rd} - v_1  \\
-\frac{d[Q^{ \cdot -}]_n}{dt} &= v_{7,ox} + v_{7,rd} - v_{8,ox}- v_{8,rd}  \\
-\frac{d[QH_2]_n}{dt} &= v_{8,ox} + v_{8,rd} + v_1 - v_2   \\
-\frac{d[QH_2]_p}{dt} &= v_2 -v_3 \\
-\frac{d[Q^{ \cdot -}]_p}{dt} &= v_3 - v_{10} - v_{10b} - v_{4,ox} - v_{4,rd}   \\
-\frac{d[Q]_p}{dt} &= v_{10} + v_{10b} + v_{4,ox} + v_{4,rd} - v_5   \\
-\frac{d[b1]}{dt} &= v_{7,ox} + v_{8,ox} - v_{4,ox}    \\
-\frac{d[b2]}{dt} &= v_{4,ox} + v_{7,rd} - v_{8,rd} - v_6   \\
-\frac{d[b3]}{dt} &= v_6 - v_{4,rd} + v_{7,ox} - v_{8,ox}    \\
-\frac{d[b4]}{dt} &= v_{4,rd} - v_{7,rd} - v_{8,rd}   \\
-\frac{d[FeS]_{ox}}{dt} &= v_9 - v_3      \\
-\frac{d[cytc1]_{ox}}{dt} &= v_{33} - v_9   \\
-\frac{d[cytc]_{ox}}{dt} &= V_e - v_{33}   \\
-\end{aligned}
-$$
-
-### Parameters
 
 | Parameter    | Value    | Unit  | Desc.                                                     |
 | ------------ | -------- | ----- | --------------------------------------------------------- |

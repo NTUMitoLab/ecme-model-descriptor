@@ -57,8 +57,6 @@ $$
 | $\Phi_1$  | 5E-6   | mM*s | Dalziel coefficient         |
 | $\Phi_2$  | 7.5-E4 | mM*s | Dalziel coefficient         |
 
-
-
 ### Glutathione reductase (GR)
 
 Michaelis-Menten kinetics, for both cytosolic and mitochondrial compartments.
@@ -148,8 +146,6 @@ $$
 | $[GSH]_i$ |       | mM   | Cytosolic GSH pool     |
 | $[GSH]_m$ |       | mM   | Mitochondrial GSH pool |
 
-
-
 ## Thioredoxin system[^Kembro2013]
 
 ### Peroxiredoxin (TPX)
@@ -204,8 +200,6 @@ $$
 | $[TrxSS]_i$ | 25    | μM   | Sum of cytosolic thioreoxin     |
 | $[TrxSS]_m$ | 50    | μM   | Sum of mitochondrial thioreoxin |
 
-
-
 ## Inner mitochondrial anion channel[^Cortassa2004]
 
 $$
@@ -226,8 +220,6 @@ $$
 | $\Delta\Psi_m^b$ | 4      | mV           | Potential at half saturation       |
 | j                | 0.1    | -            | Fraction of IMAC conductance       |
 
-
-
 ## Hydrogen peroxide transfer[^Kembro2013]
 
 Simple diffusion.
@@ -245,8 +237,6 @@ $$
 $$
 \Sigma{[NADP]_m} = [NADP^+]_m + [NADPH]_m
 $$
-
-
 
 ## NADPH-producing isocitrate dehydrogenase (IDH2)[^Kembro2013]
 
@@ -271,8 +261,6 @@ $$
 | $K_{m,\alpha KG}$ | 510   | μM    | Michaelis constant for αKG        |
 | $V_f$             | 87    | μM*Hz | Maximal forward rate of IDH2      |
 | $V_b$             | 5.45  | μM*Hz | Maximal backward rate of IDH2     |
-
-
 
 ## Transhydrogenase (THD)[^Kembro2013]
 

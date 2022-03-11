@@ -2,7 +2,6 @@
 
 ### Citrate synthase (CS)
 
-
 $$
 \begin{aligned}
 J_{CS} &= \frac{k_{cat} E_T AB}{(1+A)(1+B)}  \\
@@ -106,7 +105,7 @@ $$
 
 ### Succinate dehydrogenase (SDH)
 
-See electron transport chain.
+See OXPHOS part: complex II (Succinate dehydrogenase).
 
 ### Fumarate hydratase (FH)
 

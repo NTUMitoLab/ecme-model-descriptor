@@ -55,6 +55,35 @@ $$
 | $\Sigma{[NADP]_m}$ | 0.1     | mM   | Sum of mitochondrial NADPH plus NADP     |
 | $[Ca^{2+}]_i$      | 1E-4    | mM   | Cytosolic calcium concentration          |
 
+## Initial conditions of state variables
+
+| State variable | Value   | Unit |
+| -------------- | ------- | ---- |
+| $[Ca^{2+}]_m$  | 0.02738 | μM   |
+| $[ADP]_m$      | 15.8    | μM   |
+| $\Delta\Psi_m$ | 193     | mV   |
+| $[NADH]$       | 965     | μM   |
+| $[H^+]_m$      | 0.0697  | μM   |
+| $[Pi]_m$       | 8280    | μM   |
+| $[ISOC]$       | 121     | μM   |
+| $[\alpha KG]$  | 130     | μM   |
+| $[SCoA]$       | 16.1    | μM   |
+| $[SUC]$        | 37      | μM   |
+| $[FUM]$        | 235     | μM   |
+| $[MAL]$        | 228     | μM   |
+| $[OAA]$        | 1.28    | μM   |
+| $[Na^+]_m$     | 98.5    | μM   |
+| $[O_2^-]_m$    | 6.39E-3 | μM   |
+| $[O_2^-]_i$    | 4.83E-5 | μM   |
+| $[H_2O_2]_m$   | 0.0823  | μM   |
+| $[H_2O_2]_i$   | 2.83E-4 | μM   |
+| $[GSH]_m$      | 1650    | μM   |
+| $[GSH]_i$      | 1650    | μM   |
+| $[TrxSH_2]_m$  | 24.3    | μM   |
+| $[TrxSH_2]_i$  | 49.9    | μM   |
+| $[PSSG]_m$     | 0.676   | μM   |
+| $[PSSG]_i$     | 0.0264  | μM   |
+
 ## Acid-base equilibria and binding polynomials[^Wei2011]
 
 For both cytoplasmic and mitochondrial compartments.
@@ -91,32 +120,3 @@ $$
 
 
 [^Wei2011]: Wei AC, Aon MA, O'Rourke B, Winslow RL, Cortassa S. Mitochondrial energetics, pH regulation, and ion dynamics: a computational-experimental approach. Biophys J. 2011;100(12):2894-903. [PMC3123977](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3123977/)
-
-## Initial conditions of state variables
-
-| State variable | Value   | Unit |
-| -------------- | ------- | ---- |
-| $[Ca^{2+}]_m$  | 0.02738 | μM   |
-| $[ADP]_m$      | 15.8    | μM   |
-| $\Delta\Psi_m$ | 193     | mV   |
-| $[NADH]$       | 965     | μM   |
-| $[H^+]_m$      | 0.0697  | μM   |
-| $[Pi]_m$       | 8280    | μM   |
-| $[ISOC]$       | 121     | μM   |
-| $[\alpha KG]$  | 130     | μM   |
-| $[SCoA]$       | 16.1    | μM   |
-| $[SUC]$        | 37      | μM   |
-| $[FUM]$        | 235     | μM   |
-| $[MAL]$        | 228     | μM   |
-| $[OAA]$        | 1.28    | μM   |
-| $[Na^+]_m$     | 98.5    | μM   |
-| $[O_2^-]_m$    | 6.39E-3 | μM   |
-| $[O_2^-]_i$    | 4.83E-5 | μM   |
-| $[H_2O_2]_m$   | 0.0823  | μM   |
-| $[H_2O_2]_i$   | 2.83E-4 | μM   |
-| $[GSH]_m$      | 1650    | μM   |
-| $[GSH]_i$      | 1650    | μM   |
-| $[TrxSH_2]_m$  | 24.3    | μM   |
-| $[TrxSH_2]_i$  | 49.9    | μM   |
-| $[PSSG]_m$     | 0.676   | μM   |
-| $[PSSG]_i$     | 0.0264  | μM   |

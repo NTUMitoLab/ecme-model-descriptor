@@ -1,6 +1,7 @@
 # Ordinary Differential Equations
 
 ## Mitochondrial ions
+
 $$
 \begin{aligned}
 \frac{d [Ca^{2+}]_m}{dt} &=\delta_{Ca}( J_{uni} - J_{NCLX}) \\
@@ -12,6 +13,7 @@ C_{m}\frac{d \Delta \Psi_m}{dt} &= J_{Hres} - J_{Hu} - J_{ANT} - J_{Hleak} -J_{N
 $$
 
 ## Citric acid cycle
+
 $$
 \begin{aligned}
 \frac{d [ISOC]}{dt} &= J_{ACO} -J_{IDH3} -J_{IDH2}  \\
@@ -26,6 +28,7 @@ $$
 $$
 
 ## ROS transport and scavenging 
+
 $$
 \begin{aligned}
 \frac{d[ [NADPH]_m}{dt} & = J_{IDH2} + J_{THD} - 0.5J_{GR,m} - J_{TxR, m}  \\
@@ -44,6 +47,7 @@ $$
 $$
 
 ## High-energy and inorganic phosphates
+
 $$
 \begin{aligned}
 \frac{d [ADP]_m}{dt} &= J_{ANT} - J_{F1Fo} - J_{SL}  \\
@@ -62,6 +66,7 @@ V_{cyt}\frac{d [Pi]_{cyt}}{dt} &= J_{hyd} + J_{diff}^{Pi}
 $$
 
 ## Q cycle
+
 $$
 \begin{aligned}
 \frac{d[Q]_n}{dt} &= v_5 - v_{7,ox}- v_{7,rd} - v_1  \\
