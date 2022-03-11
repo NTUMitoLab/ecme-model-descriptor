@@ -10,6 +10,7 @@ V_{tr}^{ROS} &= j \cdot g_{IMAC} \left( \Delta\Psi_m + V_T ln \left( \frac{[O_2^
 $$
 
 An alternative is to adopt Nivalas’ IMAC model[^Nivala2011] with GHK flux equation, which is singularity-free and more general.
+
 $$
 J_{IMAC} = g_{IMAC}\frac{\delta}{e^\delta -1} (e^\delta [O_2^-]_m - [O_2^-]_i) \\
 \delta = \Delta\Psi_m / V_T

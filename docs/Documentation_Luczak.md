@@ -14,7 +14,7 @@
 
 ### Model validation
 
-The model is constructed by integrating two computational models: van Beek 2007 creatine kinase model[^van Beek 2007] and Gauthier 2013 cardiac bioenergetic model[^Gauthier2013A]. The model parameters were directly taken from these two model unless stated otherwise. The metabolite steady state levels in the control group were matched to the original model as a model validation.
+The model is constructed by integrating two computational models: van Beek 2007 creatine kinase model[^vanBeek2007] and Gauthier 2013 cardiac bioenergetic model[^Gauthier2013A]. The model parameters were directly taken from these two model unless stated otherwise. The metabolite steady state levels in the control group were matched to the original model as a model validation.
 
 ## Ordinary Differential Equations[^vanBeek2007]
 
@@ -122,10 +122,8 @@ J_{diff,Pi} &=R_{Pi}( Pi_{ims} -Pi)  \\
 $$
 
 
-
 $$
 \begin{aligned}
-
 J_{hyd} =H_{ATP(max)} \  6t/t_{cycle} \ \ \ \ \ for\ \ \ \ \ 0< t< 1/6 t_{cycle} \\
 J_{hyd} =H_{ATP(max)} \  [1-6(t/t_{cycle} -1/6)]\ \ \ \ \ for\ \ \ \ \ 1/6\ t_{cycle} < t< 1/3 t_{cycle} \\
 J_{hyd} =0\ \ \ \ \ for\ \ \ \ \ 1/3 t_{cycle} < t< t_{cycle} \\
@@ -914,10 +912,6 @@ $$
 | $k_{37}$      | 1.7245E8  | Hz      | @ pH = 7                 |
 | $k_{-37}$     | 17.542    | Hz      | @ pH = 7                 |
 
-
-
-
-
 ## Complex V (ATP synthase) rates[^Wei2011]
 
 $$
@@ -927,7 +921,8 @@ J_H^{F1Fo} &= -3\rho^{F1} (100p_a(1 + v_a) - (p_a + p_b)v_h) / \Delta \\
 \Delta &= (1 + p_1 v_a)v_B + (p_2 + p_3 v_a)v_h \\
 v_B &= \text{exp}(3\Delta\Psi_B / V_T)   \\ 
 v_h &= \text{exp}(3\Delta p / V_T)  \\
-v_a &= {K_{eq}^{'} [ATP^{4-}]_m \over \Sigma [Pi]_m([ADP^{3-}]_m + [HADP^{2-}]_m)} \\\end{aligned}
+v_a &= {K_{eq}^{'} [ATP^{4-}]_m \over \Sigma [Pi]_m([ADP^{3-}]_m + [HADP^{2-}]_m)}
+\end{aligned}
 $$
 
 | Parameter      | Value     | Unit | Desc.                                            |
@@ -946,7 +941,6 @@ $$
 
 
 ## Reactive oxygen species (ROS) scavenging and transport
-
 
 
 ## Catalase (CAT)[^Cortassa2004]
@@ -973,7 +967,7 @@ $$
 \begin{aligned}
 J_{SOD} &= {2k_5E_Tf_{sox}(k_1 + k_3^\prime) \over k_5(2 k_1 + k_3^\prime) + k_3^\prime f_{sox}}   \\
 k_3^\prime &= k_3 (1 + \frac{[H_2O_2]}{K_{H_2O_2}})  \\
-f_{sox} &= k_1^{SOD} [O_2^-] \\
+f_{sox} &= k_1^{SOD} [O_2^-]
 \end{aligned}
 $$
 
