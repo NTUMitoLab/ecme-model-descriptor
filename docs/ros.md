@@ -1,7 +1,5 @@
 # Reactive oxygen species (ROS) scavenging and transport
 
-
-
 ## Catalase (CAT)[^Cortassa2004]
 
 Includes inhibition by high levels of hydrogen peroxide

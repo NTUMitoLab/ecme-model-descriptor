@@ -24,8 +24,6 @@ $$
 | $c_{PiC}$  | 4.9     | mM   | PiC activity                              |
 | $K_{eq}$   | 1       | -    | Equilibrium constant of PiC               |
 
-
-
 ## Mitochondrial Sodium-hydrogen exchanger (mNHE)[^Wei2011]
 
 Following Smith and Crampin's model of counterpart on the plasma membrane
@@ -70,7 +68,6 @@ Q &= [ADP^{3-}]_m  \\
 \delta &= \text{exp}(-\Delta\Psi_m / V_T)
 \end{aligned}
 $$
-
 
 
 | Parameter | Value | Unit    | Desc.            |
