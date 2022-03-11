@@ -1,4 +1,5 @@
 # General parameters
+
 | Parameter     | Value  | Unit             | Desc.                                    |
 | ------------- | ------ | ---------------- | ---------------------------------------- |
 | F             | 96485  | C/mol            | Faraday constant                         |
@@ -14,7 +15,7 @@
 
 | Parameter          | Value   | Unit | Desc.                                    |
 | ------------------ | ------- | ---- | ---------------------------------------- |
-| $pH_i$             | 7       |      | Cytosolic pH                             |
+| $pH_i$             | 7       |      | CytosoliWc pH                            |
 | $pH_m$             | 7.3-7.8 |      | Mitochondrial pH                         |
 | $[O_2]$            | 0.006   | mM   | Tissue oxygen concentration              |
 | $[Mg^{2+}]_i$      | 1.0     | mM   | Cytosolic magnesium concentration        |

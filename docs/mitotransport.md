@@ -126,7 +126,6 @@ $$
 | $g_{H}$   | 2     | mM / (V * s) | Ionic conductance of the inner membrane |
 
 
-
 ## Mitochondrial hydrogen flux balance[^Wei2011]
 
 $J_H$: Proton influx to mitochondrial matrix by pumps / transporters
