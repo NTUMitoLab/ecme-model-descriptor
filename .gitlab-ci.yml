@@ -1,6 +1,6 @@
 image: 
   name: pandoc/core:2.17.1.1-ubuntu
-  entrypoint: [""]
+  entrypoint: [""] # Default entrypoint of this image is 'pandoc'
 
 build-docx:
   script:
