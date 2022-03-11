@@ -1,0 +1,10 @@
+image: 
+  name: pandoc/core:2.17.1.1-ubuntu
+  entrypoint: [""]
+
+build-docx:
+  script:
+    - find ./docs -name "*.md" -exec sh -c "pandoc -s {} -o {}.docx" \;
+  artifacts:
+    paths:
+      - docs/**/*.docx
