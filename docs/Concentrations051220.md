@@ -12,7 +12,7 @@
 | $[Ca^{2+}]_i$ | $1 \cdot 10^{-4}$ | $mM$  | cytosolic Ca+ concentration          |
 | $[ADP]_i$     | $0.01-1.0$        | $mM$  | cytosolic ADP concentration          |
 
-#### Conservations
+### Conservations
 
 $$
 \begin{aligned}
@@ -24,7 +24,6 @@ $$
 $$
 
 The total adenosine concentration and the total creatine might be different in different mice strains: WT, mtCK,  mtCaMKII etc.
-
 
 
 ## Initial Conditions
