@@ -122,6 +122,25 @@ $$
 \end{aligned}
 $$
 
+## Functions
+
+Nernst potential
+
+$$
+E_N(X_o, X_i, z) := \frac{RT}{Fz} ln(\frac{X_o}{X_i}) \approx \frac{26.7mV}{z} ln(\frac{X_o}{X_i}) 
+$$
+
+Hill function
+
+$$
+Hill(x, k, n) := \frac{x^n}{x^n + k^n}
+$$
+
+GHK current equation
+
+$$
+\Phi_s(P_s, z_s, V_m, [S]_i, [S]_o) := P_sz^2_s\frac{V_mF^2}{RT}\frac{[S]_i - [S]_o\mathrm{exp}(-z_sV_mF/RT)}{1-\mathrm{exp}(-z_sV_mF/RT)}
+$$
 
 ## Parameters
 
