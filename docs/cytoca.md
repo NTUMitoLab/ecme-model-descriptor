@@ -46,7 +46,20 @@ y_\infty &= \frac{1}{1 + e^{(V_m + 55) / 7.5}} + \frac{0.5}{1 + e^{(-V_m + 21) /
 \end{aligned}
 $$
 
-## Cacium release channel (Jrel)[^Cortassa2006]
+| Parameter      | Value                 | Units            | Description                                |
+| -------------- | --------------------- | ---------------- | ------------------------------------------ |
+| $A$            | $2$                   |                  | Mode transition parameter                  |
+| $B$            | $2$                   |                  | Mode transition parameter                  |
+| $\omega$       | $10$                  | Hz               | Mode transition parameter                  |
+| $f$            | $300$                 | Hz               | Transition rate into open state            |
+| $g$            | $2000$                | Hz               | Transition rate into open state            |
+| $f^\prime$     | $0$                   | Hz               | Transition rate into open state            |
+| $g^\prime$     | $0$                   | Hz               | Transition rate into open state            |
+| $P_{Ca}^{LCC}$ | $1.24 \cdot 10^{-3}$  | $cm/s$           | L-type Ca2+ channel permeability to Ca2+   |
+| $P_{K}^{LCC}$  | $1.11 \cdot 10^{-11}$ | $cm/s$           | L-type Ca2+ channel permeability to K+     |
+| $I_{Ca, half}$ | $-0.4583$             | $\mu A \ cm^{2}$ | ICa level that reduces equation Pk by half |
+
+## Ryanodine receptor (calcium release, Jrel)[^Cortassa2006]
 
 With optimization from Plank et al. (2008)
 
@@ -69,6 +82,18 @@ J_{rel} &= r_{ryr} (P_{O1} + P_{O2})([Ca^{2+}]_{JSR} - [Ca^{2+}]_{ss}) \\
 \end{aligned}
 $$
 
+| Parameter | Value                  | Units               | Description               |
+| --------- | ---------------------- | ------------------- | ------------------------- |
+| $v_1$     | $3600$                 | Hz                  | RyR flux channel constant |
+| $n$       | $4$                    |                     | Cooperativity parameter   |
+| $m$       | $3$                    |                     | Cooperativity parameter   |
+| $k_a^+$   | $1.215 \cdot 10^{13} $ | $\text{Hz mM}^{-4}$ | RyR rate constant         |
+| $k_a^-$   | $576$                  | $\text{Hz}$         | RyR rate constant         |
+| $k_b^+$   | $4.05 \cdot 10^{6} $   | $\text{Hz mM}^{-3}$ | RyR rate constant         |
+| $k_b^-$   | $1930$                 | $\text{Hz}$         | RyR rate constant         |
+| $k_c^+$   | $100$                  | $\text{Hz}$         | RyR rate constant         |
+| $k_c^-$   | $0.8$                  | $\text{Hz}$         | RyR rate constant         |
+
 ## Plama membrane calcium ATPase (PMCA) current (IpCa)[^Cortassa2006]
 
 Modified rate expression incorporating the ATP-dependence of pump activity.
@@ -82,7 +107,15 @@ I_{pCa} &= I_{max}^{PMCA}  \cdot f_{Ca}  \cdot f_{ATP} \\
 \end{aligned}
 $$
 
-## SERCA pump (Jup)[^Cortassa2006]
+| Parameter         | Value   | Units                 | Description                                                   |
+| ----------------- | ------- | --------------------- | ------------------------------------------------------------- |
+| $I_{max}^{PMCA}$  | $0.575$ | $\mu A \cdot cm^{-2}$ | Maximum sarcolemmal Ca2+ pump current                         |
+| $K_{Ca}^{PMCA}$   | $0.5$   | $\mu M$               | Ca2+ half-saturation constant for sarcolemmal Ca2+ pump       |
+| $K_{ATP1}^{PMCA}$ | $0.012$ | $mM$                  | First ATP half-saturation constant for sarcolemmal Ca2+ pump  |
+| $K_{ATP2}^{PMCA}$ | $0.23$  | $mM$                  | Second ATP half-saturation constant for sarcolemmal Ca2+ pump |
+| $K_{ADP}^{PMCA}$  | $1.0$   | $mM$                  | ADP inhibition constant for sarcolemmal Ca2+ pump             |
+
+## SERCA calcium pump (Jup)[^Cortassa2006]
 
 Michaelis-Menten dependence of enzyme activity with respect to ATP and mixed-type inhibition of the enzyme by ADP.
 
@@ -99,21 +132,7 @@ $$
 
 [^Cortassa2006]: Cortassa S, Aon MA, O'Rourke B, et al. A computational model integrating electrophysiology, contraction, and mitochondrial bioenergetics in the ventricular myocyte. Biophys J. 2006;91(4):1564-89. [PMC1518641](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1518641/)
 
-## Parameters
-
-### Sarcolemmal Ca2+ (PMCA) current
-
-| Symbol            | Value   | Units                 | Description                                                   |
-| ----------------- | ------- | --------------------- | ------------------------------------------------------------- |
-| $I_{max}^{PMCA}$  | $0.575$ | $\mu A \cdot cm^{-2}$ | Maximum sarcolemmal Ca2+ pump current                         |
-| $K_{Ca}^{PMCA}$   | $0.5$   | $\mu M$               | Ca2+ half-saturation constant for sarcolemmal Ca2+ pump       |
-| $K_{ATP1}^{PMCA}$ | $0.012$ | $mM$                  | First ATP half-saturation constant for sarcolemmal Ca2+ pump  |
-| $K_{ATP2}^{PMCA}$ | $0.23$  | $mM$                  | Second ATP half-saturation constant for sarcolemmal Ca2+ pump |
-| $K_{ADP}^{PMCA}$  | $1.0$   | $mM$                  | ADP inhibition constant for sarcolemmal Ca2+ pump             |
-
-### Sarcoplasmic reticulum Ca2+ ATPase (SERCA)
-
-| Symbol               | Value     | Units   | Description                                    |
+| Parameter            | Value     | Units   | Description                                    |
 | -------------------- | --------- | ------- | ---------------------------------------------- |
 | $V_{max, f}^{SERCA}$ | $0.2989$  | $mM/s$  | SERCA forward rate parameter                   |
 | $V_{max, b}^{SERCA}$ | $0.3179$  | $mM/s$  | SERCA reverse  rate parameter                  |
@@ -125,36 +144,7 @@ $$
 | $K_{ADP1}^{SERCA}$   | $0.14$    | $mM$    | ADP first inhibition constant for SERCA        |
 | $K_{ADP2}^{SERCA}$   | $5.1$     | $mM$    | ADP second  inhibition constant for SERCA      |
 
-### L-type Ca2+ channel (LCC)
-
-| Symbol         | Value                 | Units            | Description                                |
-| -------------- | --------------------- | ---------------- | ------------------------------------------ |
-| $A$            | $2$                   |                  | Mode transition parameter                  |
-| $B$            | $2$                   |                  | Mode transition parameter                  |
-| $\omega$       | $10$                  | Hz               | Mode transition parameter                  |
-| $f$            | $300$                 | Hz               | Transition rate into open state            |
-| $g$            | $2000$                | Hz               | Transition rate into open state            |
-| $f^\prime$     | $0$                   | Hz               | Transition rate into open state            |
-| $g^\prime$     | $0$                   | Hz               | Transition rate into open state            |
-| $P_{Ca}^{LCC}$ | $1.24 \cdot 10^{-3}$  | $cm/s$           | L-type Ca2+ channel permeability to Ca2+   |
-| $P_{K}^{LCC}$  | $1.11 \cdot 10^{-11}$ | $cm/s$           | L-type Ca2+ channel permeability to K+     |
-| $I_{Ca, half}$ | $-0.4583$             | $\mu A \ cm^{2}$ | ICa level that reduces equation Pk by half |
-
-### Ryanodine receptor (RyR)
-
-| Symbol  | Value                  | Units               | Description               |
-| ------- | ---------------------- | ------------------- | ------------------------- |
-| $v_1$   | $3600$                 | Hz                  | RyR flux channel constant |
-| $n$     | $4$                    |                     | Cooperativity parameter   |
-| $m$     | $3$                    |                     | Cooperativity parameter   |
-| $k_a^+$ | $1.215 \cdot 10^{13} $ | $\text{Hz mM}^{-4}$ | RyR rate constant         |
-| $k_a^-$ | $576$                  | $\text{Hz}$         | RyR rate constant         |
-| $k_b^+$ | $4.05 \cdot 10^{6} $   | $\text{Hz mM}^{-3}$ | RyR rate constant         |
-| $k_b^-$ | $1930$                 | $\text{Hz}$         | RyR rate constant         |
-| $k_c^+$ | $100$                  | $\text{Hz}$         | RyR rate constant         |
-| $k_c^-$ | $0.8$                  | $\text{Hz}$         | RyR rate constant         |
-
-### Ca2+ transport and buffering parameters
+## Ca2+ transport and buffering parameters
 
 | Symbol          | Value    | Units               | Description                                          |
 | --------------- | -------- | ------------------- | ---------------------------------------------------- |
@@ -170,3 +160,14 @@ $$
 | $\Sigma[LTRPN]$ | $0.07$   | $mM$                | Total troponin low-affinity sites                    |
 | $\Sigma[CMDN]$  | $0.05$   | $mM$                | Total myoplasmic calmodulin concentration            |
 | $\Sigma[CQSN]$  | $15$     | $mM$                | Total NSR calsequestrin concentration                |
+
+## ODE for cytosolic calcium
+
+$$
+\begin{aligned}
+β_i &= M((K_m^{CMDN} + [Ca^{2+}]_i)^2, K_m^{CMDN}  \cdot  [CMDN]_{tot})  \\
+β_{SR} &= M((K_m^{CSQN} + [Ca^{2+}]_{SR})^2, K_m^{CSQN}  \cdot  [CSQN]_{tot})  \\
+\frac{d[Ca^{2+}]_i}{dt} &= \beta_i(J_{xfer}\frac{V_{ss}}{V_{myo}} - J_{up} - J_{trpn} - (I_{Ca,b} -2I_{NaCa} + I_{pCa})\frac{A_{cap}}{2V_{myo}F} + (V_{NaCa} - V_{uni})\frac{V_{mito}}{V_{myo}}) \\
+\frac{d[Ca^{2+}]_{SR}}{dt} &= \beta_{SR}(J_{up}\frac{V_{myo}}{V_{SR}} - J_{rel}\frac{V_{ss}}{V_{SR}}) \\
+\end{aligned}
+$$

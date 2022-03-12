@@ -289,7 +289,7 @@ $$
 | $k_{a}$        | 1174.74 | Hz   | Forward catalytic constant    |
 | $K_{eq}^{App}$ | 1       | -    | Apparent equilibrium constant |
 
-## ODE system for ROS 
+## ODE system for ROS transport and scavenging  
 
 $$
 \begin{aligned}
@@ -307,7 +307,6 @@ $$
 \frac{d [PSSG]_i}{dt} &= J_{PSSG,i} - J_{GRX,i}    \\
 \end{aligned}
 $$
-
 
 
 [^Cortassa2004]:Cortassa S, Aon MA, Winslow RL, O'Rourke B. A mitochondrial oscillator dependent on reactive oxygen species. Biophys J. 2004;87(3):2060-73. [PMC1304608](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1304608/)

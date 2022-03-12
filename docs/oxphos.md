@@ -373,9 +373,7 @@ $$
 | $p_{2}$        | 7.739E-7  | -    | Sum of products of rate constants                                                       |
 | $p_{3}$        | 6.65E-15  | -    | Sum of products of rate constants                                                       |
 
-## ODE system
-
-Q cycle
+## ODE system for the Q cycle
 
 $$
 \begin{aligned}
@@ -394,7 +392,6 @@ $$
 \frac{d[cytc]_{ox}}{dt} &= V_e - v_{33}   \\
 \end{aligned}
 $$
-
 
 
 [^Wei2011]: Wei AC, Aon MA, O'Rourke B, Winslow RL, Cortassa S. Mitochondrial energetics, pH regulation, and ion dynamics: a computational-experimental approach. Biophys J. 2011;100(12):2894-903. [PMC3123977](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3123977/)

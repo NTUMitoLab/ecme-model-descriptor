@@ -85,6 +85,26 @@ $$
 | $\Sigma [Cr]_{cyt}$ | 15.5      | mM   | Pool of cytosolic creatine                                                           |
 | $\Sigma [Cr]_{ims}$ | 15.5      | mM   | Pool of intermembrane space creatine                                                 |
 
+## ODEs for High-energy and inorganic phosphates
+
+$$
+\begin{aligned}
+\frac{d [ADP]_m}{dt} &= J_{ANT} - J_{F1Fo} - J_{SL}  \\
+[ATP]_m &= \Sigma[A]_m - [ADP]_m  \\
+V_{ims}\frac{d [ADP]_{ims}}{dt} &= -J_{ANT} + J_{CK}^{Mi} + J_{diff}^{ATP}  \\
+[ATP]_{ims} &= \Sigma[A]_{ims} - [ADP]_{ims}  \\
+V_{cyto}\frac{d[ADP]_{cyt}}{dt} &= J_{hyd} +J_{CK}^{MM} - J_{diff}^{ATP}    \\
+[ATP]_{cyt} &= \Sigma[A]_{cyt} - [ADP]_{cyt}  \\
+V_{ims}\frac{d[Cr]_{ims}}{dt} &= -J_{CK}^{Mi} + J_{diff}^{PCr}  \\
+[PCr]_{ims} &= \Sigma[Cr]_{ims} - [Cr]_{ims}  \\
+V_{cyt}\frac{d [Cr]_{cyt}}{dt} &= -J_{CK}^{MM} - J_{diff}^{PCr}  \\
+[PCr]_{cyt} &= \Sigma[Cr]_{cyt} - [Cr]_{cyt}  \\
+V_{ims}\frac{d [Pi]_{ims}}{dt} &= -V_{mito} J_{PiC} - J_{diff}^{Pi}  \\
+V_{cyt}\frac{d [Pi]_{cyt}}{dt} &= J_{hyd} + J_{diff}^{Pi}
+\end{aligned}
+$$
+
+
 
 [^vanBeek2007]: Kongas O, van Beek JHGM Creatine kinase in energy metabolic signaling in muscle Nature Precedings (2007)DOI: https://doi.org/10.1038/npre.2007.1317.1
 

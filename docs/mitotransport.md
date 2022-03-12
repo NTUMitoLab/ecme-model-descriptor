@@ -125,15 +125,27 @@ $$
 
 ## Mitochondrial hydrogen flux balance[^Wei2011]
 
-$J_H$: Proton influx to mitochondrial matrix by pumps / transporters
-$J_{Hn}$: Proton flux due to enzyme stoichiometry
-$J_{HL}$: Proton flux due to ligand binding / unbinding
+- $J_H$: Proton influx to mitochondrial matrix by pumps / transporters
+- $J_{Hn}$: Proton flux due to enzyme stoichiometry
+- $J_{HL}$: Proton flux due to ligand binding / unbinding
+
 $$
 \begin{aligned}
 J_H &= -J_{h, Res}+ J_{hu} + J_{NHE} + J_{PiC} + J_{Hleak}   \\
 J_{Hn} &= -(J_{IDH3} + J_{KGDH} + J_{MDH} - J_{F1Fo})   \\
 J_{HL} &= \frac{[H^+]_m}{K_{a, ATP}P_{ATP}}\frac{d[ATP]_m}{dt} + \frac{[H^+]_m}{K_{a, ADP}P_{ADP}}\frac{d[ADP]_m}{dt} + \frac{[H^+]_m}{K_{a, Pi}P_{Pi}}\frac{d[Pi]_m}{dt} + \frac{[H^+]_m}{K_{a, SUC}P_{SUC}}\frac{d[SUC]_m}{dt}   \\
 \frac{d[H^+]_m}{dt} &= δ_H(J_H - J_{Hn} - J_{HL})   \\
+\end{aligned}
+$$
+
+## ODEs for mitochondrial ions
+
+$$
+\begin{aligned}
+\frac{d [Ca^{2+}]_m}{dt} &=\delta_{Ca}( J_{uni} - J_{NCLX}) \\
+\frac{d [Na^+]_m}{dt} &= J_{NCLX} - J_{NaH} \\
+\frac{d [Pi]_m}{dt} &= -J_{F1Fo} + J_{PiC} - J_{SL}  \\
+C_{m}\frac{d \Delta \Psi_m}{dt} &= J_{Hres} - J_{Hu} - J_{ANT} - J_{Hleak} -J_{NCLX} - J_{uni} - J_{IMAC} \\
 \end{aligned}
 $$
 

@@ -1,6 +1,6 @@
-## TCA cycle rates[^Wei2011]
+# TCA cycle rates[^Wei2011]
 
-### Citrate synthase (CS)
+## Citrate synthase (CS)
 
 $$
 \begin{aligned}
@@ -19,7 +19,7 @@ $$
 | $[AcCoA]$        | 1       | mM   | Acetyl CoA concentration            |
 | $k_{cat}$ (cell) | 0.15891 | Hz   | Catalytic constant (cellular model) |
 
-### Aconitase (ACO)
+## Aconitase (ACO)
 
 $$
 \begin{aligned}
@@ -35,7 +35,7 @@ $$
 | $\Sigma_{CAC}$ | 1.300    | mM   | Sum of TCA cycle intermediates         |
 | $k_f$ (cell)   | 0.078959 | Hz   | Forward rate constant (cellular model) |
 
-### Isocitrate dehydrogenase, NADH-producing (IDH3)
+## Isocitrate dehydrogenase, NADH-producing (IDH3)
 
 $$
 \begin{aligned}
@@ -62,7 +62,7 @@ $$
 | $K_{NADH}$       | 0.19  | mM   | Inhibition constant by NADH       |
 | $k_{cat}$ (cell) | 535   | Hz   | Rate constant (cellular model)    |
 
-### Alpha-ketoglutarate dehydrogenase (KGDH)
+## Alpha-ketoglutarate dehydrogenase (KGDH)
 
 $$
 \begin{aligned}
@@ -87,7 +87,7 @@ $$
 | $K_{CA}$         | 1.5E-4 | mM   | Activation constant for Ca     |
 | $k_{cat}$ (cell) | 17.9   | Hz   | Rate constant (cellular model) |
 
-### Succinate-CoA ligase (SL)
+## Succinate-CoA ligase (SL)
 
 $$
 \begin{aligned}
@@ -103,11 +103,11 @@ $$
 | [CoA]        | 0.020   | mM      | Coenzyme A concentration               |
 | $k_f$ (cell) | 2.84E-5 | mM * Hz | Forward rate constant (cellular model) |
 
-### Succinate dehydrogenase (SDH)
+## Succinate dehydrogenase (SDH)
 
 See OXPHOS part: complex II (Succinate dehydrogenase).
 
-### Fumarate hydratase (FH)
+## Fumarate hydratase (FH)
 
 $$
 J_{FH} = k_f ([FUM] - [MAL] / K_{eq})
@@ -119,7 +119,7 @@ $$
 | $K_{eq}$     | 1.0   | -    | Equilibrium constant                   |
 | $k_f$ (cell) | 8.4   | Hz   | Forward rate constant (cellular model) |
 
-### Malate dehydrogenase (MDH)
+## Malate dehydrogenase (MDH)
 
 $$
 \begin{aligned}
@@ -145,7 +145,7 @@ $$
 | $K_{OAA}$        | 0.031    | mM    | Inhibition constant for oxaloacetate |
 | $k_{cat}$ (cell) | 125.9    | Hz    | Rate constant for cellular model     |
 
-### Aspartate aminotransferase (AAT)
+## Aspartate aminotransferase (AAT)
 
 $$
 J_{AAT} = k_f [OAA][GLU] \frac{k_{ASP}K_{eq}}{k_{ASP}K_{eq} + k_f[\alpha KG]}
@@ -158,5 +158,20 @@ $$
 | $K_{eq}$     | 6.6    |       | Equilibrium constant                   |
 | [GLU]        | 30.000 | mM    | Glutamate concentration                |
 | $k_f$ (cell) | 21.7   | Hz    | Forward rate constant (cellular model) |
+
+## ODEs specifically to the Citric acid cycle (CAC)
+
+$$
+\begin{aligned}
+\frac{d [ISOC]}{dt} &= J_{ACO} -J_{IDH3} -J_{IDH2}  \\
+\frac{d [\alpha KG]}{dt} &= J_{IDH3} + J_{IDH2} - J_{KGDH} + J_{AAT}  \\
+\frac{d[SCoA]}{dt} &= J_{KGDH} - J_{SL}  \\
+\frac{d [SUC]}{dt} &= J_{SL} - J_{SDH} \\
+\frac{d [FUM]}{dt} &= J_{SDH} - J_{FH}  \\
+\frac{d[MAL]}{dt} &= J_{FH} - J_{MDH}  \\
+\frac{d [OAA]}{dt} & = J_{MDH} - J_{CS} - J_{AAT}  \\
+\frac{d [NADH]_m}{dt} &= -J_{C1} + J_{IDH} + J_{KGDH} + J_{MDH} - J_{THD}  \\
+\end{aligned}
+$$
 
 [^Wei2011]: Wei AC, Aon MA, O'Rourke B, Winslow RL, Cortassa S. Mitochondrial energetics, pH regulation, and ion dynamics: a computational-experimental approach. Biophys J. 2011;100(12):2894-903. [PMC3123977](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3123977/)
