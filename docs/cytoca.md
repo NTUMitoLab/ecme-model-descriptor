@@ -165,8 +165,8 @@ $$
 
 $$
 \begin{aligned}
-β_i &= M((K_m^{CMDN} + [Ca^{2+}]_i)^2, K_m^{CMDN}  \cdot  [CMDN]_{tot})  \\
-β_{SR} &= M((K_m^{CSQN} + [Ca^{2+}]_{SR})^2, K_m^{CSQN}  \cdot  [CSQN]_{tot})  \\
+β_i &= Hill((K_m^{CMDN} + [Ca^{2+}]_i)^2, K_m^{CMDN}  \cdot  [CMDN]_{tot}, 1)  \\
+β_{SR} &= Hill((K_m^{CSQN} + [Ca^{2+}]_{SR})^2, K_m^{CSQN}  \cdot  [CSQN]_{tot}, 1)  \\
 \frac{d[Ca^{2+}]_i}{dt} &= \beta_i(J_{xfer}\frac{V_{ss}}{V_{myo}} - J_{up} - J_{trpn} - (I_{Ca,b} -2I_{NaCa} + I_{pCa})\frac{A_{cap}}{2V_{myo}F} + (V_{NaCa} - V_{uni})\frac{V_{mito}}{V_{myo}}) \\
 \frac{d[Ca^{2+}]_{SR}}{dt} &= \beta_{SR}(J_{up}\frac{V_{myo}}{V_{SR}} - J_{rel}\frac{V_{ss}}{V_{SR}}) \\
 \end{aligned}
