@@ -33,9 +33,11 @@ v_{04} &= k_{pn}^{trop} [P_0] - k_{np}^{trop} [N_0] \\
  [N_0] &= 1 - [P_0] - [P_1] - [P_2] - [P_3] - [N_1]  \\
 v_{15} &= k_{pn}^{trop} [P_1] - k_{np}^{trop} [N_1] \\
 v_{54} &= g_{01,off} [N_1]  \\
-J_{trpn} &= \frac{d[HTRPNCa]}{dt} + \frac{d[LTRPNCa]}{dt} \\
  [HTRPN] &=  [HTRPN]_{tot} - [HTRPNCa]  \\
  [LTRPN] &=  [LTRPN]_{tot} - [LTRPNCa]  \\
+f_{ATP}^{AM} &= Hill([ATP]_i  \cdot Hill(K_{i,AM}^{ADP}, [ADP]_i, 1), K_{m,AM}^{ATP}, 1) \\
+V_{AM} &= V_{max}^{AM}  \cdot f_{ATP}^{AM}  \cdot  \frac{f_{01}[P_0] + f_{12}[P_1] + f_{23}[P_2]}{f_{01} + f_{12} + f_{23}} \\
+J_{trpn} &= \frac{d[HTRPNCa]}{dt} + \frac{d[LTRPNCa]}{dt} \\
 \frac{d[HTRPNCa]}{dt} &= k^{+}_{htrpn}[Ca^{2+}]_i[HTRPN] - k^{-}_{htrpn}[HTRPNCa]  \\
 \frac{d[LTRPNCa]}{dt} &= k^{+}_{ltrpn}[Ca^{2+}]_i[LTRPN] - k^{-}_{ltrpn}(1-\frac{2}{3}Force_{norm})[LTRPNCa]  \\
 \frac{d[P_0]}{dt} &= - v_{01} - v_{04}  \\
@@ -43,10 +45,9 @@ J_{trpn} &= \frac{d[HTRPNCa]}{dt} + \frac{d[LTRPNCa]}{dt} \\
 \frac{d[P_2]}{dt} &= v_{12} - v_{23}  \\
 \frac{d[P_3]}{dt} &= v_{23}  \\
 \frac{d[N_1]}{dt} &= v_{15} - v_{54} \\
-f_{ATP}^{AM} &= Hill([ATP]_i  \cdot Hill(K_{i,AM}^{ADP}, [ADP]_i, 1), K_{m,AM}^{ATP}, 1) \\
-V_{AM} &= V_{max}^{AM}  \cdot f_{ATP}^{AM}  \cdot  \frac{f_{01}[P_0] + f_{12}[P_1] + f_{23}[P_2]}{f_{01} + f_{12} + f_{23}} \\
 \end{aligned}
 $$
+
 
 [^Rice2000]: Rice JJ, Jafri MS, Winslow RL. Modeling short-term interval-force relations in cardiac muscle. Am J Physiol Heart Circ Physiol. 2000 Mar;278(3):H913-31. [APS](https://www.physiology.org/doi/full/10.1152/ajpheart.2000.278.3.H913)
 
