@@ -18,7 +18,7 @@ jobs:
         run: |
           find ./docs -type f -name "*.md" -print0 | parallel -0 -j2 pandoc -s {} -o {}.docx
       - name: Deploy to GitHub pages
-        uses: peaceiris/actions-gh-pages@v3.8.0
+        uses: peaceiris/actions-gh-pages@v3.9.0
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
